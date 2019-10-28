@@ -1,6 +1,6 @@
 <!-- ---  
 title: TBAG
-author: Angela Brennecke, Till Bovermann
+author: Till Bovermann, Angela Brennecke
 affiliation: Film University Babelsberg KONRAD WOLF
 date: Winter term 19/20
 ---   -->
@@ -24,60 +24,85 @@ Last Update: 23.07.2019
 
 ## Organization 
 
-- **TBD**: Mondays or Wednesdays 10:00 h - 13:30 h
+- **TBD**: Mondays 10:00 h - 13:30 h
   - Mondays: 28.10., 04.11., 11.11., 18.11., 25.11., 02.12., 13.01., 20.01., 27.01., (03.02.)
-  - Wednesdays: 30.10., 06.11., 13.11., 20.11., 27.11., 04.12., 15.01., 22.01., 29.01., (05.02.)
 - 3 SWS | 4 ECTS
 - 9 lectures in total during winter term as defined in the **CTech Classes Calender**
 
 
 ## Syllabus
 
-1. Intro to course and fundamental mathematical concepts
-   1. Numeric foundations
-   2. Mathematical bases (time vs frequency domain, carthesic vs polar/euler coordinates)
-2. Digital audio fundamentals
-   1. Nyquist theorem
-   2. Audio rendering pipeline (analog to digital audio processing)
-3. Audio synthesis
-   1. Oscillation & sound generation
-   2. Types of sound synthesis
-4. Audio processing
-   1. Filtering
-   2. Analysis
-5. Audio project
-6. Computer graphics fundamentals
-   1. Transformations & matrices
-   2. Graphics rendering pipeline
-7. 3D Objects in space
-   1. Affine transformations, local vs global space 
-   2. Positioning & movement: Transformation of objects in space
-8. Projection & viewing
-   1. Projective transformations
-   2. Camera viewing systems, perspective, and light
-9.  Graphics project
++ Introduction & fundamental maths
+  + organisation of the course
+  + numeric foundations
+  + integer arithmetic
+    + fixed-point arithmetic 
+    + floating point arithmetic
+  + mathematical bases
+    + time
+    + frequency (FFT / fourier transform)
+    + cartesic
+    + (polar coordinates)
+    + (euler)
++ Digital audio fundamentals
+  + nyquist theorem
+  + audio rendering pipeline (audio architecture)
+  + audio buffer processing (“1 sample delay”)
+  + latency
++Synthesis
+  + oscillation & sound generation
+  + types of sound synthesis
+    + additive
+    + subtractive
+    + FM
+    + (granular)
++Processing
+  + filtering
+    + Filter theory – message: filters are built in the time domain, mainly with the help of delays and feedback.
+    + HPF / LPF / BPF / Allpass
+    + (complex filter design)
+  + analysis
+    + amplitude tracking
+    + pitch tracking
+    + overview on [state-of-the-art features](https://en.wikipedia.org/wiki/Audio_analysis)
+      + Level and gain
+      + Frequency domain analysis
+      + Frequency response
+      + Total Harmonic Distortion plus Noise (THD+N)
+      + Phase
+      + Crosstalk
+      + Intermodulation Distortion (IMD)
+      + Stereo and Surround
++ Computer graphics fundamentals
+  + graphic rendering pipeline (overview)
+  + Transformations & matrices
+    + affine transformations — definition
+    + (2D examples)
+    + 3D examples
+  + 3D objects in space
+    + Affine transformations, local vs global space
+    + Positioning & movement: Transformation of objects in space
+    + Projection & viewing
+      + Projective transformations
+      + Camera viewing systems, perspective, and light
 
+## Project
 
-
-
-## Projects
-
-Overall idea is to create audio-visual scenes (dioramas) with moving objects a dynamically changing room tone.
+Create audio-visual scenes (dioramas) with moving objects and dynamically changing room tone.
 
 Learning aspects: integration of sound and graphics into one coherent environment creating kinetic objects (audio / graphics) and moving (sound) sources.
 
-
-Project 1 (audio)
+### Project audio
 
 - Given
   - time-varying control data (OSC message stream) 
-  - programming environment: supercollider
+  - programming environment: [supercollider](http://supercollider.github.io)
 - Task
   - analyse 2 self-made recordings (i.e. from Technology Introductions) for their spectral components and recreate them with controls for tonal and texture quality
   - create sound objects (like e.g. for a radio play) with controls for tonal, texture and positional qualities
 
 
-Project 2 (graphics)
+### Project graphics
 
 - Given 
   - time-varying control data (OSC message stream) 
@@ -87,8 +112,3 @@ Project 2 (graphics)
 - Task
   - create (abstract) visual environment that represents the place in which the diorama takes place including parameters for lighting, culling, etc.
   - create (abstract) kinematic graphic objects with (high-level) controls for position and shape
-
-
-Final Project 
-
-- TBD
