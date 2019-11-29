@@ -15,7 +15,7 @@ channels?  Review the documentation from within SuperCollider (`Buffer` help pag
 
 ### Task 3.2
 
-Read provided document on audio buffers & latency.  
+Read provided document on audio buffers & latency (in _assets folder).  
 
 + What is meant by latency?
 + What causes latency and how do you calculate it?
