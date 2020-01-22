@@ -1,19 +1,20 @@
-				// time-pitch changing // 
+				// time-pitch changing //
 
 
 
 		// figure 16.19 time-pitch changing
 p = ProxySpace.push(s.boot);
 b = Buffer.read(s, "sounds/a11wlk01-44_1.aiff");
+
 (
-~timepitch = {arg sndbuf, pitchRatio=1, pitchRd=0.01, grainRate=10, overlap=2, 
+~timepitch = {arg sndbuf, pitchRatio=1, pitchRd=0.01, grainRate=10, overlap=2,
 	posSpeed=1, posRd=0.01;
-	
+
 	var graindur = overlap / grainRate;
 	var pitchrate = pitchRatio + LFNoise0.kr(grainRate, pitchRd);
-	var position = LFSaw.kr(posSpeed / BufDur.kr(sndbuf)).range(0, 1) 
+	var position = LFSaw.kr(posSpeed / BufDur.kr(sndbuf)).range(0, 1)
 		+ LFNoise0.kr(grainRate, posRd);
-		
+
 	GrainBuf.ar(2, Impulse.kr(grainRate), graindur, sndbuf, pitchrate,
 			position, 4, 0, -1)
 };
@@ -43,24 +44,24 @@ NodeProxyEditor(~timepitch, 10);
 
 
 
-			// examples constantQ granulation 
+			// examples constantQ granulation
 
 
 	// figure 16.20 - A constant-Q Synthdef.
 
 b = Buffer.read(s, "sounds/a11wlk01-44_1.aiff");
 (
-SynthDef(\constQ, { |out, bufnum=0, amp=0.1, pan, centerPos=0.5, sustain=0.1, 
-	rate=1, freq=400, rq=0.3| 
+SynthDef(\constQ, { |out, bufnum=0, amp=0.1, pan, centerPos=0.5, sustain=0.1,
+	rate=1, freq=400, rq=0.3|
 
 	var ringtime = (2.4 / (freq * rq) * 0.66).min(0.5); // estimated
-	var ampcomp = (rq ** -1) * (400 / freq ** 0.5);	
+	var ampcomp = (rq ** -1) * (400 / freq ** 0.5);
 	var envSig = EnvGen.ar(Env([0, amp, 0], [0.5, 0.5] * sustain, \welch));
 	var cutoffEnv = EnvGen.kr(Env([1, 1, 0], [sustain+ringtime,0.01]), doneAction: 2);
-	var grain = PlayBuf.ar(1, bufnum, rate, 0, 
-		centerPos - (sustain * rate * 0.5) * BufSampleRate.ir(bufnum), 
-		1) * envSig;	
-	var filtered = BPF.ar( grain, freq, rq, ampcomp ); 
+	var grain = PlayBuf.ar(1, bufnum, rate, 0,
+		centerPos - (sustain * rate * 0.5) * BufSampleRate.ir(bufnum),
+		1) * envSig;
+	var filtered = BPF.ar( grain, freq, rq, ampcomp );
 
 	OffsetOut.ar(out, Pan2.ar(filtered, pan, cutoffEnv))
 }, \ir.dup(8)).memStore;
@@ -72,13 +73,13 @@ Synth(\constQ, [\bufnum, b, \freq, exprand(100, 10000), \rq, exprand(0.01, 0.1),
 
 
 	// parameter tests for constant Q granulation
-	
+
 Synth(\constQ, [\bufnum, b]);
 Synth(\constQ, [\bufnum, b, \centerPos, 0.5]);	// centerPos = where in soundfile (seconds)
-Synth(\constQ, [\bufnum, b, \centerPos, 1]);	
-Synth(\constQ, [\bufnum, b, \centerPos, 1.5]);	
-	
-	// sustain is sustain of exciter grain: 
+Synth(\constQ, [\bufnum, b, \centerPos, 1]);
+Synth(\constQ, [\bufnum, b, \centerPos, 1.5]);
+
+	// sustain is sustain of exciter grain:
 Synth(\constQ, [\bufnum, b, \centerPos, 0.5, \sustain, 0.01]);
 Synth(\constQ, [\bufnum, b, \centerPos, 0.5, \sustain, 0.03]);
 Synth(\constQ, [\bufnum, b, \centerPos, 0.5, \sustain, 0.1]);
@@ -99,12 +100,12 @@ Synth(\constQ, [\bufnum, b, \freq, 600, \rq, 0.003]);
 
 	// figure 16.21 - a stream of constant Q grains
 (
-Pbindef(\gr1Q, 
+Pbindef(\gr1Q,
 	\instrument, \constQ, \bufnum, b.bufnum,
 	\sustain, 0.01, \amp, 0.2,
-	\centerPos, Pn(Penv([1, 2.0], [10], \lin)), 
+	\centerPos, Pn(Penv([1, 2.0], [10], \lin)),
 	\dur, Pn(Penv([0.01, 0.09, 0.03].scramble, [0.38, 0.62] * 10, \exp)),
-	\rate, Pwhite(0.95, 1.05), 
+	\rate, Pwhite(0.95, 1.05),
 	\freq, Pbrown(64.0, 120, 8.0).midicps,
 	\pan, Pwhite(-1, 1, inf),
 	\rq, 0.03
