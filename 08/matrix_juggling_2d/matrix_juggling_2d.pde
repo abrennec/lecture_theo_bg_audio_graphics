@@ -1,5 +1,3 @@
-
-
 void setup() 
 {
   size(640, 360);
@@ -78,17 +76,3 @@ void rotateAt(int x, int y, float angle) {
    applyMatrix(coordinateSystem);
    //(r.preApply(t1)).preApply(t2);
  }
-
-
-//PMatrix2D mult(PMatrix2D a, PMatrix2D b) {
-//  for(int r = 0; r<4; r++) {
-//    for(int c = 0; c<4; c++) {
-//      float temp = 0;
-//      for(int i = 0; i<4; i++) {
-//        temp += a[r][i] * b[i][c]
-//    }
-//    c[r][c] = temp;
-//    }
-//  }
-//  return c;
-//}
