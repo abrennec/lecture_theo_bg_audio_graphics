@@ -5,8 +5,6 @@ OscP5 oscP5;
 NetAddress myRemoteLocation;
 
 ArmElement a, b, c;
-
-
 float t;
 
 void setup() { 
@@ -18,11 +16,13 @@ void setup() {
   myRemoteLocation = new NetAddress("127.0.0.1",57120);
   
   a = new ArmElement(0, 100);
-  a.setColor(color(50, 55, 100));
+  a.setColor(color(200, 0, 0));
+
   b = new ArmElement(1, 50);
-  b.setColor(color(50, 100, 100));
+  b.setColor(color(0, 200, 00));
+
   c = new ArmElement(2, 200);
-  c.setColor(color(100, 55, 100));
+  c.setColor(color(0, 0, 200));
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
   a.setReference(m);
