@@ -21,14 +21,14 @@ void setup() {
   myRemoteLocation = new NetAddress("127.0.0.1", 57120);
 
   a = new ArmElement(0, 100);
-  a.setColor(color(200, 0, 0));
+  a.setColor(color(0, 250, 0));
 
   b = new ArmElement(1, 50);
-  b.setColor(color(0, 200, 00));
+  b.setColor(color(150, 250, 50));
 
   for ( int i = 0; i < c.length; i++) {
     c[i] = new ArmElement(2, 50);
-    c[i].setColor(color(0, 0, (i*10)+200));
+    c[i].setColor(color(150+((1+i)*5), 150, 250));
   }
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
@@ -81,21 +81,21 @@ void draw() {
   }
 
 void updateModel() {
-  a.updateState(0, t, 0); 
+  a.updateState(0, t, PI/4); 
   b.setReference(a.effectorCoord);
-  b.updateState(sin(t), 0, cos(t/2));
-
+  b.updateState(sin(t), 0, cos(t));
+  
+  // last arm fans out
   fan = map(mouseY, 0, height, -0.2, -0.8);
-
   for ( int i = 0; i < c.length; i++) {
     c[i].setReference(b.effectorCoord);
     c[i].updateState(TWO_PI/igelNum*(i+1), fan, 0);
   }
 
+  // is the mouse moving?
   if (mouseX==pmouseX || mouseY==pmouseY) {
     bewegung = false;
   } else {
     bewegung = true;
   }
-  println(bewegung);
 }
