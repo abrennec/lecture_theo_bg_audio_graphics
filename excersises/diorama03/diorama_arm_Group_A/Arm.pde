@@ -1,18 +1,22 @@
 class ArmElement { 
   int index;
   color myColor;
-  int length;
+  float length;
 
   PMatrix3D referenceSystem;
   PMatrix3D coordSystem;
   PMatrix3D effectorCoord;
 
-  ArmElement (int index, int length) {
+  ArmElement (int index, float length) {
     this.index = index;
     this.length = length;
     myColor = color(128); 
     coordSystem = new PMatrix3D();
     referenceSystem = new PMatrix3D();
+  }
+  
+  public float getLen(){
+   return this.length; 
   }
 
   void draw() {
