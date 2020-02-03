@@ -10,7 +10,7 @@ class ArmElement {
   ArmElement (int index, int length) {
     this.index = index;
     this.length = length;
-    myColor = color(128); 
+    myColor = color(120); 
     coordSystem = new PMatrix3D();
     referenceSystem = new PMatrix3D();
   }
@@ -20,7 +20,7 @@ class ArmElement {
     fill(myColor);
     applyMatrix(coordSystem);
     translate(length*0.5, 0, 0);
-    box(length, 5, 5); 
+    box(length, 3, 3); 
     pop();
   }
   void sendState(OscP5 me, NetAddress target) {
@@ -41,9 +41,11 @@ class ArmElement {
   void setColor(color c) {
     myColor = c;
   }
+  
   void setReference(PMatrix3D coords) {
     referenceSystem = coords;  // !!! reference assignment
   }
+  
   void updateState(float roll, float pitch, float yaw) {
     coordSystem = referenceSystem.get(); // get is like copy but called 'get'
     coordSystem.rotateX(roll);   

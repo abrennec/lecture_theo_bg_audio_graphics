@@ -20,8 +20,8 @@ void drawCoords() {
 
 void setGlobals(){
   lights();
-  background(210);
-  translate(width/2, height/2); 
+  background(0);
+  translate(width/2, height - 20); 
   
   rotateX(0.75*PI);
   rotateY(0.75*PI);
