@@ -28,7 +28,7 @@ void setup() {
 
   for ( int i = 0; i < c.length; i++) {
     c[i] = new ArmElement(2, 50);
-    c[i].setColor(color(150+((1+i)*5), 150, 250));
+    c[i].setColor(color(150+((1+i)%(igelNum/4)*30), 150, 250));
   }
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
@@ -42,24 +42,17 @@ void setup() {
 void draw() {
 
   t = map(mouseX, 0, width, -PI, PI);
-  println(sin(t));
 
   // update model
   updateModel();
-
-  // send state
-  //a.sendState(oscP5, myRemoteLocation);
-  //b.sendState(oscP5, myRemoteLocation);
-  //c.sendState(oscP5, myRemoteLocation);
   
   bewegungVal = float(int(bewegung));
   sendVal(oscP5, myRemoteLocation, "bewegung", bewegungVal);
   sendVal(oscP5, myRemoteLocation, "igel", igel);
-  println(igel);
-  
+    
   // draw routine
   setGlobals();
-  drawCoords();
+  //drawCoords();
 
   a.draw();
   b.draw();
@@ -70,15 +63,6 @@ void draw() {
     c[i].draw();
   }
 }
-
- void sendVal(OscP5 me, NetAddress target, String name, float value) {
-    OscMessage myMessage = new OscMessage(name);
- 
-    myMessage.add(value);
-    // send message
-    me.send(myMessage, target);
-
-  }
 
 void updateModel() {
   a.updateState(0, t, PI/4); 
