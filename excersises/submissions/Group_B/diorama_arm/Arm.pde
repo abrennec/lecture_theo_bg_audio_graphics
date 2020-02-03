@@ -36,8 +36,9 @@ class ArmElement {
 
     // send message
     me.send(myMessage, target);
-
   }
+  
+  
   void setColor(color c) {
     myColor = c;
   }
