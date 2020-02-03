@@ -45,18 +45,17 @@ void draw() {
 
   // update model
   updateModel();
-  
+
   bewegungVal = float(int(bewegung));
-  sendVal(oscP5, myRemoteLocation, "bewegung", bewegungVal);
-  sendVal(oscP5, myRemoteLocation, "igel", igel);
-    
+  sendVal(oscP5, myRemoteLocation, "bewegung", bewegungVal); // 0 or 1
+  sendVal(oscP5, myRemoteLocation, "igel", igel); // 1 to max igelNum 
+
   // draw routine
   setGlobals();
   //drawCoords();
 
   a.draw();
   b.draw();
-
 
   igel = map(mouseY, 0, height, 1, igelNum);
   for ( int i = 0; i <= igel; i++) {
@@ -68,7 +67,7 @@ void updateModel() {
   a.updateState(0, t, PI/4); 
   b.setReference(a.effectorCoord);
   b.updateState(sin(t), 0, cos(t));
-  
+
   // last arm fans out
   fan = map(mouseY, 0, height, -0.2, -0.8);
   for ( int i = 0; i < c.length; i++) {
