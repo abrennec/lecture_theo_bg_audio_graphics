@@ -4,7 +4,7 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
-ArmElement a, b, c;
+ArmElement a, b, c, c1, c2;
 float t;
 
 void setup() { 
@@ -23,6 +23,12 @@ void setup() {
 
   c = new ArmElement(2, 200);
   c.setColor(color(0, 0, 200));
+  
+  c1 = new ArmElement(2, 200);
+  c1.setColor(color(0, 0, 200));
+  
+  c2 = new ArmElement(2, 200);
+  c2.setColor(color(0, 0, 200));
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
   a.setReference(m);
@@ -32,7 +38,7 @@ void setup() {
 
 void draw() {
   
-  t = (t + 0.01) % (4*PI);
+  t = map(mouseX, 0, width, 0, 1);
   
   // update model
   updateModel();
@@ -49,6 +55,8 @@ void draw() {
   a.draw();
   b.draw();
   c.draw();
+  c1.draw();
+  c2.draw();
 }
 
 void updateModel() {
@@ -57,4 +65,10 @@ void updateModel() {
   b.updateState(sin(t), 0, cos(t/2));
   c.setReference(b.effectorCoord);
   c.updateState(0, sin(t), -cos(t));
+  
+  c1.setReference(b.effectorCoord);
+  c1.updateState(0, 30, 0);
+  
+  c2.setReference(b.effectorCoord);
+  c2.updateState(0, 60, 0);
 }
