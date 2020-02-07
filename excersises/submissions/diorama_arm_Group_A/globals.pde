@@ -4,7 +4,7 @@ void drawCoords() {
   fill(255, 0, 0);
   box(200, 1, 1);
   pop();
-
+  
   push();
   translate(0, 100, 0);
   fill(0, 255, 0);
@@ -18,18 +18,11 @@ void drawCoords() {
   pop();
 }
 
-void setGlobals() {
+void setGlobals(){
   lights();
-  background(10);
-  translate(width/2, height/2); 
-
+  background(0);
+  translate(width/2, height - 20); 
+  
   rotateX(0.75*PI);
   rotateY(0.75*PI);
-}
-
-void sendVal(OscP5 me, NetAddress target, String name, float value) {
-  OscMessage myMessage = new OscMessage(name);
-  myMessage.add(value);
-  // send message
-  me.send(myMessage, target);
 }

@@ -4,71 +4,81 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
-ArmElement a, b, c, c1, c2;
-float t;
+int igelNum = 15;
+
+ArmElement a, b;
+ArmElement c[] = new ArmElement[igelNum];
+float t, igel, fan, bewegungVal;
+
+boolean bewegung = false;
 
 void setup() { 
   size(640, 480, P3D);
   noStroke();  
   frameRate(30);
 
-  oscP5 = new OscP5(this,12000);
-  myRemoteLocation = new NetAddress("127.0.0.1",57120);
-  
+  oscP5 = new OscP5(this, 12000);
+  myRemoteLocation = new NetAddress("127.0.0.1", 57120);
+
   a = new ArmElement(0, 100);
-  a.setColor(color(200, 0, 0));
+  a.setColor(color(0, 250, 0));
 
   b = new ArmElement(1, 50);
-  b.setColor(color(0, 200, 00));
+  b.setColor(color(150, 250, 50));
 
-  c = new ArmElement(2, 200);
-  c.setColor(color(0, 0, 200));
-  
-  c1 = new ArmElement(2, 200);
-  c1.setColor(color(0, 0, 200));
-  
-  c2 = new ArmElement(2, 200);
-  c2.setColor(color(0, 0, 200));
+  for ( int i = 0; i < c.length; i++) {
+    c[i] = new ArmElement(2, 50);
+    c[i].setColor(color(150+((1+i)%(igelNum/4)*30), 150, 250));
+  }
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
   a.setReference(m);
   b.setReference(a.coordSystem);
-  c.setReference(b.coordSystem);
+  for ( int i = 0; i < c.length; i++) {
+    c[i].setReference(b.coordSystem);
+  }
 } 
 
 void draw() {
-  
-  t = map(mouseX, 0, width, 0, 1);
-  
+
+  t = map(mouseX, 0, width, -PI, PI);
+
   // update model
   updateModel();
-    
-  // send state
-  a.sendState(oscP5, myRemoteLocation);
-  b.sendState(oscP5, myRemoteLocation);
-  c.sendState(oscP5, myRemoteLocation);
-    
+
+  bewegungVal = float(int(bewegung));
+  sendVal(oscP5, myRemoteLocation, "bewegung", bewegungVal); // 0 or 1
+  sendVal(oscP5, myRemoteLocation, "igel", igel); // 1 to max igelNum 
+
   // draw routine
   setGlobals();
   //drawCoords();
-  
+
   a.draw();
   b.draw();
-  c.draw();
-  c1.draw();
-  c2.draw();
+
+  igel = map(mouseY, 0, height, 1, igelNum);
+  for ( int i = 0; i <= igel; i++) {
+    c[i].draw();
+  }
 }
 
 void updateModel() {
-  a.updateState(0, sin(t), cos(t*2)); 
+  a.updateState(0, t, PI/4); 
   b.setReference(a.effectorCoord);
-  b.updateState(sin(t), 0, cos(t/2));
-  c.setReference(b.effectorCoord);
-  c.updateState(0, sin(t), -cos(t));
-  
-  c1.setReference(b.effectorCoord);
-  c1.updateState(0, 30, 0);
-  
-  c2.setReference(b.effectorCoord);
-  c2.updateState(0, 60, 0);
+  b.updateState(sin(t), 0, cos(t));
+
+  // last arm fans out
+  fan = map(mouseY, 0, height, -0.2, -0.8);
+  for ( int i = 0; i < c.length; i++) {
+    c[i].setReference(b.effectorCoord);
+    c[i].updateState(TWO_PI/igelNum*(i+1), fan, 0);
+  }
+
+  // is the mouse moving?
+  if (mouseX==pmouseX || mouseY==pmouseY) {
+    bewegung = false;
+  } else {
+    bewegung = true;
+  }
 }
