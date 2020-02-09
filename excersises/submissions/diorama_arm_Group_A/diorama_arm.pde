@@ -20,7 +20,7 @@ void setup() {
   myRemoteLocation = new NetAddress("127.0.0.1", 57120);
 
   a = new ArmElement(0, default_len);
-  a.setColor(color(0));
+  a.setColor(color(random(0,255)));
 
   PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
   a.setReference(m); 
@@ -63,7 +63,7 @@ void drawBranch(float len) {
       b.setColor(color(random(0, 255), random(0, 255), random(0, 255)));
       arms[index] = b;
       if (arms[index] != null){
-      b.setReference(arms[index-1].coordSystem);
+      b.setReference(arms[index-1].effectorCoord);
       b.updateState(0, 0, 0);
       }
     }
@@ -74,7 +74,7 @@ void updateModel() {
   a.updateState(0, PI * 0.75, 0);
   if (index != 0 && index < arms.length) {
     if (arms[index] != null) {
-      arms[index].setReference(arms[index-1].effectorCoord);
+      arms[index].setReference(arms[index-1].coordSystem);
       arms[index].updateState(0, 45, 0);
     }
   }
