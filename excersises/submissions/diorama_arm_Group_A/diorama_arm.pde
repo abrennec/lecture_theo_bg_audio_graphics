@@ -4,6 +4,7 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
+float theta;
 ArmElement a, b;
 float t;
 int index = 0;
@@ -23,12 +24,16 @@ void setup() {
   //PMatrix3D m = new PMatrix3D(); // origin, link to 'a'
   //a.setReference(m); 
 
-  arms = new ArmElement[20];
+  arms = new ArmElement[15];
   arms[0] = a;
 } 
 
 void draw() {
-
+  
+  float l = (mouseX / (float) width) * 90f;
+  // Convert it to radians
+  theta = radians(l);
+  
   t = (t + 0.01) % (4*PI);
 
   // update model
@@ -60,6 +65,7 @@ void drawBranch(float len, int _index) {
   len *= 0.66f;
 
   b = new ArmElement(_index, len);
+  
   b.setColor(color(random(0, 255),random(0, 255),random(0, 255)));
   arms[_index] = b;
   b.setReference(arms[_index-1].coordSystem);
@@ -70,5 +76,5 @@ void updateModel() {
   if (index != 0)
     arms[index].setReference(arms[index-1].effectorCoord);
     //b.updateState(sin(t), 0, cos(t/2));
-    arms[index].updateState(0, 0, 0);
+    arms[index].updateState(0, 45, 0);
 }
