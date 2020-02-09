@@ -14,9 +14,11 @@ ArmElement c3[] = new ArmElement[igelNum];
 float t, igel, fan, bewegungVal;
 
 boolean bewegung = false;
-
+public void settings() {
+  size(640, 480,P3D);
+}
 void setup() { 
-  size(640, 480, P3D);
+  //size(640, 480, P3D);
   noStroke();  
   frameRate(30);
 
@@ -76,8 +78,8 @@ void draw() {
   updateModel();
 
   bewegungVal = float(int(bewegung));
-  sendVal(oscP5, myRemoteLocation, "bewegung", bewegungVal); // 0 or 1
-  sendVal(oscP5, myRemoteLocation, "igel", igel); // 1 to max igelNum 
+  if(bewegungVal > 0) sendVal(oscP5, myRemoteLocation, "/bewegung", bewegungVal); // 0 or 1
+  //sendVal(oscP5, myRemoteLocation, "igel", igel); // 1 to max igelNum 
 
   // draw routine
   setGlobals();
