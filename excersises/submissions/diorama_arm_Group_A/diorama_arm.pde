@@ -4,7 +4,6 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
-float theta;
 ArmElement a, b;
 float t;
 int index = 0;
@@ -29,10 +28,6 @@ void setup() {
 } 
 
 void draw() {
-  
-  float l = (mouseX / (float) width) * 90f;
-  // Convert it to radians
-  theta = radians(l);
   
   t = (t + 0.01) % (4*PI);
 
