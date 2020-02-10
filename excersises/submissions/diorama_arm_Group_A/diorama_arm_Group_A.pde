@@ -64,11 +64,6 @@ void draw() {
   drawBranch(120);
 }
 
-void mouseClicked () { 
-  if (index < arms.length-1 && arms[index] != null) 
-    drawBranch(arms[index].getLen());
-}
-
 void drawBranch(float len) {
   stroke(col2);
   len *= 0.66f;
