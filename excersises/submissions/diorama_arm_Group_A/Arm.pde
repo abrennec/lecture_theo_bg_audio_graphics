@@ -31,12 +31,14 @@ class ArmElement {
     OscMessage myMessage = new OscMessage("/arm");
   
     myMessage.add(this.index);
+    myMessage.add(mouseX);
+    myMessage.add(mouseX/2);
 
     // send translation elements of matrix 
     // (i.e. local coordinate system origin)
-    myMessage.add(effectorCoord.m03 / 300); // approx. scale to -1..1
-    myMessage.add(effectorCoord.m13 / 300);
-    myMessage.add(effectorCoord.m23 / 300);
+    //myMessage.add(effectorCoord.m03 / 300); // approx. scale to -1..1
+    //myMessage.add(effectorCoord.m13 / 300);
+    //myMessage.add(effectorCoord.m23 / 300);
 
     // send message
     me.send(myMessage, target);
