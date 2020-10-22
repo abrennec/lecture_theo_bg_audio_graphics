@@ -116,49 +116,49 @@ At the end of the lecture, a final exercise will allow you to combine both field
 - The syllabus is still subject to change.
 ```
 
-1. 28.10.20 - **Audio Rendering** (4 hrs)
+1. 04.11.20 - **Audio Rendering** (4 hrs)
    1. Intro to the course
    2. Computer music history 
    3. Audio rendering 
    4. Sound properties
-2. 04.11.20 - **Audio Production** (4 hrs)
+2. 18.11.20 - **Audio Production** (4 hrs)
    1. Digital audio
    2. Stereo soundscape
    3. Dynamics and panning
    4. Audio FX
-3. 18.11.20 - **Sound Synthesis** (4 hrs)
+3. 25.11.20 - **Sound Synthesis** (4 hrs)
    1. Sound generation and basic waveforms
    2. Sound synthesis
    3. Anlysis and filter
    4. Subtractive synthesis by example 
-4. 25.11.20 - **Audio Programming** (4 hrs)
+4. 02.12.20 - **Audio Programming** (4 hrs)
    1. WebAudio and p5.js
    2. Generating waveforms
    3. Audio in/out
    4. Interactive audio application
-5. 02.12.20 - **Audio projects** (2 hrs)
+5. 09.12.20 - **Audio projects** (2 hrs)
    1. Projects presentation
-6. 09.12.20 - **Graphics Rendering** (4 hrs)
+6. 16.12.20 - **Graphics Rendering** (4 hrs)
    1. Computer graphics history
    2. Graphics, images, textures
    3. Graphics rendering pipeline
    4. Local, global, camera, and screen spaces
-7. 16.12.20 - **Transformations** (4 hrs)
+7. 13.01.20 - **Transformations** (4 hrs)
    1. 3D models, vertices and vertex meshes
    2. Affine transformations
    3. Projection
    4. OpenGL and WebGL
-8. 13.01.20 - **Shader programming I** (4 hrs)
+8. 20.01.20 - **Shader programming I** (4 hrs)
    1. The programmable rendering pipeline
    2. Vertex shaders and fragment shaders
    3. OpenGL Shader Language
    4. Vertex shader manipulations
-9.  20.01.20 - **Shader programming II** (4 hrs)
+9.  27.01.20 - **Shader programming II** (4 hrs)
     1. Uniforms and attributes
     2. Vertex and texture coordinates
     3. Shapes and 3D
     4. Simple image effects
-10. 27.01.20 - **Graphics projects**
+10. 03.02.20 - **Graphics projects**
     1. Projects presentation
     2. Final Exercise + course wrap-up (2 hrs)
 
