@@ -1,0 +1,2263 @@
+<REAPER_PROJECT 0.1 "6.13/OSX64" 1605439073
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 1
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 600
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 1.5
+  ZOOM 27.60776076533986 0 0
+  VZOOMEX 0 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 1
+  LOOPGRAN 0 4
+  RECORD_PATH "" ""
+  <RECORD_CFG
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN test_project_task1
+  RENDER_FMT 0 2 44100
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 0
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    bDNwbYAAAAAAAAAABQAAAP////8EAAAAgAAAAAAAAAA=
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 2.5 7.5
+  SELECTION2 2.5 7.5
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_FX 1
+  MASTER_SEL 1
+  <MASTERPLAYSPEEDENV
+    EGUID {466583B6-E96C-42CC-ABF1-1C103A2AB4A6}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {1C4B1A4B-82AE-47F3-9D65-DE966DAB51FA}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {B4184E11-5539-4EDF-BEFF-5E32E3AF2835}
+    NAME 535046__emily-hope-bradford__normal-resting-heartbeat
+    PEAKCOL 32671930
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1.42145870954057 0 -1 -1 1
+    MUTESOLO 0 2 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {B4184E11-5539-4EDF-BEFF-5E32E3AF2835}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <VOLENV2
+      EGUID {F1C7B106-FB78-4ADE-AC52-D6FFFEC44D37}
+      ACT 0 -1
+      VIS 0 1 1
+      LANEHEIGHT 0 0
+      ARM 0
+      DEFSHAPE 0 -1 -1
+      VOLTYPE 1
+      PT 0 3.09745372 0
+      PT 23.9999 3.09745372 0
+      PT 24 3.09745372 0
+      PT 24.1695872 3.09745372 0
+      PT 24.1696872 3.09745372 0
+      PT 24.49586258 3.09745372 0
+      PT 24.49596258 3.09745372 0
+      PT 24.66554978 3.09745372 0
+      PT 24.66564978 3.09745372 0
+      PT 25.05056025 3.09745372 0
+      PT 25.05066025 3.09745372 0
+      PT 25.25864456 3.09745372 0
+      PT 25.25874456 3.09745372 0
+      PT 25.9999 3.09745372 0
+      PT 26 3.09745372 0
+      PT 26.1695872 3.09745372 0
+      PT 26.1696872 3.09745372 0
+      PT 26.49586258 3.09745372 0
+      PT 26.49596258 3.09745372 0
+      PT 26.66554978 3.09745372 0
+      PT 26.66564978 3.09745372 0
+      PT 27.05056025 3.09745372 0
+      PT 27.05066025 3.09745372 0
+      PT 27.29930481 3.09745372 0
+      PT 27.29940481 3.09745372 0
+      PT 27.9999 3.09745372 0
+      PT 28 3.09745372 0
+      PT 28.1695872 3.09745372 0
+      PT 28.1696872 3.09745372 0
+      PT 28.49586258 3.09745372 0
+      PT 28.49596258 3.09745372 0
+      PT 28.66554978 3.09745372 0
+      PT 28.66564978 3.09745372 0
+      PT 29.05056025 3.09745372 0
+      PT 29.05066025 3.09745372 0
+      PT 29.25864456 3.09745372 0
+      PT 29.25874456 3.09745372 0
+      PT 29.9999 3.09745372 0
+      PT 30 3.09745372 0
+      PT 30.1695872 3.09745372 0
+      PT 30.1696872 3.09745372 0
+      PT 30.49586258 3.09745372 0
+      PT 30.49596258 3.09745372 0
+      PT 30.66554978 3.09745372 0
+      PT 30.66564978 3.09745372 0
+      PT 31.05056025 3.09745372 0
+      PT 31.05066025 3.09745372 0
+      PT 31.25864456 3.09745372 0
+      PT 31.25874456 3.09745372 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 3.10678244042831
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.605984 0 5 0 0
+      FADEOUT 1 0.225362 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {2AD18B97-B63B-47F6-B624-C3B6EAE9FE69}
+      IID 7
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9A3C7B6B-6E23-4F4D-9E66-2788D48B1F68}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 6.94933974862659
+      SNAPOFFS 0
+      LENGTH 0.16958720470984
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {03A1D48D-1D2B-4A5B-B699-836183474092}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {871DC472-F3CA-484C-A618-3660D148E3C1}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 7.44530232843839
+      SNAPOFFS 0
+      LENGTH 0.16958720470983
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {40E417B7-B135-4ECC-A6CA-7F494C65DECE}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1BE7C5FD-E453-4B0E-B566-AE069C290E38}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 8
+      SNAPOFFS 0
+      LENGTH 0.20798430766301
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {EF61CCC2-89D4-49F1-BA61-37AC0E2D0FCF}
+      IID 75
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 2.0766433180507
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {57A30A3D-C465-4D0A-964C-89C908FAD40B}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 8.94933974859305
+      SNAPOFFS 0
+      LENGTH 0.16958720470984
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {9BFE5B60-7F15-405E-BC91-52F3E6824AEA}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5E4A6A4A-D813-4EBC-B2A6-37D243B33B35}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 9.44530232844409
+      SNAPOFFS 0
+      LENGTH 0.16958720470984
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C85B388E-A866-4F94-BC13-D5DC38C4B4CF}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4258FCD4-6B80-4CCA-8710-BA925E5844BA}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 10
+      SNAPOFFS 0
+      LENGTH 0.24864455906996
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {78F2B6B8-9385-435A-B8D9-93369B52AABA}
+      IID 75
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 2.0766433180507
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0FCD0DF0-3AA7-445B-B440-9F72A8D89243}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 10.94933974859305
+      SNAPOFFS 0
+      LENGTH 0.16958720470984
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {79DA5AA8-C28E-4DED-8709-36F12F22C418}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8172ECF7-674D-4ED6-91C5-C30290C67B52}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 11.44530232844409
+      SNAPOFFS 0
+      LENGTH 0.16958720470984
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8C9CE727-868C-4DB5-A1B4-4207BBFFCDB5}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1495AE7B-C412-4C3C-9540-F79DAA186DBD}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 12
+      SNAPOFFS 0
+      LENGTH 0.20798430766301
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C59A9527-8270-4CB8-9CB3-04F9FBFAF063}
+      IID 75
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 2.0766433180507
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5ADFDBD5-CBDD-4310-90A2-05FB5269A320}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 18
+      SNAPOFFS 0
+      LENGTH 8.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 2.772701 0 5 0 0
+      FADEOUT 2 4.494477 0 2 0 -1
+      MUTE 0 0
+      SEL 0
+      IGUID {E8D692F6-1B56-49D1-BFE8-07286BC24896}
+      IID 7
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 30.50947845804989
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CF03189A-140E-4C4C-9DB0-73BC2EBE1FC9}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+    <ITEM
+      POSITION 21.94933974859305
+      SNAPOFFS 0
+      LENGTH 0.00001
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0 0 5 0 0
+      FADEOUT 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1E925491-9A3F-48F0-9C18-250DC3314457}
+      IID 73
+      NAME 535046__emily-hope-bradford__normal-resting-heartbeat.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 1.74706818436931
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {65023CF8-B48B-4E41-9B65-9539C4D93428}
+      <SOURCE WAVE
+        FILE "535046__emily-hope-bradford__normal-resting-heartbeat.wav"
+      >
+    >
+  >
+  <TRACK {4BB9748F-6670-42C1-AA80-9CAFDD777C30}
+    NAME 54961__cidchili__breath-human-sci
+    PEAKCOL 27159602
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 3.98107170553497 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {4BB9748F-6670-42C1-AA80-9CAFDD777C30}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 1
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.476441 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {FA4FD68D-CD5B-4BEF-AB96-4450B214C75B}
+      IID 37
+      NAME 54961__cidchili__breath-human-sci.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5797EFE2-0E3F-42A8-BE10-0179D4ED6FD1}
+      <SOURCE WAVE
+        FILE "54961__cidchili__breath-human-sci.wav"
+      >
+    >
+    <ITEM
+      POSITION 16.17231896985322
+      SNAPOFFS 0
+      LENGTH 3.82768103014678
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.232274 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {6B3E0115-4DDE-46D2-8DDA-38EF01FA9908}
+      IID 37
+      NAME 54961__cidchili__breath-human-sci.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6E158FC2-EC49-42A2-8EDC-393361BB4B44}
+      <SOURCE WAVE
+        FILE "54961__cidchili__breath-human-sci.wav"
+      >
+    >
+  >
+  <TRACK {7B9CB06E-BEBF-49C9-A042-3C40AE40A618}
+    NAME "sewing machine left"
+    PEAKCOL 23517169
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.02387215858466 -0.808 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {7B9CB06E-BEBF-49C9-A042-3C40AE40A618}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 3
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3B56F0C1-F58F-4E45-8F58-23B232B77293}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F15B69A1-C511-4427-806C-9EAEB5AF10DB}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4
+      SNAPOFFS 0
+      LENGTH 0.09187678336807
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {FBD76A36-2518-4279-A1A5-0F96E4084DC2}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {67D60653-0C57-49D3-8FC9-F635322C0A14}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4.14688711894254
+      SNAPOFFS 0
+      LENGTH 0.07308584372556
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5C7DF975-DE2C-4CB0-8F25-D5EC4377B893}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {71C02110-5636-4826-A593-6EA9AD12F864}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4.54685694137141
+      SNAPOFFS 0
+      LENGTH 0.26232588662387
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5A84CF83-94D7-4AD6-856C-0BC5B7A42C0B}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {95102A4A-E2D0-4C70-B681-9F729D23F9B4}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.03002048686549
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {91177343-47AA-44AC-8BB3-316DD43D1297}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5F332FE3-978F-47AC-9E72-D0614C3D78CB}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.46997951308731
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1C9FE3E5-E936-4292-B25C-80E1B4A35144}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0F1CAE9B-91DD-43F4-A05A-BB3D360B66F2}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.61686663201544
+      SNAPOFFS 0
+      LENGTH 0.07308584372555
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4B14131A-9607-486C-BCFA-EA145C7F5944}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D2826E1A-FBBF-4B52-89DD-FC15008C3E1D}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 6.01683645450976
+      SNAPOFFS 0
+      LENGTH 0.26232588662388
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {DE3AE875-62E9-416F-8B53-51F2C67E4C81}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2E2F4221-D5DF-4BF3-921A-0F2B8AEFBF34}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 6.5
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A384227A-21D0-4308-9586-E9673A124317}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F34E043F-DA89-43EB-A2D2-AACE6EAC7493}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 8.5
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A7B8573E-65ED-4972-B67B-74A68C6BA65A}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5C905AFC-C0DF-4E90-A0D0-64C1F98F3354}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 12.5
+      SNAPOFFS 0
+      LENGTH 0.09187678336806
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C2CD11FF-B0A7-42E0-A36F-7B4059F45621}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {54AE1D0E-7E4F-4BE5-8B0E-9951C12D2EB0}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 12.64688711892814
+      SNAPOFFS 0
+      LENGTH 0.07308584372556
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5023CFCA-3E6F-42DB-9C4B-5DACD051D769}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1DD95C4A-AA14-459E-B0F0-CF34C687A94F}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.04685694142245
+      SNAPOFFS 0
+      LENGTH 0.26232588662386
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {30DBFD30-AD1A-47FB-A953-C841D14A21B6}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F6A7BB03-B48B-4010-A6B0-705EFC538EFE}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.53002048691269
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8BFCD865-3508-4831-B746-4BDD1DDD495C}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {014FB5EE-0D4D-4D7A-99C4-8B25A95520A4}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.96997951308731
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {DEDB0005-E5BF-40DE-85B8-2A9F0FB11B69}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {987A1AF3-08A2-46F4-9D68-3AC1AAA397C3}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 14.11686663201545
+      SNAPOFFS 0
+      LENGTH 0.07308584372555
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {86831C9C-CDAC-4B4A-BBBD-92FCCC8D44BC}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4E011139-BFC8-47CC-9A9F-FB42AFE76613}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 14.51683645450976
+      SNAPOFFS 0
+      LENGTH 0.26232588662388
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {62BF0773-A9C5-4DD5-BD6E-C972E11D04C9}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {BCE965F6-E5BA-48EE-8102-3E4B77BFB7E1}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 15
+      SNAPOFFS 0
+      LENGTH 0.28238610148337
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {80F73AD1-1E74-41FC-B74B-610A448A38C7}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A8FABA6A-1C9B-4815-85EE-15A8251D7E51}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 15.5
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F9335DC3-23E5-45DF-BE90-F3321FB4D3A7}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {54F60FF9-ADEC-49D4-8C7E-A7033442246D}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 18.04156533163041
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F89F9F91-B8F4-4E78-B445-CF0B10F7DC55}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {102E0CBB-E265-40AF-8993-A97D6944E421}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 19.05963701091241
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {61BEA2CA-727C-4FA7-9B15-AA0DBF252E13}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6F65D54F-CCF6-4BA2-8C04-A429A3DC4DE1}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 20.00949157436844
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F86EDAFD-A1B9-4656-87BB-E6D6A0473675}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A9AEC7BA-74C1-4ABC-894E-FEF05B4E7A7B}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 21
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3EF116D0-FF07-44E9-AA8F-1C95F0865357}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1F040BFB-0BD0-4BC4-B998-65F0AC0DFFBD}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+  >
+  <TRACK {1D340E97-37C8-4F8E-A663-15B80B051229}
+    NAME "sewing machine right"
+    PEAKCOL 17021561
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.01969912058598 0.808 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {1D340E97-37C8-4F8E-A663-15B80B051229}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 3.5
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {21CB735C-2C96-429E-9A42-375C4B6EC189}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0F47F00B-B711-4C8E-900B-1B9B0EDE2686}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {63A4925E-51FC-4EEC-AE27-0424C2A888F7}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {FF7E53E6-0839-4AAB-8117-EB9DB71B0F7D}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4.14688711894254
+      SNAPOFFS 0
+      LENGTH 0.07308584372556
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {13A0002E-FFAB-4606-BBCF-FD4C6A441CC2}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {81E7A4CC-1099-4FBB-834B-4E80E73F97EC}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 4.54685694137141
+      SNAPOFFS 0
+      LENGTH 0.26232588662388
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8620C72B-0640-449D-8A08-FCD920C40768}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8A190BCE-7597-43DB-9EDE-79487E5864B7}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.03002048686549
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {91BDA68D-079D-4C6F-BFE8-6FE9D5E4D9FB}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A3EBB945-FB52-4E46-B2BB-725B35CCEE21}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.46997951308731
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {778B87D6-B6CA-4C0E-9FF8-BC60BD5F9A78}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {12C0856A-587A-4C15-A71A-D1D8F4DB227E}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 5.61686663201544
+      SNAPOFFS 0
+      LENGTH 0.07308584372555
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {96218D7E-5DAA-46C2-B9FE-8C5E3D03C0E6}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E83EE217-0BEE-4B55-9E0B-F7D9B236A524}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 6.01683645450976
+      SNAPOFFS 0
+      LENGTH 0.26232588662388
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C41B00A2-9907-4EA2-8257-07A28D252DED}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {21FF7E3C-521B-49DD-86B4-993E535CE917}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 6.5
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E450C415-5C46-4288-A3C9-7601148C9C50}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5AA6073C-A479-42BA-810D-04203FDAA711}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 10.5
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E60DEB08-A92C-4127-8762-DF4D9F958858}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {309835EA-3AA9-42BC-B00A-6C9A28F6D23E}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 12.5
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {51983242-81C7-4FA6-9F09-CC36C86D0A4F}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D5EBECD6-366D-45E6-A03E-BFC3A233847D}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 12.64688711892813
+      SNAPOFFS 0
+      LENGTH 0.07308584372556
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7A38F0DC-0C52-4FE8-B764-4D02305925BC}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {23A0C714-67F5-4B76-81C6-52F135BB0176}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.04685694142245
+      SNAPOFFS 0
+      LENGTH 0.26232588662388
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F97D8084-8269-4668-B51D-4F0A587CC285}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {25B6D59F-688A-4ADA-89F6-DF30E22D043F}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.53002048691269
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {66AB9B89-605B-47CD-B9AD-3A19BF5BCB4B}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D1E31001-5D48-4940-AA21-9EFF206293B7}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 13.96997951308731
+      SNAPOFFS 0
+      LENGTH 0.09187678336808
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {900BBE8D-79C2-4075-964E-63FF280DCBB9}
+      IID 97
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.71121267720898
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A7FC3BBA-77F3-4AF6-8CAB-DFAA8721D7D8}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 14.11686663201544
+      SNAPOFFS 0
+      LENGTH 0.07308584372555
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1DCA0E63-DF7D-49CA-B0B4-5A1A95D8D911}
+      IID 81
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.80308946057705
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8DE7BE84-605F-46CF-AACA-5B3AFF2CE2B8}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 14.51683645450976
+      SNAPOFFS 0
+      LENGTH 0.26232588662386
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {AA69EE19-021E-4B59-875F-C810419BA53E}
+      IID 43
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D2FF48DA-6F15-455C-83CE-0D87C43C7560}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 15
+      SNAPOFFS 0
+      LENGTH 0.28238610148336
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {20229418-2844-4104-8440-EA10579991AC}
+      IID 47
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {56ADDA1C-5517-48EF-BA4E-3BDCE3134C2E}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 16
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {B70B9891-65DE-406E-9679-25B8101EDC8A}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {DE41FE05-ADF9-479F-8C85-DB26B3A1C2DD}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 18.54156533163041
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {BB32CAA8-E008-4C85-B15A-E2C6F0323101}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {DC176E58-1CCA-4330-8CE0-96D5896A6D68}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 19.55963701091241
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {511790C4-7899-4518-AF9E-F3844B4FB433}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {7A060A6C-B91F-4B03-B0C9-7BDF2A67B725}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 20.50949157436844
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {65BDB817-BD8A-42DD-9BCE-8426C138D4CA}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2AB763BA-8E12-401E-84C1-A2FA9F2F8A97}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 21.94933974859305
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3D5FBE6D-AA71-4D35-A484-D63B14F37F71}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {08A9B82A-E87E-40F3-B1F5-B5DC053143B1}
+      <SOURCE MP3
+        FILE "238156__jimsim__sewing-2.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 23
+      SNAPOFFS 0
+      LENGTH 0.10970800713608
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A1289F63-05D6-4AB4-9AAD-A39EC1779074}
+      IID 39
+      NAME 238156__jimsim__sewing-2.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2F583A0E-2722-4667-8371-C6531970E9EE}
+      <SOURCE SECTION
+        LENGTH 0.10970800713608
+        STARTPOS 4.6015046700729
+        OVERLAP 0.01
+        <SOURCE MP3
+          FILE "238156__jimsim__sewing-2.mp3" 1
+        >
+      >
+    >
+  >
+  <TRACK {90BB749E-CD42-42F6-B177-F9B57667F14B}
+    NAME rain
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {90BB749E-CD42-42F6-B177-F9B57667F14B}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 4.14688711894254
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F86AE1DB-F913-4374-BB89-93EBA998134A}
+      IID 32
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4C9A766C-F741-4832-B5A2-B8BD3458EEBF}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.14688711894254
+      SNAPOFFS 0
+      LENGTH 0.45461755113036
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {464A543C-B319-4A19-92C3-D031EC4FF483}
+      IID 83
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.14688711894254
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4B0F7CDD-893B-44DE-8025-A6A87C1373BA}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.6015046700729
+      SNAPOFFS 0
+      LENGTH 0.2746706342297
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3C032349-3D8D-4A24-B543-96786D27D128}
+      IID 40
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {01335612-AEC0-46EC-AAFF-27DB54307AFC}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.8761753043026
+      SNAPOFFS 0
+      LENGTH 0.26232588662387
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C11334C3-3A8C-4555-BA3A-49E2089A639A}
+      IID 44
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {90E0B75E-5F31-4739-95D3-26385058261A}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.13850119092648
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {6BFDCFCD-7EB1-4941-B8FF-BE597CC9A7AD}
+      IID 48
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {821A4B59-7CD6-49EA-8E5C-31E7974D376D}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.42088729240982
+      SNAPOFFS 0
+      LENGTH 0.10338726119882
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C372F104-BE4B-4982-83B0-890F70752E4A}
+      IID 52
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.42088729240982
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CD785A86-560C-4F07-823C-FEAB5FE80853}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.52427455360865
+      SNAPOFFS 0
+      LENGTH 0.12009958050759
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {2D5E8CB3-2555-4658-B111-6CC4B0F4F283}
+      IID 56
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.52427455360865
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1C2B83AC-1C98-4F05-B7E4-A91B6E2FE775}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.64437413411624
+      SNAPOFFS 0
+      LENGTH 0.04809760562183
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4C3F3C6F-7144-470F-8594-FAE502BB521C}
+      IID 76
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.64437413411624
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {28C3AB2F-FE53-442B-A694-018DF8FD4FB1}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.69247173973807
+      SNAPOFFS 0
+      LENGTH 54.45922894053404
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7B348A53-E972-4354-B2FC-E1F3CCA5D373}
+      IID 60
+      NAME 531947__straget__the-rain-falls-against-the-parasol.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.69247173973807
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {31CF507D-B011-4F6D-A7C0-4366FAFBEEA7}
+      <SOURCE WAVE
+        FILE "531947__straget__the-rain-falls-against-the-parasol.wav"
+      >
+    >
+  >
+  <TRACK {B88FC15A-0997-432E-96C5-2F5B8ACFF69A}
+    NAME teelöffel?
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {B88FC15A-0997-432E-96C5-2F5B8ACFF69A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 4.14688711894254
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {BA03785B-7BB6-4A89-9312-0440CC0995BF}
+      IID 33
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {609BC3BA-2E6F-4596-917A-D41CA3D22108}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.14688711894254
+      SNAPOFFS 0
+      LENGTH 0.45461755113036
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4A8BCD23-0D22-4B53-A9B1-D095FD7F8888}
+      IID 84
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.14688711894254
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4EDB2386-666E-40A7-9911-0F9F70570269}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.6015046700729
+      SNAPOFFS 0
+      LENGTH 0.2746706342297
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F2FDEA6F-FF2F-464B-906D-C2D59168F602}
+      IID 41
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6C9A1277-37BB-45D7-8935-F222DB3FF086}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.8761753043026
+      SNAPOFFS 0
+      LENGTH 0.26232588662387
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A5F9BC13-E97C-4144-A2FC-2A46B2A7154F}
+      IID 45
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {AB983842-83EF-40F2-9BD3-B7F6EC1DB1B6}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.13850119092648
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1D7BA26B-829C-4899-AAF0-3A2F74DB9714}
+      IID 49
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9F5D1D93-8869-452A-A77F-13EA0B4B344B}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.42088729240982
+      SNAPOFFS 0
+      LENGTH 0.10338726119882
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {68B53B2A-E044-4330-AD5F-7D1361C7BBCD}
+      IID 53
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.42088729240982
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6D36D46C-9D13-4A49-A449-F63195FD01DB}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.52427455360865
+      SNAPOFFS 0
+      LENGTH 0.12009958050759
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F09F7ED9-0998-4DCB-AAB8-359C6B74588C}
+      IID 57
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.52427455360865
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {984CEB1E-979A-4127-B495-029E456E9C69}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.64437413411624
+      SNAPOFFS 0
+      LENGTH 0.04809760562183
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {2AB75359-0A45-4051-896F-62342D2DFBF7}
+      IID 77
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.64437413411624
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {71286443-9660-44AC-B539-9BD7141A8EA1}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.69247173973807
+      SNAPOFFS 0
+      LENGTH 34.52544492692859
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A15162ED-5679-4AC5-89E6-98DF43E32D6A}
+      IID 61
+      NAME 463431__luongthenguyen1__glass-and-metal.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.69247173973807
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {129DAF8A-7248-4257-9C04-980BAE6CAB72}
+      <SOURCE WAVE
+        FILE "463431__luongthenguyen1__glass-and-metal.wav"
+      >
+    >
+  >
+  <TRACK {EC96CDB0-1A97-4C97-8F4A-040A5506DB3A}
+    NAME 432350__ericlichtenberg__liquid-pouring-no-ice
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1.00000000000013 0 -1 -1 1
+    MUTESOLO 1 2 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {EC96CDB0-1A97-4C97-8F4A-040A5506DB3A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 4.14688711894254
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {6A87DA14-83A4-4409-9A17-EB4C4BD188BC}
+      IID 36
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {177199EB-7633-4F0D-B382-2DBD03BE03A9}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.14688711894254
+      SNAPOFFS 0
+      LENGTH 0.45461755113036
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5321E20B-4F0B-4CCE-82C8-B8E3A5A3D42D}
+      IID 85
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.14688711894254
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {70655668-6354-4784-9449-59BB80B9CDD3}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.6015046700729
+      SNAPOFFS 0
+      LENGTH 0.2746706342297
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {0BB472DD-CAA3-4D64-A8AB-D497ED275B86}
+      IID 42
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.6015046700729
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F31F04C9-1DFF-4253-A616-2153E267DF64}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 4.8761753043026
+      SNAPOFFS 0
+      LENGTH 0.26232588662387
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7D5585BA-2FCA-4E1A-A0C9-1E1BB76E2558}
+      IID 46
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 4.8761753043026
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6EABD505-CE33-42F7-A9DD-07EA99F996E9}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.13850119092648
+      SNAPOFFS 0
+      LENGTH 0.28238610148335
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {BB817144-A178-4D5D-9699-DB39140F4CDB}
+      IID 50
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.13850119092648
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A4CF6488-B56A-400C-933F-3EB68E314D9C}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.42088729240982
+      SNAPOFFS 0
+      LENGTH 0.10338726119882
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {23A96DDB-DDCB-4200-B99D-84520B6C919D}
+      IID 54
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.42088729240982
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {BD045EA4-FA2E-471E-BAE0-5352C2E16C7A}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.52427455360865
+      SNAPOFFS 0
+      LENGTH 0.12009958050759
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {9DDEE56F-4B84-40BC-A2C1-529AE41DF65A}
+      IID 58
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.52427455360865
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1779B7E1-96A8-4294-BE3D-2C00CDAA288D}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.64437413411624
+      SNAPOFFS 0
+      LENGTH 0.04809760562183
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {664B54EE-AE3A-4C84-ABD0-6877378BCC6E}
+      IID 78
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.64437413411624
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {62D515FC-5F53-45A3-A2D5-72B566223226}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+    <ITEM
+      POSITION 5.69247173973807
+      SNAPOFFS 0
+      LENGTH 4.51532871377667
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {324B549B-3D83-490A-A314-643074A11CAC}
+      IID 62
+      NAME 432350__ericlichtenberg__liquid-pouring-no-ice.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 5.69247173973807
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8E3DE317-0DCF-48DF-AB32-C4C4609B5CDC}
+      <SOURCE WAVE
+        FILE "432350__ericlichtenberg__liquid-pouring-no-ice.wav"
+      >
+    >
+  >
+>
