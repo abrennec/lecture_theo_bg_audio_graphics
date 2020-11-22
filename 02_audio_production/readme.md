@@ -15,6 +15,7 @@ Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film Univers
   - [Digital Audio Signals](#digital-audio-signals)
   - [Digitization](#digitization)
     - [Self-study Material](#self-study-material)
+      - [Lecture Videos](#lecture-videos)
   - [Digital Audio Signal Path](#digital-audio-signal-path)
 - [Audio Production](#audio-production)
   - [Spatial Audio](#spatial-audio)
@@ -109,6 +110,25 @@ Please check out these materials to understand what happens during digitization 
 
 - [Music Technology 101: Sampling rate and bit depth explained](https://www.youtube.com/watch?v=zC5KFnSUPNo)
 - **resources/tbag_digitization.pdf**
+
+#### Lecture Videos
+
+```diff 
+- Two lecture videos updated
+```
+
+The following video recaps and zooms in on some aspects of digitization following the lectuer slides **resources/tbag_digitization.pdf**
+
+- [Link to Digitization video](https://owncloud.gwdg.de/index.php/s/viV4nSWjtkr9fEN)
+  - ~ 24 mins
+
+
+This video briefly shows you how to change sampling rate and bit depth in Reaper and talks about quantization in the context of virtual instruments and adding Midi notes to a track:
+- [Link to Reaper video](https://owncloud.gwdg.de/index.php/s/CkJOgU6Ip8Hessl)
+  - ~ 10 mins
+
+![screencast](imgs/screencast.png)
+
 
 Additionally, the following two videos are highly recommended to dive deeper into the process but they require additional knowledge that we are not going to address here. Nevertheless, the lectures very niceley illustrate the sampling and quantization processes:
 - [The sampling theorem](https://www.youtube.com/watch?v=vrXGaFV1AmE)
@@ -304,9 +324,11 @@ Listen to music carefully. Try to identify panning and dynamic effects. Bring ex
 
 ### Miro Board
 
-Please use this Miro board to collect questions, feedback and useful information that you have stumbled across while working on the project or reading the script:
+Please use [this Miro board to collect questions, feedback and useful information](https://miro.com/app/board/o9J_kjnEjFo=/?moveToWidget=3074457351867290298&cot=12) that you have stumbled across while working on the project or reading the script:
 
-**Link to be updated**
+```diff 
+- Link updated!
+```
 
 The miro board also includes one frame for review and recap where I would like you to collect your thoughts so we can keep track of open issues and aspects that need our further attention :-)
 
