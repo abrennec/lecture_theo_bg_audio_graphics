@@ -2,4 +2,4 @@
 
 For my assignment I used sonic-pi:
 
-Please refer to my [Git-Repo](https://github.com/thelayeredmind/winds_of_kyoto)
+Please refer to my [Git-Repo](https://github.com/seb-ctech/winds_of_kyoto)
