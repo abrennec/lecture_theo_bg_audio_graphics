@@ -1,0 +1,3 @@
+The concept for this project was to create a jungle soundscape that sounds like it was recorded on an alien planet. I wanted to experiment with animal-like sound effects, and make them appear both familiar and disturbing, by distorting them. The soundscape instills a growing feeling of tension as a creature moves closer and closer to the listener. After a growl, the audio cuts off to white noise. 
+
+In order to create the project I used multiple samples downloaded from freesound.org and used various effect within reaper such as volume adjustmen, panning, pitch modulation, noise reduction, playback speed, reversing audio, white noise and an EQ.
