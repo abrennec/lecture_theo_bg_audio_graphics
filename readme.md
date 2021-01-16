@@ -122,10 +122,10 @@ At the end of the lecture, a final exercise will allow you to combine both field
    3. Audio rendering 
    4. Sound properties
 2. 18.11.20 - **Audio Production** (4 hrs)
-   1. Digital audio
-   2. Stereo soundscape
-   3. Dynamics and panning
-   4. Audio FX
+   1. Digital audio and signal path
+   2. Production steps and process
+   3. Spatial audio in stereo
+   4. Dynamics and audio FX
 3. 25.11.20 - **Sound Synthesis** (4 hrs)
    1. Sound generation and basic waveforms
    2. Sound synthesis
@@ -136,29 +136,29 @@ At the end of the lecture, a final exercise will allow you to combine both field
    2. Generating waveforms
    3. Audio in/out
    4. Interactive audio application
-5. 09.12.20 - **Audio projects** (2 hrs)
+5. 16.12.20 - **Audio projects** (2 hrs)
    1. Projects presentation
-6. 16.12.20 - **Graphics Rendering** (4 hrs)
+6. 13.01.20 - **Graphics Rendering** (4 hrs)
    1. Computer graphics history
-   2. Graphics, images, textures
-   3. Graphics rendering pipeline
-   4. Local, global, camera, and screen spaces
-7. 13.01.20 - **Transformations** (4 hrs)
-   1. 3D models, vertices and vertex meshes
-   2. Affine transformations
-   3. Projection
-   4. OpenGL and WebGL
-8. 20.01.20 - **Shader programming I** (4 hrs)
+   2. Graphics rendering pipeline
+   3. Euclidian geometry and vertices
+   4. 3D geometric objects and triangles
+7. 20.01.20 - **Transformations** (4 hrs)
+   1. Martrices and matrix multiplication
+   2. Geometric transformations
+   3. Homogeneous coordinates
+   4. Graphics rendering pipeline revisited
+8. 27.01.20 - **Shader programming I** (4 hrs)
    1. The programmable rendering pipeline
    2. Vertex shaders and fragment shaders
    3. OpenGL Shader Language
    4. Vertex shader manipulations
-9.  27.01.20 - **Shader programming II** (4 hrs)
+9.  03.02.20 - **Shader programming II** (4 hrs)
     1. Uniforms and attributes
     2. Vertex and texture coordinates
     3. Shapes and 3D
     4. Simple image effects
-10. 03.02.20 - **Graphics projects**
+10. TBD - **Graphics projects**
     1. Projects presentation
     2. Final Exercise + course wrap-up (2 hrs)
 
