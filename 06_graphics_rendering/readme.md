@@ -103,8 +103,8 @@ Can you find the pipeline in your code?
 
 The following lecture video introduces you to vector spaces and euclidian geometry in general. Check out the video presentation at the following address and the accompanying slides in the resources folder:
 
-- [DEAD Link to vector spaces video INPUT FOLLOWS]()
-- ~ XX mins
+- [Link to vector spaces video](https://owncloud.gwdg.de/index.php/s/aCLWUc6Ci2YudFu)
+- ~ 35 mins
 
 ![screencast](imgs/screencast.png)
 
