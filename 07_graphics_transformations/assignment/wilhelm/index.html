@@ -31,7 +31,16 @@
     </section>
     <section>
         <h3> Sketch 4 </h3>
-        <h4>  </h4>
+        <h4> What is going on here on a general level? </h4>
+        <ol>
+            <li> First we get the distance to the mouse on the canvas </li>
+            <li> We iterate from 0 to the mouse point by some interval </li>
+            <li> This way we calculate the distance between the mouse and the center, by adding the variable offset (i, j) to the center </li>
+            <li> The stroke color is also relative to the mouse position and by the iteration in the loop </li>
+            <li> Then we translate by that amount while also setting the scale of the rect by a ratio determined by the distance. </li>
+            <li> For every value of "i" and "j" we draw two boxes and rotating them in opposite directions </li>
+            <li> Finally we increase the angle to animate the rotation transformation each frame </li>
+        </ol>
         <div id="s4">
         </div>
     </section>

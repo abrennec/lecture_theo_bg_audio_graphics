@@ -16,6 +16,18 @@ const sketch4 = (p) => {
   // QUESTION:
   // What is going on here on a general level? Add some comments.
 
+
+  /*
+
+  1. First we get the distance to the mouse on the canvas
+  2. We iterate from 0 to the mouse point by some interval
+  3. This way we calculate the distance between the mouse and the center, by adding the variable offset (i, j) to the center
+  4. The stroke color is also relative to the mouse position and by the iteration in the loop
+  5. Then we translate by that amount while also setting the scale of the rect by a ratio determined by the distance.
+  6. For every value of "i" and "j" we draw two boxes and rotating them in opposite directions
+  7. Finally we increase the angle to animate the rotation transformation each frame
+
+  */
   for (let i = 50; i < p.mouseX; i += 50) {
     for (let j = 50; j < p.mouseY; j += 50) {
       p.noFill()
