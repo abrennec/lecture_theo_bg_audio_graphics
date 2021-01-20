@@ -47,12 +47,11 @@ const sketch5 = (p) => {
                   p.cos(t) * p.sin(t) * p.cos(t) + p.sin(t) * p.sin(t), p.sin(t) * p.sin(t) * p.cos(t) - p.cos(t) * p.sin(t), p.cos(t) * p.cos(t), 0.0,
                   0.0, -80.0, 0.0, 1.0)
     p.torus(40 + vol * 200, 10, 6);
-    p.resetMatrix();
     const a = angle;
     p.applyMatrix(p.cos(a), 0, -p.sin(a), 0,
                   p.sin(a) * p.sin(a), p.cos(a), p.cos(a) * p.sin(a), 0,
                   -p.sin(a) * p.sin(a), -p.sin(a), p.cos(a) * p.cos(a), 0,
-                  0, 0, 0, 0)
+                  0, 0, 0, 1.0)
     p.torus(20, 5, 6);
     p.resetMatrix();
 
@@ -71,8 +70,6 @@ const sketch5 = (p) => {
     p.resetMatrix();
 
     //3
-    p.push()
-    p.translate(100, 30);
     const s = p.sin(angle);
     p.applyMatrix(p.cos(s) * p.cos(s), p.sin(s) * p.cos(s), -p.sin(s), 0.0,
                   p.cos(s) * p.sin(s) * p.sin(s) - p.sin(s) * p.cos(s), p.cos(s) * p.sin(s) * p.cos(s) + p.sin(s) * p.sin(s), p.cos(s) * p.sin(s), 0.0,
@@ -82,7 +79,7 @@ const sketch5 = (p) => {
     p.applyMatrix(p.cos(-a), 0, -p.sin(-a), 0,
                   p.sin(-a) * p.sin(-a), p.cos(-a), p.cos(-a) * p.sin(-a), 0,
                   -p.sin(-a) * p.sin(-a), -p.sin(-a), p.cos(-a) * p.cos(-a), 0,
-                  0, 0, 0, 0)
+                  0, 0, 0, 1.0)
     p.torus(20, 8, 6);
     p.pop()
 
