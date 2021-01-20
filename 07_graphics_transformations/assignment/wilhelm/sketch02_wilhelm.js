@@ -19,12 +19,23 @@ const sketch2 = (p) => {
     
     p.draw = function() {
       p.background(220);
-    
+      
+      p.push();
+      p.translate(0, 50);
+      p.rotate(-p.PI / 6);
       p.beginShape();
       vectors.forEach(v => {
         p.vertex(v.x, v.y);
       }); 
       p.endShape(p.CLOSE);
+      p.pop();
+
+      p.push();
+      p.translate(300, 120);
+      p.rotate(-p.PI / 6);
+      p.fill(205, 130, 150);
+      p.rect(0,0,50,50);
+      p.pop();
     }
   }
   

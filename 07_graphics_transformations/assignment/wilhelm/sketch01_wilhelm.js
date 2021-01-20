@@ -33,7 +33,7 @@ const sketch1 = (p) => {
     p.push();
     p.translate(300, 120);
     p.fill(205, 130, 150);
-    p.ellipse(0,0,50,50);
+    p.rect(0,0,50,50);
     p.pop();
   }
 }

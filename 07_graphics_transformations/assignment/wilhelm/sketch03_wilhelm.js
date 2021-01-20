@@ -13,7 +13,7 @@ const sketch3 = (p) => {
   let vectors;
 
   p.setup = function() {
-    p.createCanvas(100, 100, WEBGL);
+    p.createCanvas(100, 100, p.WEBGL);
     p.noFill();
   
     vectors  = [
@@ -26,21 +26,21 @@ const sketch3 = (p) => {
   
   p.draw = function() {
     p.background(200);
-    p.rotateY(PI / 6);
-    p.stroke(153);
-    p.box(35);
-    let rad = millis() / 1000;
+    
+    let rad = p.millis() / 1000;
     // Set rotation angles
-    let ct = cos(rad);
-    let st = sin(rad);
+    let ct = p.cos(rad);
+    let st = p.sin(rad);
+    p.stroke(205, 130, 150);
+    p.box(35);
     // Matrix for rotation around the Y axis
-    p.applyMatrix(ct, 0.0,  st,  0.0,
-                  0.0, 1.0, 0.0,  0.0,
-                  -st, 0.0,  ct,  0.0,
-                  0.0, 0.0, 0.0,  1.0);
+    p.applyMatrix(ct, 0.0,  st,  0.005,
+                  0.0, 1.0, 0.0, 0.005,
+                  -st, 0.0,  ct, 0.005,
+                  0.0, 0.0, 0.0, 1.0);
     p.stroke(255);
-    box(50);
+    p.box(50);
   }
 }
 
-const s3 = new p5(sketch2, "s3");
+const s3 = new p5(sketch3, "s3");
