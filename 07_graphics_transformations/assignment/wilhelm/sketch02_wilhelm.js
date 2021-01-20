@@ -21,8 +21,8 @@ const sketch2 = (p) => {
       p.background(220);
       
       p.push();
-      p.translate(0, 50);
-      p.rotate(-p.PI / 6);
+      p.translate(20, 50);
+      p.rotate(p.PI / 6);
       p.beginShape();
       vectors.forEach(v => {
         p.vertex(v.x, v.y);
