@@ -116,14 +116,16 @@ Finally, you can also specifie and apply a matrix yourselves and I would like yo
 ## Additional Material
 
 An excellent practical approach to the mathematics of computer graphics was created by Dan Shiffman and is accessible online:
-- Daniel Shiffman's p5 tutorials on transformations:
+- TheCodingTrain on transformations:
   - [Part 1](https://www.youtube.com/watch?v=o9sgjuh-CBM)
   - [Part 2](https://www.youtube.com/watch?v=pkHZTWOoTLM)
   - [Part 3](https://www.youtube.com/watch?v=IVMvq9rd8dA)
   - [3D rendering](https://www.youtube.com/watch?v=p4Iz0XJY-Qk)
   - [Matrix multiplication for 3D rendering](https://www.youtube.com/watch?v=tzsgS19RRc8)
 
-Another excellent approach to linear algebra and matrices was created by and is accessible online:
+Another excellent approach to linear algebra and matrices was created by Grant Sanderson and is accessible online:
+
+- [3blue1brown's Essence of linear algebra](https://www.3blue1brown.com/essence-of-linear-algebra-page)
 
 
 --- 
