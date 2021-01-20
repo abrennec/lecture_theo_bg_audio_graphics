@@ -36,44 +36,55 @@ const sketch5 = (p) => {
       // In the push() and pop() settings below, several rotation 
       // transformations are excuted. 
       // 1) How would you have to combine the rotation matrices into one?
+      //  By Matrix multiplication or in p5js with rotate(x-angle, y-angle, z-angle)
       // 2) How would the applyMatrix() function look like?
+      // See implementation below
 
     //1
-    p.push()
-    p.translate(0, -80);
-    p.rotateX(p.tan(angle));
-    p.rotateY(p.tan(angle));
-    p.rotateZ(p.tan(angle));
+    const t = p.tan(angle);
+    p.applyMatrix(p.cos(t) * p.cos(t), p.sin(t) * p.cos(t), -p.sin(t), 0.0,
+                  p.cos(t) * p.sin(t) * p.sin(t) - p.sin(t) * p.cos(t), p.cos(t) * p.sin(t) * p.cos(t) + p.sin(t) * p.sin(t), p.cos(t) * p.sin(t), 0.0,
+                  p.cos(t) * p.sin(t) * p.cos(t) + p.sin(t) * p.sin(t), p.sin(t) * p.sin(t) * p.cos(t) - p.cos(t) * p.sin(t), p.cos(t) * p.cos(t), 0.0,
+                  0.0, -80.0, 0.0, 1.0)
     p.torus(40 + vol * 200, 10, 6);
-    p.rotateY(angle);
-    p.rotateZ(angle);
+    p.resetMatrix();
+    const a = angle;
+    p.applyMatrix(p.cos(a), 0, -p.sin(a), 0,
+                  p.sin(a) * p.sin(a), p.cos(a), p.cos(a) * p.sin(a), 0,
+                  -p.sin(a) * p.sin(a), -p.sin(a), p.cos(a) * p.cos(a), 0,
+                  0, 0, 0, 0)
     p.torus(20, 5, 6);
-    p.pop()
+    p.resetMatrix();
 
     //2
-    p.push()
-    p.translate(-100, 30);
-    p.rotateX(cos(angle));
-    p.rotateY(cos(angle));
-    p.rotateZ(cos(angle));
+    const c = p.cos(angle);
+    p.applyMatrix(p.cos(c) * p.cos(c), p.sin(c) * p.cos(c), -p.sin(c), 0.0,
+                  p.cos(c) * p.sin(c) * p.sin(c) - p.sin(c) * p.cos(c), p.cos(c) * p.sin(c) * p.cos(c) + p.sin(c) * p.sin(c), p.cos(c) * p.sin(c), 0.0,
+                  p.cos(c) * p.sin(c) * p.cos(c) + p.sin(c) * p.sin(c), p.sin(c) * p.sin(c) * p.cos(c) - p.cos(c) * p.sin(c), p.cos(c) * p.cos(c), 0.0,
+                  -100.0, 30.0, 0.0, 1.0)
     p.torus(40 + vol * 200, 10, 6);
-    p.rotateY(angle);
-    p.rotateZ(angle);
+    p.applyMatrix(p.cos(a), 0, -p.sin(a), 0,
+                  p.sin(a) * p.sin(a), p.cos(a), p.cos(a) * p.sin(a), 0,
+                  -p.sin(a) * p.sin(a), -p.sin(a), p.cos(a) * p.cos(a), 0,
+                  0, 0, 0, 0)
     p.torus(20, 7, 6);
-    p.pop()
+    p.resetMatrix();
 
     //3
     p.push()
     p.translate(100, 30);
-    p.rotateX(p.sin(angle));
-    p.rotateY(p.sin(angle));
-    p.rotateZ(p.sin(angle));
+    const s = p.sin(angle);
+    p.applyMatrix(p.cos(s) * p.cos(s), p.sin(s) * p.cos(s), -p.sin(s), 0.0,
+                  p.cos(s) * p.sin(s) * p.sin(s) - p.sin(s) * p.cos(s), p.cos(s) * p.sin(s) * p.cos(s) + p.sin(s) * p.sin(s), p.cos(s) * p.sin(s), 0.0,
+                  p.cos(s) * p.sin(s) * p.cos(s) + p.sin(s) * p.sin(s), p.sin(s) * p.sin(s) * p.cos(s) - p.cos(s) * p.sin(s), p.cos(s) * p.cos(s), 0.0,
+                  100.0, 30.0, 0.0, 1.0)
     p.torus(40 + vol * 200, 10, 6);
-    p.rotateY(-angle);
-    p.rotateZ(-angle);
+    p.applyMatrix(p.cos(-a), 0, -p.sin(-a), 0,
+                  p.sin(-a) * p.sin(-a), p.cos(-a), p.cos(-a) * p.sin(-a), 0,
+                  -p.sin(-a) * p.sin(-a), -p.sin(-a), p.cos(-a) * p.cos(-a), 0,
+                  0, 0, 0, 0)
     p.torus(20, 8, 6);
     p.pop()
-
 
     angle += 0.003
   }
