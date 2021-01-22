@@ -1,0 +1,1053 @@
+<REAPER_PROJECT 0.1 "6.15/OSX64" 1608038052
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 1
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 600
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 467
+  ZOOM 1.25054216546808 0 0
+  VZOOMEX 6 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "" ""
+  <RECORD_CFG
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN ""
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 0
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 8 0
+  SELECTION2 8 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 -1 -1 -1 0 0 0 -1 -1 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 0.77874018757665 0 -1 -1 1
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    EGUID {ED1F62E5-5DFD-9449-9F91-F395D5613EDA}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {10CB0EEA-7415-A145-8E8C-25ED4217F1E1}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {09419E5A-70FA-AD4F-84A1-A8D10A52B56F}
+    NAME 99955__cgeffex__bumble-bee-long
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 2.23756723283818 -0.24 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {09419E5A-70FA-AD4F-84A1-A8D10A52B56F}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 8
+      SNAPOFFS 0
+      LENGTH 28
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5.1 11.083684 0 5.1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {DCD8076C-C513-1F45-B0EB-B70C6CD48CD9}
+      IID 10
+      NAME 99955__cgeffex__bumble-bee-long.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 104.30401360544218
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {C49A3858-69D1-F042-A6A1-E8ECBFD06525}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/99955__cgeffex__bumble-bee-long.wav"
+      >
+    >
+    <ITEM
+      POSITION 36
+      SNAPOFFS 0
+      LENGTH 20.69370380495378
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 5.1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {08074CE2-7409-B241-8B8E-E14117884A99}
+      IID 32
+      NAME 99955__cgeffex__bumble-bee-long.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 26.5
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {DB425797-884A-B84C-AC3D-38667B3C6C8D}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/99955__cgeffex__bumble-bee-long.wav"
+      >
+    >
+    <ITEM
+      POSITION 56.69370380495378
+      SNAPOFFS 0
+      LENGTH 47.30629619504622
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 5.1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5BC4C484-18FA-764B-9F42-1A22229A5A66}
+      IID 39
+      NAME 99955__cgeffex__bumble-bee-long.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 47.19370380495378
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CEC32215-1DC4-5943-9F89-72B8C77B6A70}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/99955__cgeffex__bumble-bee-long.wav"
+      >
+    >
+    <ITEM
+      POSITION 344
+      SNAPOFFS 0
+      LENGTH 32
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 5.1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3B89A7FA-F950-6C49-B607-D2329FB31252}
+      IID 39
+      NAME 99955__cgeffex__bumble-bee-long.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 55.19370380495378
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {775631AD-D707-3D4B-ABAE-9F475D3E7698}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/99955__cgeffex__bumble-bee-long.wav"
+      >
+    >
+  >
+  <TRACK {0BFC1CD4-A411-2D49-9AC3-CA015F9436D1}
+    NAME 382931__frankum__vintage-techno-house-loop-110bpm
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.03197459428437 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {0BFC1CD4-A411-2D49-9AC3-CA015F9436D1}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 36
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 0 9.361347 0 0 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      BEAT 1
+      SEL 0
+      IGUID {1189AFB8-A953-AD44-997E-A8C72BFF5B6A}
+      IID 19
+      NAME 382931__frankum__vintage-techno-house-loop-110bpm.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1.09090909090909 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {46959846-B56E-874B-B9F0-6AD6107F47F2}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/music_chill/382931__frankum__vintage-techno-house-loop-110bpm.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 36
+      SNAPOFFS 0
+      LENGTH 8
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 0 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      BEAT 1
+      SEL 0
+      IGUID {4CE2415B-CFEB-334C-94DA-3869395EC4F0}
+      IID 33
+      NAME 382931__frankum__vintage-techno-house-loop-110bpm.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 39.27272727272724
+      PLAYRATE 1.09090909090909 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {AC2EB3E3-067A-274D-BDC4-26C5ADF4F337}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/music_chill/382931__frankum__vintage-techno-house-loop-110bpm.mp3" 1
+      >
+    >
+  >
+  <TRACK {CC5471A5-5281-3440-953F-BE71AB6D5F99}
+    NAME beehive_normallife
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.83627504012513 0.256 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 1
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {CC5471A5-5281-3440-953F-BE71AB6D5F99}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 32
+      SNAPOFFS 0
+      LENGTH 4
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 3.99 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F94E76F6-BAA4-3049-97E1-D255F6B952E7}
+      IID 13
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E84561E2-389D-9A4B-9452-C9A89CB6BB97}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 36
+      SNAPOFFS 0
+      LENGTH 20.69370380495378
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E0181B90-22AA-CD40-AEF5-A7C50596C069}
+      IID 34
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {60CA27CB-EE2D-834D-908A-56A20B3FC013}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 56.69370380495378
+      SNAPOFFS 0
+      LENGTH 53.12576645576814
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {0A10EA9B-3A03-5140-A6A4-DC958D41045F}
+      IID 40
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 24.69370380495378
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2B87FE3C-908E-F246-928F-14A4671BAEB4}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 109.81947026072191
+      SNAPOFFS 0
+      LENGTH 7.34751760284922
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1C8096EC-F88C-D941-8217-497C01654C42}
+      IID 44
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 77.81947026072191
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A9A4FC52-BC3F-1549-8679-4BA1B490DCA9}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 117.16698786357114
+      SNAPOFFS 0
+      LENGTH 92.83242256726788
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {D26F27E7-9894-434E-83DF-A3D4102A8262}
+      IID 48
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 85.16698786357114
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0F7316A1-2CCF-FD47-A7BC-C09EA9116230}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 448
+      SNAPOFFS 0
+      LENGTH 17
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 2 1.533125 0 2 0 1
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8A6932DF-83A7-B547-BCBF-9CE070277A3E}
+      IID 34
+      NAME beehive_normallife.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 4
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {08AD4FE6-55ED-4149-A679-6299025ED399}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/beehive_normallife.mp3" 1
+      >
+    >
+  >
+  <TRACK {D7CFA130-EB43-CD49-AD12-AECA6C9BB961}
+    NAME protest_chatter
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 3.98107170553497 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {D7CFA130-EB43-CD49-AD12-AECA6C9BB961}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT -215 1383 724 387
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+    >
+    <ITEM
+      POSITION 48
+      SNAPOFFS 0
+      LENGTH 138
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0.2
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {EB1C3E70-B462-0F4A-997A-C61EB49F00B2}
+      IID 22
+      NAME T15.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {739B28E0-8FBC-9E48-A033-A5EC2EC3C35C}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T15.WAV"
+      >
+    >
+    <ITEM
+      POSITION 198
+      SNAPOFFS 0
+      LENGTH 206.99997916666655
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {BA7CAF81-8D36-A844-8B98-BA9195606AA0}
+      IID 90
+      NAME T15.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 150
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4DB85BDB-0116-7240-9B0D-1C7387EA81FF}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T15.WAV"
+      >
+    >
+  >
+  <TRACK {C06684E3-270B-5C43-A12D-7C963DC9993A}
+    NAME syreny
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1.33040597555447 0.224 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {C06684E3-270B-5C43-A12D-7C963DC9993A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 132
+      SNAPOFFS 0
+      LENGTH 20.69370380495377
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.14 0 1 0 0.1
+      FADEOUT 1 0.19992 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C4443BD4-0659-C841-84FB-B306AE2F5C20}
+      IID 35
+      NAME T02A.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 36
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {734EF575-7B34-4042-A436-82E01F9A05FC}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T02A.WAV"
+      >
+    >
+    <ITEM
+      POSITION 168
+      SNAPOFFS 0
+      LENGTH 18
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 1.881198 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5E7E4BDA-90A0-304A-ADAF-5FCED2FD2FF5}
+      IID 45
+      NAME T02A.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 109.81947026072191
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E8312F47-AAF1-C64A-A458-6A00DB95AABB}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T02A.WAV"
+      >
+    >
+    <ITEM
+      POSITION 198
+      SNAPOFFS 0
+      LENGTH 4
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.468177 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {D1A63DFA-CE2D-F44F-BDE6-B64E1617CC02}
+      IID 92
+      NAME T02A.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 139.81947026072191
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {55585B89-D497-874A-86CF-6399291D83D5}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T02A.WAV"
+      >
+    >
+  >
+  <TRACK {AEA0AE1C-4489-CA46-B6B1-35048E69EFC6}
+    NAME "chill techno2"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.77445705324066 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {AEA0AE1C-4489-CA46-B6B1-35048E69EFC6}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 68
+      SNAPOFFS 0
+      LENGTH 48.00000868055557
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 4 1.099778 0 4 0 1
+      FADEOUT 2 24.529499 0 2 0 -1
+      MUTE 0 0
+      BEAT 1
+      SEL 0
+      IGUID {B731D0D8-A534-C543-A7A7-B071CD45B68E}
+      IID 19
+      NAME 382931__frankum__vintage-techno-house-loop-110bpm.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1.09090909090909 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {7395773E-EB75-F14E-A963-60BADA3D76D8}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/music_chill/382931__frankum__vintage-techno-house-loop-110bpm.mp3" 1
+      >
+    >
+  >
+  <TRACK {A62DC2D8-5BEA-F14E-95C8-1FA738184168}
+    NAME protest_sound
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A62DC2D8-5BEA-F14E-95C8-1FA738184168}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 213.70891156464904
+      SNAPOFFS 0
+      LENGTH 38.29108843535096
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 2.898267 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {38C8BB97-01A7-8B41-9566-B19E45D9B974}
+      IID 53
+      NAME protest_sound.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {700D2E2F-55F2-414C-A0B9-DF21D84E23DD}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/protest_sound.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 258.46607461664723
+      SNAPOFFS 0
+      LENGTH 9.53392538335277
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 5 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {80BC2182-1749-8D4D-9E45-9247ED8ED82A}
+      IID 100
+      NAME protest_sound.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 44.75716305199819
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9D78CF30-2A0E-544F-B092-CDD108E428DF}
+      <SOURCE MP3
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/protest_sound.mp3" 1
+      >
+    >
+  >
+  <TRACK {6563EAAD-7196-8F40-B714-0CB0264CC96D}
+    NAME lots-of-sirens-and-horns
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 3.41178320896894 -0.064 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {6563EAAD-7196-8F40-B714-0CB0264CC96D}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 184
+      SNAPOFFS 0
+      LENGTH 88
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 3 1.566619 0 3 0 -1
+      FADEOUT 1 11.331725 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E1494288-6083-B04E-81F5-E73C32011804}
+      IID 52
+      NAME lots-of-sirens-and-horns.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {909B0992-C6C9-4949-915E-647825F78E64}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/lots-of-sirens-and-horns.wav"
+      >
+    >
+    <ITEM
+      POSITION 308
+      SNAPOFFS 0
+      LENGTH 8
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.1 0 3 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C23DB4EE-2DC5-B94F-86FF-C2E9B74FE894}
+      IID 102
+      NAME lots-of-sirens-and-horns.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 28
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6181FBCC-E575-DC4F-81A2-309B6AE3241F}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/lots-of-sirens-and-horns.wav"
+      >
+    >
+    <ITEM
+      POSITION 320
+      SNAPOFFS 0
+      LENGTH 4
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.1 0 3 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7C4A03D8-C04E-A246-9D1D-4481E8220277}
+      IID 102
+      NAME lots-of-sirens-and-horns.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 28
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9836A3AA-B664-BE45-961B-E1D6DBFC1F65}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/lots-of-sirens-and-horns.wav"
+      >
+    >
+    <ITEM
+      POSITION 340
+      SNAPOFFS 0
+      LENGTH 8
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 3 0 0
+      FADEOUT 0 8 0 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {4C5E9C99-7F42-3141-98CB-4C0BF143A887}
+      IID 102
+      NAME lots-of-sirens-and-horns.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 28
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E0C9B786-08C6-724A-AB7E-412D787E6DCE}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/protests/lots-of-sirens-and-horns.wav"
+      >
+    >
+  >
+  <TRACK {4251B1B7-400B-5949-920C-941BACF0EA80}
+    NAME bee-hive-and-swarm
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 2.53283180894024 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {4251B1B7-400B-5949-920C-941BACF0EA80}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 240
+      SNAPOFFS 0
+      LENGTH 6.60922916666667
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 3 0.375995 0 3 0 -1
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {49A35299-158A-994D-A741-68D981433391}
+      IID 36
+      NAME bee-hive-and-swarm.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 36
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1B5CF229-E0E9-9740-AF3A-0F71E400CFE2}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/bee-hive-and-swarm.wav"
+      >
+    >
+    <ITEM
+      POSITION 252
+      SNAPOFFS 0
+      LENGTH 6.60922916666664
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1D1F1676-2FDB-5A4C-A987-A086A0A3AD1C}
+      IID 36
+      NAME bee-hive-and-swarm.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 36
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D1ACE2D7-7A01-CD48-9028-0DB9E411558B}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/bee-hive-and-swarm.wav"
+      >
+    >
+    <ITEM
+      POSITION 260
+      SNAPOFFS 0
+      LENGTH 12
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A39ECDA9-99B7-A14B-86FE-234180FE617B}
+      IID 12
+      NAME bee-hive-and-swarm.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E8ED17CC-D67F-5B41-AB3C-D4190D7EF966}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/bee-hive-and-swarm.wav"
+      >
+    >
+    <ITEM
+      POSITION 276
+      SNAPOFFS 0
+      LENGTH 8
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F5999931-11E7-0D4B-8D9B-93B89235163D}
+      IID 94
+      NAME bee-hive-and-swarm.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 16
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2FD9C8C6-282D-1C43-B3D5-E737F7700293}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/bee-hive-and-swarm.wav"
+      >
+    >
+    <ITEM
+      POSITION 288
+      SNAPOFFS 0
+      LENGTH 8
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {E5C8A2A9-18FD-0C4A-8848-D5F6D180FEA5}
+      IID 96
+      NAME bee-hive-and-swarm.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 28
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {ADE9B07D-F661-414E-8E65-1CB51A1799C6}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/audio_1stPrototype/sounds/bees/bee-hive-and-swarm.wav"
+      >
+    >
+  >
+  <TRACK {15A1315F-F1A9-364A-92F1-DB6B00BB436F}
+    NAME protest_techno
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 2.00219539980522 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
+    FREEMODE 0
+    SEL 0
+    REC 0 0 1 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 -1 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {15A1315F-F1A9-364A-92F1-DB6B00BB436F}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 288
+      SNAPOFFS 0
+      LENGTH 67.44823129255451
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {D2A0D1E8-7794-2E41-8E9A-A19447F0B627}
+      IID 70
+      NAME T14.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {64F567BF-1A01-F140-9FF3-EB7FF1B55EAC}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T14.WAV"
+      >
+    >
+    <ITEM
+      POSITION 388
+      SNAPOFFS 0
+      LENGTH 4
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 4 3.036358 0 4 0 1
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      GROUP 1
+      IGUID {4C1CFFF7-7523-3E4E-828C-522A58EED467}
+      IID 74
+      NAME T14.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 223.44823129255451
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D1037248-7711-8043-9015-C7F0022371DF}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T14.WAV"
+      >
+    >
+    <ITEM
+      POSITION 392
+      SNAPOFFS 0
+      LENGTH 66.67369360200377
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 4 0.01 0 4 0 1
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      GROUP 1
+      IGUID {8E974B9A-E437-164F-B7AB-068967FD96E3}
+      IID 72
+      NAME T14.WAV
+      VOLPAN 1 0 1 -1
+      SOFFS 227.44823129255451
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {1EEDFB46-116E-724B-AEE4-4640FEA3C840}
+      <SOURCE WAVE
+        FILE "/Volumes/ULA/SWARM_firstyearproject/SWARM_Audiorecordings/T14.WAV"
+      >
+    >
+  >
+>
