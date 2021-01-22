@@ -18,7 +18,7 @@ let music;
 function preload() {
     // TODO: 
     // Add a music file so that the sketch works
-  music = loadSound("/* add your music file */")
+  music = loadSound("./resources/audio-project-aparicio-sleep-paralysis.wav")
 
 }
 
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(175);
+  background(0);
   normalMaterial();
   vol = amplitude.getLevel();
 
@@ -40,14 +40,22 @@ function draw() {
     // 2) How would the applyMatrix() function look like?
 
   //1
+  let rad = millis() / 1000;
+  let ct = cos(rad);
+  let st = sin(rad);
+
   push()
   translate(0, -80);
-  rotateX(tan(angle));
-  rotateY(tan(angle));
-  rotateZ(tan(angle));
+  applyMatrix(  ct, 0.0,  st,  0.0,
+                0.0, 1.0, 0.0,  0.0,
+                -st, 0.0,  ct,  0.0,
+                0.0, 0.0, 0.0,  1.0);
   torus(40 + vol * 200, 10, 6);
-  rotateY(angle);
-  rotateZ(angle);
+  applyMatrix(  ct, 0.0,  st,  0.0,
+                0.0, 1.0, 0.0,  0.0,
+                -st, 0.0,  ct,  0.0,
+                0.0, 0.0, 0.0,  1.0);
+  
   torus(20, 5, 6);
   pop()
 

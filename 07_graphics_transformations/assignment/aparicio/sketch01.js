@@ -11,18 +11,33 @@ let vectors;
 
 function setup() {
   createCanvas(400, 400);
+  background(0);
 
+  //Vektorpunkte erstellen
   vectors  = [
-    createVector(30, 20),
-    createVector(85, 20),
-    createVector(85, 75),
-    createVector(30, 75)
+    createVector(100, 100), 
+    createVector(100, 300), 
+    createVector(250, 300),
+    createVector(250, 250),
+    createVector(150, 250),
+    createVector(150, 100)
   ];
+ 
 }
 
+//Jeden Vektorpunkt durchgehen in der Reihenfolge für oben und da entlang eine Form malen
 function draw() {
-  background(220);
+  fill(255);
+  noStroke();
+  beginShape();
+  vectors.forEach(v => {
+    vertex(v.x, v.y);
+  }); 
+  endShape(CLOSE);
 
+  //mit translate können die gleichen Vektoren genutzt werden
+  fill(200,0,50);
+  translate(-5, -5, 0)
   beginShape();
   vectors.forEach(v => {
     vertex(v.x, v.y);

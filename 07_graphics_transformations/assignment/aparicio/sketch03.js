@@ -6,16 +6,31 @@
 // 1) Re-position the two box objects such that they are side by side
 //    with a short distance in between them.
 
+let angle = 2;
+angleMode(DEGREES);
+
 function setup() {
-    createCanvas(100, 100, WEBGL);
+    createCanvas(600, 400, WEBGL);
     noFill();
   }
   
   function draw() {
-    background(200);
-    rotateY(PI / 6);
-    stroke(153);
-    box(35);
+    background(0);
+    
+    //rote Box -> rotiert mit rotate()
+    push();
+    translate(100, 0, 0);
+    rotateY(angle);
+    angle += 0.01;
+    stroke(200,0,50);
+    box(150);
+    pop();
+
+
+
+    //weiße Box -> rotiert durch Matrix
+    push();
+    translate(-150, 0, 0);
     let rad = millis() / 1000;
     // Set rotation angles
     let ct = cos(rad);
@@ -27,5 +42,6 @@ function setup() {
                  0.0, 0.0, 0.0,  1.0);
     stroke(255);
     box(50);
+    pop();
   }
   
