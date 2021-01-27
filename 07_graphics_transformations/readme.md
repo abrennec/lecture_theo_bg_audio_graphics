@@ -125,13 +125,16 @@ In order to ensure correct shading or visibility of the polygonal objects, the f
 ![screencast](imgs/backfacefrontface.jpg)
 *Image source: https://blender.community/c/rightclickselect/qrcbbc/*
 
-The vertex normals are calculated using the cross product. Therefore, two edges of the triangle are "crossed". These two edges are represented by two vertices that share one point.
+The vertex normals are calculated using the cross product. Therefore, two edges of the triangle are used as vectors for the calculation. 
 
-The wiring order of the vertices determines also the order in which the triangle edges / vertices are crossed. 
+In the following illustration, assume the vertex order is defined by CCW, i.e., the triangle is described by points (v0, v1, v2), the triangle face is front facing. The corresponding vertex normal is calculated following the wiring: v0v1 x v0v2. The respectice vectors v0v1 and v0v2 can be calculated by subtracting the points: v0v1 = v1 - v0, v0v2 = v2 - v0. 
 
-In the following illustration, assume the vertex order is defined by CCW, i.e., the triangle is described by points (v0, v1, v2), the triangle face is front facing. The corresponding vertex normal is calculated following the wiring: v0v1 x v0v2. The respectice vectors v0v1 and v0v2 can be calculated by subtracting the points: v0v1 = v1 - v0, v0v2 = v2 - v0.
+Thus, there are two important points to keep in mind:
+1) The two vectors used to calculate the normal vector share one point of the triangle.
+2) The order of the vertices given by the wiring direction also determines the order of the vectors used to calculate the cross product.
 
 ![screencast](imgs/shad-tri-normal.png)
+
 *Image source: https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-normals*
 
 
