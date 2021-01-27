@@ -19,6 +19,8 @@ Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film Univers
     - [Affine Transformations and Homogeneous Coordinates](#affine-transformations-and-homogeneous-coordinates)
       - [Lecture Video](#lecture-video-2)
   - [Geometric Transformations by Example](#geometric-transformations-by-example)
+  - [Addendum - Triangle Wiring and Normal Vectors](#addendum---triangle-wiring-and-normal-vectors)
+    - [Application Examples and Additional Material](#application-examples-and-additional-material)
   - [Additional Material](#additional-material)
 - [Assignments](#assignments)
 
@@ -109,7 +111,38 @@ Finally, you can also specifie and apply a matrix yourselves and I would like yo
 - [applyMatrix](https://p5js.org/reference/#/p5/applyMatrix)
 - [resetMatrix](https://p5js.org/reference/#/p5/resetMatrix)
 
+---
 
+## Addendum - Triangle Wiring and Normal Vectors
+
+When setting up a polygonal mesh with triangle faces, the sequence of vertices is very important. This is also referred to as **wiring** order of the vertices. The wiring in clockwise order (CW, clockwise wiring) is illustrated on the left in the following Figure, the wiring in counter-clockwise order (CCW, counter-clockwise wiring) is depcited on the right hand side: 
+
+![screencast](imgs/winding_order_triangles.png)
+*Image source: https://www.khronos.org/opengl/wiki/Face_Culling*
+
+In order to ensure correct shading or visibility of the polygonal objects, the face normal is calculated. The face normal is then used to identify whether the triangle face is a front-face or a back-face, as illustrated in the following image:
+
+![screencast](imgs/backfacefrontface.jpg)
+*Image source: https://blender.community/c/rightclickselect/qrcbbc/*
+
+The vertex normals are calculated using the cross product. Therefore, two edges of the triangle are "crossed". These two edges are represented by two vertices that share one point.
+
+The wiring order of the vertices determines also the order in which the triangle edges / vertices are crossed. 
+
+In the following illustration, assume the vertex order is defined by CCW, i.e., the triangle is described by points (v0, v1, v2), the triangle face is front facing. The corresponding vertex normal is calculated following the wiring: v0v1 x v0v2. The respectice vectors v0v1 and v0v2 can be calculated by subtracting the points: v0v1 = v1 - v0, v0v2 = v2 - v0.
+
+![screencast](imgs/shad-tri-normal.png)
+*Image source: https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-normals*
+
+
+Check out the corresponding code example in the code folder "the_cube_by_lucas".
+
+
+### Application Examples and Additional Material
+
+- [Calculating normals, vertex wiring, and correct shading](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-normals)
+- [Face culling requires to know about front face and back face](https://flylib.com/books/en/2.124.1.130/1/) 
+- [A survey on backface culling](https://www.researchgate.net/publication/2440562_A_Survey_of_Visibility_for_Walkthrough_Applications#fullTextFileContent)
 
 ---
 
