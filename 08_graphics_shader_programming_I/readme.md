@@ -20,6 +20,10 @@ Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film Univers
     - [Important Variables Type Qualifiers](#important-variables-type-qualifiers)
 - [Additional Material](#additional-material)
 - [Assignments](#assignments)
+  - [1 ) Shader Exercises](#1--shader-exercises)
+  - [2 ) Graphics Project](#2--graphics-project)
+  - [3 ) Final Project](#3--final-project)
+- [Important Dates](#important-dates)
 
 ---
 
@@ -156,4 +160,27 @@ For more information on the latest list of shader types supported by OpenGL and 
 
 # Assignments
 
+## 1 ) Shader Exercises
 
+Will be added with additional code examples by the end of this week. I just realized that the current examples are not sufficient to work with any kind of geometry. Please stay tuned. I'll send an update.
+
+## 2 ) Graphics Project
+
+Here, you are pretty free to come up with an idea. I can see these options:
+
+1) Please consider the triangle subdivision tutorial from the first graphics session as a starting point to think about how an algorithm triangle subdivision could work (e.g., pen and paper) and start with a simple 2D quad geometry before you look at 3D.
+2) Take the works by artist Saskia Freske as another inspirational starting point to come up with your own ideas that targets the aesthetics of geometry. Please make sure in this case, that the resulting geometry is actually defined explicitly, perhaps using an algorithmic approach, or is at least an interesting and aesthetic combination of pre-defined and custom geometric shapes.
+3) Come up with an idea similar to the sketch5.js from 07 transformation. In this sketch, audio parameters are used to change the 3D geometry. You could use a clip from your soundscape together with one or more custom geometric objects.
+4) Your very personal approach.
+
+## 3 ) Final Project
+
+I have suggested to create a "visual album"-like final documentation of the individual soundscapes combined with the graphics sketches. The final project thus targets to combine both, audio and graphics project, in one markdown (?) file ready to be published on the CTech's Github.pages.io. The challenge will be to agree on a title and potential album cover. Then everyone has to add a few sentences for their projects.
+
+Please let me know next time if this will work for you as a group work. If not, the final project will be an individual documentation file ready to be published via Ctech's Github.pages.io.
+
+# Important Dates
+
+Please consider the following dates for a final meeting on the graphics projects in combination with the final documenation project:
+- 15th February, 10:00 or 14:00
+- 17th FEbruary, 9:30 
