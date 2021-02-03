@@ -24,7 +24,7 @@ function draw() {
   shader(simpleShader);
 
   // rect gives us some geometry on the screen
-  rect(0,0,width, height);
+  rect(0,0, width, height);
 }
 
 function windowResized(){
