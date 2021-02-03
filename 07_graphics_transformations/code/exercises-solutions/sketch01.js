@@ -1,0 +1,48 @@
+
+// This is a simple shape definition. Add another shape to 
+// this 2d scene (specify the geometry or load a predefined shape)
+// and check out the following functions in order to position
+// the second shape inside of your scene:
+// - push()
+// - pop()
+// - translate()
+
+let vectors;
+
+function setup() {
+  createCanvas(400, 400);
+
+  vectors  = [
+    createVector(30, 20),
+    createVector(85, 20),
+    createVector(85, 75),
+    createVector(30, 75)
+  ];
+}
+
+function draw() {
+  background(220);
+
+  beginShape();
+  vectors.forEach(v => {
+    vertex(v.x, v.y);
+  }); 
+  endShape(CLOSE);
+
+  push();
+  translate(width/2, height/2); //getting to the center
+
+  beginShape();
+	vertex(-50, -85);
+	vertex(50, -85);
+	vertex(100, 0);
+	vertex(50, 85);
+  vertex(-50, 85);
+	vertex(-100, 0);
+	endShape(CLOSE); 
+
+  pop();
+
+}
+
+

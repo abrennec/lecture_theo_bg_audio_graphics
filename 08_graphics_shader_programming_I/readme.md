@@ -17,6 +17,7 @@ Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film Univers
   - [Revisiting the Rendering Pipeline](#revisiting-the-rendering-pipeline)
   - [Implementation and Code Examples](#implementation-and-code-examples)
     - [Shaders, Variables, GLSL Versions](#shaders-variables-glsl-versions)
+      - [Variable Qualifiers](#variable-qualifiers)
     - [Important Variables Type Qualifiers](#important-variables-type-qualifiers)
 - [Additional Material](#additional-material)
 - [Assignments](#assignments)
@@ -117,6 +118,8 @@ These variables are used to access and change OpenGL-specific function states al
 The list of built-in variables used by GLSL and OpenGL can be found at 
 - https://www.khronos.org/registry/OpenGL-Refpages/gl4/index.php
 
+#### Variable Qualifiers
+
 <!-- As mentioned above, the use of the built-in variables, however, changed with latest GLSL versions. The GLSL version you can use depends on the OpenGL version supported on your system and graphics card. 
 Here, we will be working with GLSL 1.2 which will work on most machines. An overview of OpenGL and GLSL versions can be found at 
 - https://www.khronos.org/opengl/wiki/Core_Language_(GLSL) -->
@@ -127,19 +130,27 @@ Here, we will be working with GLSL 1.2 which will work on most machines. An over
 Basically, you will work with three different types of variable type qualifiers: 
 
 - **Attributes**
-  - Attribute variables are specifed and processed per vertex. They correspond to the internal OpenGL attribute settings. 
+  - Attribute variables are **global variables** specifed and processed **per vertex**. They correspond to the internal OpenGL attribute settings and are only available to the vertex shader.
   - In p5.js, you can specify vertices by using the vertex() function. The specified values are then handed over to the underlying OpenGL library for further processing which uses its pre-defined attribute variables to store the values internally and hands those over to the shader. 
   - Examples: gl_Vertex, gl_Color, gl_MultiTexCoord0, gl_Normal, ...
 - **Uniform**
   - Uniform variables can be specified in the application (i.e., sketch.js) and can be handed over to the shader program directly (compared to how attributes are processed, for instance). 
   - They are used to, for example, to hand over information interactively from the application to the shader program.
-  - Uniform variables are applied to the entire primitive that is being processed.
+  - Uniform variables are **global variables** applied to the entire **primitive** that is being processed.
   - Examples: User defined variables as well as dedicated OpenGL uniforms like gl_ProjectionMatrix, gl_ModelViewMatrix, gl_NormalMatrix, ...
 - **Varying**
   - Varying variables can be used to exchange data between the shaders themselves; i.e., you can specify a varying variable in the vertex shader and retrieve the information inside of the fragment shader for further processing.
   - There are two sets of varying variables, one for the vertex and one for the fragment shader.
   - Examples: gl_Color, gl_TexCoord\[\], gl_FrontColor, ...
 Variable type qualifiers can be used inside of your sketch.js file and be handed over to the shader programs for an execution on the GPU.
+
+<!-- Every shader program has an input and output values. 
+The vertex shader output is stored in the gl_Position variable. The 
+fragment shader output is stored in the gl_FragColor variable.
+
+Input values to both shader programs are specified by variable qualifiers.
+Input values can either be built-in variables that come with OpenGL/WebGL like "attributes" (only available in the vertex shader) or "uniforms". Attributes and uniforms are both global variables. Attributes may 
+change per vertex (i.e., a position vector), whereas uniforms may change per primitive (i.e., a matrix value). -->
 
 
 ---
