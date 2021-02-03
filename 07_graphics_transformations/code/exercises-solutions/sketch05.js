@@ -43,9 +43,12 @@ function draw() {
   push()
   
   //translate(0, -80);
-  //rotateX(tan(angle));
-  //rotateY(tan(angle));
-  //rotateZ(tan(angle));
+/*
+  rotateX(tan(angle));
+  rotateY(tan(angle));
+  rotateZ(tan(angle));*/
+
+  // rotateX * rotateY * rotateZ 
 
     // Rotation matrix around x 
     //   1    0        0          0 
@@ -83,9 +86,9 @@ function draw() {
     /*
     // This is the short form of the matrix multiplication above, including the translation!
     applyMatrix( c*c,  c*s*s-s*c,   c*s*c+(-s)*(-s),  0,
-                 c*s,  s*s*s+c*c,   s*s*c+c*(-s),     -80,
+                 c*s,  s*s*s+c*c,   s*s*c+c*(-s),     0,
                  -s,   s*c,         c*c,              0,
-                 0,    0,           0,                1);
+                 0,    -80,           0,                1);
     */
    // If you uncomment this matrix, it is not working as expected.. why not?
 
@@ -101,7 +104,7 @@ function draw() {
     // the resulting transformation is different here. Why?
     
     // The sequence of operations must be 
-    // rotateX * rotateY * rotateZ
+    rotateX * rotateY * rotateZ
 
     /*
     // This finally the correct matrix but not yet in transposed form ... 
@@ -113,18 +116,14 @@ function draw() {
     
     //... this one is the correct transformation matrix that leads to the same
     // result as the individual function calls below and in transposed form:
-    /*
+    
     applyMatrix( c*c,    c*s+(-s)*c*(-s),   s*s+c*c*(-s),   0,
                 -s*c,    c*c-s*s*s,         s*c+c*s*s,      0,
                 s,       -s*c,              c*c,            0,
                 0,       -80,               0,              1);
-    */
-
     
-    translate(0, -80);
-    rotateX(tan(angle));
-    rotateY(tan(angle));
-    rotateZ(tan(angle));
+
+
   
   torus(40 + vol * 200, 10, 6);
 

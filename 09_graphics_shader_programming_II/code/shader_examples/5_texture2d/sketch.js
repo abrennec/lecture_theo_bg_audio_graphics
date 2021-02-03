@@ -28,16 +28,16 @@ function draw() {
   uniformsShader.setUniform('cactiTex', cactiImg);
 
   // rect gives us some geometry on the screen
-  //rect(0,0,width, height);
+  rect(0,0,width, height);
 
-  beginShape();
-  vertex(-50, -85, -100);
-  vertex(50, -85, -100 );
-  vertex(100, 0, -100);
-  vertex(50, 85, -100);
-  vertex(-50, 85,-100);
-  vertex(-100, 0, -100);
-endShape(CLOSE); 
+//   beginShape();
+//   vertex(-50, -85, -100);
+//   vertex(50, -85, -100 );
+//   vertex(100, 0, -100);
+//   vertex(50, 85, -100);
+//   vertex(-50, 85,-100);
+//   vertex(-100, 0, -100);
+// endShape(CLOSE); 
 }
 
 function windowResized(){

@@ -25,19 +25,21 @@ precision mediump float;
 // will specify the fragment color per vertex. In between vertices, the color
 // values are automatically interpolated so that the entire primitive is colored.
 
+
+// Examples of variables passed from vertex to fragment shader
+varying vec3 vPosition;
+varying vec4 vColor;
+
+//uniform float time;
+
 void main() {
 
-  // lets just send the color red out
-  // colors in shaders go from 0.0 to 1.0
-  // glsl is very finicky about the decimal points 
-  // gl_FragColor is a vec4 and is expecting red, green, blue, alpha
-  // the line below will make a solid red color for every pixel of the primitive, with full alpha
-  vec4 redColor = vec4(1.0, 0.0, 0.0, 1.0);
+    vec4 redColor = vec4(1.0, 0.0, 0.0, 1.0);
 
-  // assign redColor to be output to the screen
-  gl_FragColor = redColor;
-
-  // TODO: how would you make a solid green screen?
-  // yellow?
-  // gray?
+    //vec4 cColor = vColor;
+    //cColor.xy = vPosition.xy * sin(time * 0.02);
+    // Fragment shaders set the gl_FragColor, which is a vector4 of
+    // ( red, green, blue, alpha ).
+    //gl_FragColor = redColor;
+    gl_FragColor = vColor;
 }

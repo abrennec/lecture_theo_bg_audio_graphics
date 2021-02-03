@@ -46,3 +46,7 @@ Certainly, the possibilites that come with shader programming are enormous. In p
   - [Realtime Rendering](http://www.realtimerendering.com)
   - [Physically based rendering (also available at Filmuni Library)](https://www.pbrt.org)
   - [scratchapixel](https://www.scratchapixel.com)
+- Computer Graphics Lectures
+  - [Uni Freiburg Youtube Channel](https://www.youtube.com/channel/UC61bSY1sj4zTPa38dpqgRhw/videos)
+    - [Intro to Computer Graphics - Image Processing & CG](https://www.youtube.com/watch?v=E2n6NEB8fis)
+    - [Intro to Advanced Computer Graphics - Rendering](https://www.youtube.com/watch?v=VFvT2wjo4uc)
