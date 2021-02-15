@@ -1,6 +1,8 @@
 # Theoretical Backgrounds in Audio and Graphics
 ## Sebastian Wilhelm
 
+![preview](preview.PNG)
+
 ## Audio Project
 
 For the audio project I wanted to create a musical composition programmatically and used Sonic Pi.
