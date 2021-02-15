@@ -12,6 +12,7 @@ let relaxed = true;
 let amplitude, fft, peakDetect;
 let duration;
 let outline;
+let isPlaying = false;
 
 function preload(){
     myShader = loadShader('shaders/shader.vert', 'shaders/shader.frag');
@@ -23,14 +24,19 @@ function setup(){
     createCanvas(windowWidth, windowHeight, WEBGL);
     main = createGraphics(windowWidth, windowHeight, WEBGL);
     outline = createGraphics(windowWidth, windowHeight, WEBGL);
-    console.log(outline);
     giveBirthToPoints();
     setUpSound();
 }
 
+function mousePressed(){
+    if(!isPlaying){
+        mySound.play();
+        isPlaying = true;
+    }
+}
 
 function draw(){
-    orbitControl();
+    orbitControl(2.0, 3.0, 0.5);
     
     background(0);
     fft.analyze();
@@ -40,6 +46,7 @@ function draw(){
     } 
     let size = map(fft.getEnergy("highMid"), 0, 255, 1, 10);
     let rotate = map(fft.getEnergy("lowMid"), 0, 255, 0, HALF_PI * 2);
+    let thickness = map(fft.getEnergy("lowMid"), 0, 255, 1, 10);
 
     outline.shader(depthShader);
     outline.orbitControl();
@@ -50,7 +57,7 @@ function draw(){
     generateGeometry(outline);
     outline.pop();
 
-    aesthetics();
+    aesthetics(thickness);
     shader(myShader);
     welcomeToTheMatrix(size, rotate);
     generateGeometry();
@@ -63,13 +70,9 @@ function draw(){
     myShader.setUniform("u_depth", outline);
     myShader.setUniform("u_fft", size / 10.0);
 
-    if(mySound.currentTime > duration){
-        mySound.play();
-    }
 }
 
 function setUpSound(){
-    mySound.play();
     amplitude = new p5.Amplitude();
     fft = new p5.FFT();
     peakDetect = new p5.PeakDetect(200, 2000, 0.002);
@@ -166,9 +169,9 @@ function keyReleased() {
     return false; // prevent any default behavior
 }
 
-function aesthetics(){
-    strokeWeight(6);
-    stroke(20, 10, 20);
+function aesthetics(s){
+    strokeWeight(2.0 * s);
+    stroke(255, 10, 20);
 }
 
 function recordOldCanvas(){
