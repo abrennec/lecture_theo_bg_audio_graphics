@@ -9,7 +9,7 @@ My main idea was to create a RetroWave/Synthwave scene with Three.js using diffe
 
 ![preview](./assets/retro_scene.jpg)
 
-After many unsuccessfull tries I decided to switch back to p5.js and create a new scene. I started with a Terrain-Grid which i created by lopping through vertices with a for() function for rows and columns. I then added some noise on each vertex creating the wave effect. In addition I created an Array with different blue colors which fill the grid making it appear as water. Afterwards I added a sun which was also created with a for() function drawing many ellipses on the same spot with growing sizes and lerping through 2 color schemes. Finally I select a column range on the Terrain Grid and changed the color to a yellow color which represents the suns reflection. 
+After many unsuccessfull tries I decided to switch back to p5.js and create a new scene. I started with a Terrain-Grid which i created by looping through vertices with a for() function for rows and columns. I then added some noise on each vertex creating the wave effect. In addition I created an Array with different blue colors which fill the grid making it appear as water. Afterwards I added a sun which was also created with a for() function drawing many ellipses on the same spot with growing sizes and lerping through 2 color schemes. Finally I select a column range on the Terrain Grid and changed the color to a yellow color which represents the suns reflection. 
 
 
 ## Challenges and Learnings
