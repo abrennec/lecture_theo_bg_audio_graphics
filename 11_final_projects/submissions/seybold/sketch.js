@@ -12,7 +12,6 @@ let movepos = 0;
 //sound values
 let song;
 let fft;
-let button;
 let spectrum = [];
 let allSpectren = []; 
 
