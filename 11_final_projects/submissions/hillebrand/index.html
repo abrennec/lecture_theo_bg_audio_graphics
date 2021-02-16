@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <head>
+    <title>Graphics Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+      <main>
+            <div id="p5canvas"></div>
+            <div id="tools">
+              <div class="toolgroup">
+                <button onclick="createRandomTriangle()">Create Random Triangle</button>
+                <button onclick="createRandomSquare()">Create Random Square</button>
+              </div>
+              <div class="toolgroup">
+                <button class="active" onclick="(() => mode = 'add')(); activateUI(this)">Add Triangles</button>
+                <button onclick="(() => mode = 'subdivide')(); activateUI(this)">Subdivide Triangles</button>
+                <button onclick="(() => mode = 'fill')(); activateUI(this)">Fill Triangles</button>
+                <input type="color" id="fillColor">
+              </div>
+              <div class="toolgroup automate">
+                <button onclick="(() => mode = 'auto')(); activateUI(this)">Autopilot</button>
+                <div class="tool2rows">
+                  <label for="automateAdd">
+                    Add Triangles
+                    <input id="automateAdd" name="automateAdd" type="checkbox">
+                  </label>
+                  <label for="automateAddProbability">
+                    Probability
+                    <input id="automateAddProbability" name="automateAddProbability" type="range" min="1" max="100" value="50">
+                  </label>
+                </div>
+                <div class="tool2rows">
+                  <label for="automateSubdivide">
+                    Subdivide Triangles
+                    <input id="automateSubdivide" name="automateSubdivide" type="checkbox">
+                  </label>
+                  <label for="automateSubdivideProbability">
+                    Probability
+                    <input id="automateSubdivideProbability" name="automateSubdivideProbability" type="range" min="1" max="100" value="50">
+                  </label>
+                </div>
+                <div class="tool2rows">
+                  <label for="automateFill">
+                    Fill Triangles
+                    <input id="automateFill" name="automateFill" type="checkbox">
+                  </label>
+                  <label for="automateFillProbability">
+                    Probability
+                    <input id="automateFillProbability" name="automateFillProbability" type="range" min="1" max="100" value="50">
+                  </label>
+                </div>
+                <div class="tool2rows">
+                  <label for="automateSpeed">
+                    Speed
+                  </label>
+                    <input id="automateSpeed" name="automateSpeed" type="range" min="1" max="30" value="5" style="transform: translateY(5px)">
+                </div>
+              </div>
+              <div id="viewtools" style="bottom: -150px">
+                <div class="opener">
+                  <button onclick="toggleStyler()">STYLE</button>
+                </div>
+                <div class="tool2rows">
+                  <label for="stroke">
+                    Stroke
+                    <input id="stroke" name="stroke" type="checkbox" checked="true">
+                  </label>
+                  <label for="strokeWidth">
+                    Width
+                    <input id="strokeWidth" name="strokeWidth" type="range" min="1" max="10" value="3">
+                  </label>
+                </div>
+                <div class="tool2rows">
+                  <label for="strokeColor">
+                    Strokecolor
+                    <input type="color" id="strokeColor" value="#000000" style="height:20px;">
+                  </label>
+                </div>
+                <div class="tool2rows">
+                  <label for="backgroundColor">
+                    Backgroundcolor
+                    <input type="color" id="backgroundColor" value="#ffffff" style="height:20px;">
+                  </label>
+                </div>
+              </div>
+            </div>
+      </main>
+      <script>
+        let height = document.getElementById("p5canvas").clientHeight;
+        let width =document.getElementById("p5canvas").clientWidth;
+
+        function activateUI(button){
+            let allButtons = document.getElementsByTagName("button");
+            console.log(allButtons);
+            for(i = 0; i < allButtons.length; i++){
+                allButtons[i].classList.remove("active");
+            }
+            button.classList.add("active");
+        }
+
+        function toggleStyler(){
+          if(document.getElementById("viewtools").style.bottom == "0px"){
+            document.getElementById("viewtools").style.bottom = "-150px";
+          }
+          else {
+            document.getElementById("viewtools").style.bottom = "0px";
+          }
+        }
+      </script>
+      <script src="checkers.js"></script>
+      <script src="triangle.js"></script>
+      <script src="sketch.js"></script>
+  </body>
+</html>
