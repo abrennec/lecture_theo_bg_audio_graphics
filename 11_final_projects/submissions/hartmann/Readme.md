@@ -13,9 +13,6 @@ I implemented the origami clouds in three Js. For the subdivision of the triangl
 To enhance the feeling of clouds further, I followed a tutorial to create a low poly terrain and used the code of that tutorials (Terrain.js), so the majority of my work were the clouds. 
 The Low Poly shape of the terrain supports the abstract clouds, that don’t look like real clouds, but behave like ones. They change their shape, you can see through them from time to time and they remind you of something else. To further enhance this and be creative, it is possible to change the color of the clouds. As a color scheme, I chose a blue palette to create a moody atmosphere. It looks like the end of the night - it is still dark outside, but you can already see some colors and shapes, just before the sun starts rising. After looking into those origami clouds, the morning starts. A weird morning... 
 
-I deployed the project with heroku. I used parcel as a bundler. 
-[https://origamiclouds.herokuapp.com](https://origamiclouds.herokuapp.com) 
-
 To run it locally: 
 ```
 cd origami_clouds
