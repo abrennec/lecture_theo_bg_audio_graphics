@@ -7,7 +7,7 @@ date: Winter term 22/22
 **Theoretical Backgrounds of Audio and Graphics - Winter term 21/22**
 
 Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*  
-Christian Halten | hal@skylife.com 
+Christian Halten | halten@skylife.de
 
 ---
 
