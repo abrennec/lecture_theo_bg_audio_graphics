@@ -160,7 +160,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
 
 As a communication platform, we will use [GitHub.com](https://github.com/) to share code, lecture materials, comments, and submit homework and project assignments.
 
-- [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/ws2122_tbag)
+- [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/)
 - [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/wiki)
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)
 - [Miro project tbag_2021](https://miro.com/app/dashboard/)
