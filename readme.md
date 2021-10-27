@@ -2,11 +2,12 @@
 title: Theoretical Backgrounds of Audio and Graphics
 author: Angela Brennecke
 affiliation: Film University Babelsberg KONRAD WOLF
-date: Winter term 20/21
+date: Winter term 22/22
 ---   -->
-**Theoretical Backgrounds of Audio and Graphics - Winter term 20/21**
+**Theoretical Backgrounds of Audio and Graphics - Winter term 21/22**
 
-Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
+Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*  
+Christian Halten | hal@skylife.com 
 
 ---
 
@@ -31,17 +32,9 @@ Prof. Dr.-Ing. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film Univers
 
 # Theoretical Backgrounds of Audio and Graphics Applications
 
-This course provides you with an introduction to the theoretical backgrounds of digital audio and graphics software applications. It is split into one part that focuses on different topics in the field of audio rendering such as digital production, audio processing, synthesis and music computing. The second part focuses on 3D computer graphics and in particular on 3D models and vertex meshes, matrix multiplications and transformations, and ends with an introduction to shader programming.
+This course provides you with an introduction to the theoretical backgrounds of digital audio and graphics software applications. It is split into one part that focuses on different topics in the field of audio rendering such as digital production, audio processing, synthesis and music computing. The second part focuses on 3D computer graphics and in particular on 3D models and vertex meshes, matrix multiplications and transformations, and usually ends with an introduction to shader programming. This term, we might diverge from the strict separation into audio and graphics and will interweave both aspects more closely.
 
-The theoretical lectures will be accompanied with smaller exercises that are intended to underpin two small term projects:  
-1) **Audio exercise** - Design and produce a (musical) stereo-based sound space based on a specific topic (i.e., star wars, spacecraft, city slickers, nature, climate change, ... ).
-2) **Graphics exercise** - Create and implement an interactive or animated graphical counterpart of the sound space with 3d computer graphics, images/textures, and shaders.
-
-There fill be one final exercise intended to combine both directions of the lecture:
-
-3) **Final exercise** - Combine the results of the audio and graphics exercises into an interactive or animated audio-visual scene.
-
-The three projects will be central to the final grade.
+The theoretical lectures will be accompanied with smaller exercises that are intended to underpin the central term projects -- and interactive album. This interactive album will contain everyones musical track and an interactive graphics app. The final grade will be deducted from the musical piece, interactive app and the interconnection of both.
 
 
 # Organization of the Course
@@ -50,19 +43,19 @@ The three projects will be central to the final grade.
 
 - Wednesday 10:00 h - 13:30 h
 - Module 5 | 3 SWS | 4 ECTS
-- 10 sessions in total, sessions 5 & 10 only half of time.
+- 10 sessions in total, sessions 9 & 10 only half of time for project coaching and presentation of the results.
 - Participation in the lectures is **not compulsory**. **However**, in order to pass the course and receive a grade, you need to collect points. See the [Evaluation and Grading](#evaluation-and-grading) section for the details.
 
 
 ```diff
-- The course will be held online until further notice. 
+- The course will be held in person until further notice. 
 ```
 
 ## Method of Instruction
 
 The course is designed as an online course that will use tools and technique from **flipped classroom** and **blended learning** approaches. For example, there will be pre-recorded lectures such that students can work through the materials on their own and in their own pace online and offline. The weekly sessions will focus on live discussions, project work, and exercises.
 
-Make use of the **[Github team](https://github.com/orgs/ctechfilmuniversity/teams/ws2021_tbag)** when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors. The **[Miro board](https://miro.com/app/dashboard/)** will be used for group work and discussions. Make sure that you register a personal account at Miro.
+Make use of the **[Github team](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)** when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors. The **[Miro board](https://miro.com/app/dashboard/)** will be used for group work and discussions. Make sure that you register a personal account at Miro.
 
 ### Weekly Sessions
 
@@ -167,9 +160,9 @@ At the end of the lecture, a final exercise will allow you to combine both field
 
 As a communication platform, we will use [GitHub.com](https://github.com/) to share code, lecture materials, comments, and submit homework and project assignments.
 
-- [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics)
+- [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/ws2122_tbag)
 - [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/wiki)
-- [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/ws2021_tbag)
+- [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)
 - [Miro project tbag_2021](https://miro.com/app/dashboard/)
 
 
