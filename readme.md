@@ -109,16 +109,14 @@ At the end of the lecture, a final exercise will allow you to combine both field
 - The syllabus is still subject to change.
 ```
 
-1. 04.11.20 - **Audio Rendering** (4 hrs)
-   1. Intro to the course
+1. 03.11.21 - **Audio Intro** (4 hrs)
+   1. Intro to the course & main project
    2. Computer music history 
-   3. Audio rendering 
-   4. Sound properties
-2. 18.11.20 - **Audio Production** (4 hrs)
-   1. Digital audio and signal path
-   2. Production steps and process
-   3. Spatial audio in stereo
-   4. Dynamics and audio FX
+   3. Sound vs Audio Technology vs MIDI
+2. 17.11.21 - **Audio Production / DAWs** (4 hrs)
+   1. Audio rendering
+   2. Digital audio and signal path
+   3. Production steps and workflows
 3. 25.11.20 - **Sound Synthesis** (4 hrs)
    1. Sound generation and basic waveforms
    2. Sound synthesis
