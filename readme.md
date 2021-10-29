@@ -120,45 +120,45 @@ At the end of the lecture, a final exercise will allow you to combine both field
 
 1. 03.11.21 - **Audio Intro** (4 hrs)
    1. Intro to the course & main project
-   2. Computer music history 
-   3. Sound vs Audio Technology vs MIDI
+   2. Computer music history / musique conrete
+   3. Basic of sound, audio tech, and MIDI
+   4. Mood boards and project work
 2. 17.11.21 - **Audio Production / DAWs** (4 hrs)
    1. Audio rendering
-   2. Digital audio and signal path
+   2. DAW and plugin concepts
    3. Production steps and workflows
-3. 25.11.20 - **Sound Synthesis** (4 hrs)
-   1. Sound generation and basic waveforms
-   2. Sound synthesis
-   3. Anlysis and filter
-   4. Subtractive synthesis by example 
-4. 02.12.20 - **Audio Programming** (4 hrs)
-   1. WebAudio and p5.js
-   2. Generating waveforms
-   3. Audio in/out
-   4. Interactive audio application
-5. 16.12.20 - **Audio projects** (2 hrs)
-   1. Projects presentation
-6. 13.01.20 - **Graphics Rendering** (4 hrs)
-   1. Computer graphics history
-   2. Graphics rendering pipeline
-   3. Euclidian geometry and vertices
-   4. 3D geometric objects and triangles
-7. 20.01.20 - **Transformations** (4 hrs)
+   4. Mood boards discussion
+3. 24.11.21 - **Graphics Rendering** (4 hrs)
+   6. Computer graphics history
+   7. Graphics rendering pipeline
+   8. Euclidian geometry and vertices
+   9. 3D geometric objects and triangles
+4. 01.12.21 - **Moving Around** (4 hrs)
    1. Martrices and matrix multiplication
    2. Geometric transformations
    3. Homogeneous coordinates
    4. Geometric transformations by example
-8. 27.01.20 - **Shader programming I** (4 hrs)
+5. 08.12.21 - **Sound Synthesis** (4 hrs)
+   1. Sound generation and basic waveforms
+   2. Sound synthesis
+   3. Anlysis and filter
+   4. Subtractive synthesis by example 
+6. 15.12.21 - **Shader programming** (4 hrs)
    1. The rendering pipeline revisited
    2. Vertex shaders and fragment shaders
-   3. Uniforms and attributes
-   4. OpenGL Shader Language
-9.  03.02.20 - **Shader programming II** (4 hrs)
-    1. Vertex shader exercises
-    2. Fragment shader exercises
-10. TBD - **Graphics projects**
+   3. Object manipulations using shaders
+7. 12.01.22 - **Building Bridges** (4hrs)
+    1. Relating audio and graphics
+    2. Sound FX and 3D space
+    3. Practical exploration & discussion / group work
+8. 19.01.21 - **Album Work** (4hrs)
+   1. Specialization
+   2. Integrating audio and graphics
+   3. Album work
+10. Project work and questions (1hrs)
+11. Final presentations (3hrs)
     1. Projects presentation
-    2. Final Exercise + course wrap-up (2 hrs)
+    2. Course wrap-up
 
 
 ## Communication and Materials
@@ -170,7 +170,6 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 - [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/)
 - [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/lecture_theo_bg_audio_graphics/wiki)
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)
-- [Miro project tbag_2021](https://miro.com/app/dashboard/)
 
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, and so on. The team will be used for discussion, comments, notes and any important announcements.
