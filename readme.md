@@ -32,9 +32,18 @@ Christian Halten | halten@skylife.de
 
 # Theoretical Backgrounds of Audio and Graphics Applications
 
-This course provides you with an introduction to the theoretical backgrounds of digital audio and graphics software applications. It is split into one part that focuses on different topics in the field of audio rendering such as digital production, audio processing, synthesis and music computing. The second part focuses on 3D computer graphics and in particular on 3D models and vertex meshes, matrix multiplications and transformations, and usually ends with an introduction to shader programming. This term, we might diverge from the strict separation into audio and graphics and will interweave both aspects more closely.
+This course provides you with an introduction to the theoretical backgrounds of digital audio and graphics software applications. It is split into one part that focuses on different topics in the field of audio such as digital audio production, audio processing, synthesis or music computing. The second part focuses on 3D computer graphics and in particular on 3D models and vertex meshes, matrix transformations or triangulation, and usually ends with an introduction to shader programming. This term, we might diverge from the strict separation into audio and graphics to interweave both aspects more closely.
 
-The theoretical lectures will be accompanied with smaller exercises that are intended to underpin the central term projects -- and interactive album. This interactive album will contain everyones musical track and an interactive graphics app. The final grade will be deducted from the musical piece, interactive app and the interconnection of both.
+The overall term project that you will be working on will be the development of an interactive audio visual album. Every student is supposed to add their own track. Each track of this specific album will consist of an audio track in the lines of musique contrete and an interactive graphics sketch made with processing. 
+
+# Technical Requirements
+
+For this course you will work with 
+
+- Reaper or any other DAW
+- Processing v4
+- Github
+- ... ?
 
 
 # Organization of the Course
@@ -53,9 +62,9 @@ The theoretical lectures will be accompanied with smaller exercises that are int
 
 ## Method of Instruction
 
-The course is designed as an online course that will use tools and technique from **flipped classroom** and **blended learning** approaches. For example, there will be pre-recorded lectures such that students can work through the materials on their own and in their own pace online and offline. The weekly sessions will focus on live discussions, project work, and exercises.
+The course will use tools and technique from **flipped classroom** and **blended learning** approaches. For example, there will be pre-recorded lectures such that students can work through the materials on their own and in their own pace online and offline. The weekly sessions will focus on live discussions, project work, and exercises.
 
-Make use of the **[Github team](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)** when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors. The **[Miro board](https://miro.com/app/dashboard/)** will be used for group work and discussions. Make sure that you register a personal account at Miro.
+Make use of the **[Github team](https://github.com/orgs/ctechfilmuniversity/teams/ws2122_tbag)** when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors. 
 
 ### Weekly Sessions
 
@@ -64,23 +73,22 @@ Each week, new learning materials and assignments will be published. The time fr
 ### Practical Work
 
 - Practical exercises will be part of the lecture sessions to put theory to practice right away.
-- Two smaller term projects will have to be taken to pass the course and collect points for the final grade.
-- A final exercise will be assigned at the end of the course and will target an audio-visual piece of application.
+- Two smaller term projects (the development of your audio track and the development of a graphics sketch) will have to be taken to pass the course and collect points for the final grade. These will be combined into an interactive album where every student contributes their track.
 - Group work is welcome.
 
 
 ## Evaluation and Grading 
 
-In order to **pass the course**, you need to submit the final exercies. Note that the term projects are used to prepare the final exercise.
+In order to **pass the course**, you need to submit the final project and a short documentation (one pager) in addition to a presentation of your results in the last session. Course work and practical exercises are designed to help you develop your final project.
 
 For CTech students there will be a **grade**. The grade will be based on the grades received for the term projects and the final exercise. 
 
 ### Grading Breakdown <!-- omit in toc -->
 
-* 40 pts - Term projects 
-  * 20 pts Audio project (due 5th session, scope: 1 working day)
-  * 20 pts Graphics project (due 10th session, scope: 1 working day)
-* 50 pts - Final exercise (due end of winter term, scope 2-3 working days)
+* 40 pts - Term exercises and homework 
+  * 20 pts Audio tasks 
+  * 20 pts Graphics tasks 
+* 50 pts - Final project which is intended to combine your audio track and graphics sketch 
 * 5 - 10 pts can be awarded for excellence of work and high quality  submissions.
 
 ### Grading criteria <!-- omit in toc -->
@@ -89,6 +97,7 @@ For CTech students there will be a **grade**. The grade will be based on the gra
 * Quality of the result
 * Technical accuracy (i.e., consistent naming conventions, correct spelling, clean folders (no log files), etc.)
 * Presentation in class (informal)
+* Documentation (one pager that briefly outlines your artistic approach, learnings during the course, how you relate audio and graphics in your final project, and final reflection)
 
 
 # Learning Content
@@ -99,7 +108,7 @@ Main objective of this course is to get an understanding of digital audio proces
 
 The first part, audio rendering, introduces you to the fundamentals of sound and hearing perception, digital audio processing and production as well as sound synthesis and music computing. The theoretical parts will be accompanied with practical exercises so that you can apply the concepts and ideas directly. The notion of sounds in space will be an overarching theme to make you familiar with spatial hearing and sound production. 
 
-In the second part, graphics rendering will be in the foreground of the lecture. Here you will be introduced to the basic concepts of 3D computer graphics and the graphics pipeline. In particular, you will learn about the mathematical concepts behind 3D models, model transformations, viewing and texture, as well as vertex shader programming. Objects in space will also be an overarching theme and the theoretical concepts will be accompanied with practical exercises as well.
+In the second part, graphics rendering will be in the foreground of the lecture. Here you will be introduced to the basic concepts of 3D computer graphics and the graphics pipeline. In particular, you will learn about the mathematical concepts behind 3D models, model transformations, triangulation, as well as vertex shader programming. Objects in space will also be an overarching theme and the theoretical concepts will be accompanied with practical exercises as well.
 
 At the end of the lecture, a final exercise will allow you to combine both fields in an application and to explore the sounds and objects in space (hopefully!).
 
