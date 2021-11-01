@@ -137,6 +137,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Graphics rendering pipeline
   - Euclidian geometry and vertices
   - 3D geometric objects and triangles
+  - Homework: Time & motion -> Create animations
 
 01.12.21 - **Moving Around** (4 hrs)
   - Martrices and matrix multiplication
@@ -150,6 +151,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Analysis and filter
   - Subtractive synthesis by example
   - Multitrack arrangement discussion
+  - Homework: Create 10 sounds with 3 different synthesis types each to fit the project
 
 15.12.21 - **Shader programming** (4 hrs)
   - The rendering pipeline revisited
