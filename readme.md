@@ -118,16 +118,18 @@ At the end of the lecture, a final exercise will allow you to combine both field
 - The syllabus is still subject to change.
 ```
 
-1. 03.11.21 - **Audio Intro** (4 hrs)
+1. 03.11.21 - **Audio & Project Intro** (4 hrs)
    1. Intro to the course & main project
-   2. Computer music history / musique conrete
-   3. Basic of sound, audio tech, and MIDI
+   2. Computer & music history / musique concrète / MIDI
+   3. Basics of sound, digitization
    4. Mood boards and project work
+   5. Homework: Create mood board and track listing
 2. 17.11.21 - **Audio Production / DAWs** (4 hrs)
    1. Audio rendering
-   2. DAW and plugin concepts
+   2. DAWs and plugin concepts
    3. Production steps and workflows
-   4. Mood boards discussion
+   4. Mood board and track listing discussion
+   5. Homework: Create multitrack arrangement
 3. 24.11.21 - **Graphics Rendering** (4 hrs)
    6. Computer graphics history
    7. Graphics rendering pipeline
@@ -142,7 +144,8 @@ At the end of the lecture, a final exercise will allow you to combine both field
    1. Sound generation and basic waveforms
    2. Sound synthesis
    3. Anlysis and filter
-   4. Subtractive synthesis by example 
+   4. Subtractive synthesis by example
+   5. Multitrack arrangement discussion
 6. 15.12.21 - **Shader programming** (4 hrs)
    1. The rendering pipeline revisited
    2. Vertex shaders and fragment shaders
