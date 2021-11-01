@@ -118,51 +118,59 @@ At the end of the lecture, a final exercise will allow you to combine both field
 - The syllabus is still subject to change.
 ```
 
-1.  03.11.21 - **Audio & Project Intro** (4 hrs)
-   1. Intro to the course & main project
-   2. Computer & music history / musique concrète / MIDI
-   3. Basics of sound, digitization
-   4. Mood boards and project work
-   5. Homework: Create mood board and track listing
-2.  17.11.21 - **Audio Production / DAWs** (4 hrs)
-   1. Audio rendering
-   2. DAWs and plugin concepts
-   3. Production steps and workflows
-   4. Mood board and track listing discussion
-   5. Homework: Create multitrack arrangement
-3.  24.11.21 - **Graphics Rendering** (4 hrs)
-   6. Computer graphics history
-   7. Graphics rendering pipeline
-   8. Euclidian geometry and vertices
-   9. 3D geometric objects and triangles
-4.  01.12.21 - **Moving Around** (4 hrs)
-   1. Martrices and matrix multiplication
-   2. Geometric transformations
-   3. Homogeneous coordinates
-   4. Geometric transformations by example
-5.  08.12.21 - **Sound Synthesis** (4 hrs)
-   1. Sound generation and basic waveforms
-   2. Sound synthesis
-   3. Anlysis and filter
-   4. Subtractive synthesis by example
-   5. Multitrack arrangement discussion
-6.  15.12.21 - **Shader programming** (4 hrs)
-   1. The rendering pipeline revisited
-   2. Vertex shaders and fragment shaders
-   3. Object manipulations using shaders
-7.  12.01.22 - **Building Bridges** (4hrs)
-    1. Relating audio and graphics
-    2. Sound FX and 3D space
-    3. Practical exploration & discussion / group work
-8.  19.01.21 - **Album Work** (4hrs)
-   1. Specialization
-   2. Integrating audio and graphics
-   3. Album work
-9.  Project work and questions (1hrs)
-10. Final presentations (3hrs)
-    1. Projects presentation
-    2. Course wrap-up
+03.11.21 - **Audio & Project Intro** (4 hrs)
+  - Intro to the course & main project
+  - Computer & music history / musique concrète / MIDI
+  - Basics of sound, digitization
+  - Mood boards and project work
+  - Homework: Create mood board and track listing
 
+17.11.21 - **Audio Production / DAWs** (4 hrs)
+  - Audio rendering
+  - DAWs and plugin concepts
+  - Production steps and workflows
+  - Mood board and track listing discussion
+  - Homework: Create multitrack arrangement
+
+24.11.21 - **Graphics Rendering** (4 hrs)
+  - Computer graphics history
+  - Graphics rendering pipeline
+  - Euclidian geometry and vertices
+  - 3D geometric objects and triangles
+
+01.12.21 - **Moving Around** (4 hrs)
+  - Martrices and matrix multiplication
+  - Geometric transformations
+  - Homogeneous coordinates
+  - Geometric transformations by example
+
+08.12.21 - **Sound Synthesis** (4 hrs)
+  - Sound generation and basic waveforms
+  - Sound synthesis
+  - Analysis and filter
+  - Subtractive synthesis by example
+  - Multitrack arrangement discussion
+
+15.12.21 - **Shader programming** (4 hrs)
+  - The rendering pipeline revisited
+  - Vertex shaders and fragment shaders
+  - Object manipulations using shaders
+
+12.01.22 - **Building Bridges** (4hrs)
+  - Relating audio and graphics
+  - Sound FX and 3D space
+  - Practical exploration & discussion / group work
+
+19.01.21 - **Album Work** (4hrs)
+  - Specialization
+  - Integrating audio and graphics
+  - Album work
+
+Project work and questions (1hrs)
+
+Final presentations (3hrs)
+  - Projects presentation
+  - Course wrap-up
 
 ## Communication and Materials
 
