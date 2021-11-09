@@ -139,19 +139,19 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - 3D geometric objects and triangles
   - Homework: Time & motion -> Create animations
 
-01.12.21 - **Moving Around** (4 hrs)
-  - Martrices and matrix multiplication
-  - Geometric transformations
-  - Homogeneous coordinates
-  - Geometric transformations by example
-
-08.12.21 - **Sound Synthesis** (4 hrs)
+01.12.21 - **Sound Synthesis** (4 hrs)
   - Sound generation and basic waveforms
   - Sound synthesis
   - Analysis and filter
   - Subtractive synthesis by example
   - Multitrack arrangement discussion
   - Homework: Create 10 sounds with 3 different synthesis types each to fit the project
+
+01.12.21 - **Moving Around** (4 hrs)
+  - Martrices and matrix multiplication
+  - Geometric transformations
+  - Homogeneous coordinates
+  - Geometric transformations by example
 
 15.12.21 - **Shader programming** (4 hrs)
   - The rendering pipeline revisited
