@@ -19,7 +19,7 @@
 
 
 
-### __Retro - Horror__ - Using strange, scary samples, also the break could be a bit uneasy 
+### __Retro - Horror__ - Using strange, scary samples, also the break could be a bit uneasy. Would also play around with a 303 emulator. 
 
 [Arcade Summer — Electrocutioner](https://www.youtube.com/watch?v=lQYbXXYJw0M&list=PLhc7X_iW7SkmrINkQTQw20g9HSD5MHrhA&index=5)  
 [DJ Hell - I Want You (The Hacker Remix)](https://www.youtube.com/watch?v=lQYbXXYJw0M&list=PLhc7X_iW7SkmrINkQTQw20g9HSD5MHrhA&index=5)
@@ -29,7 +29,8 @@
 ### __Structure__ - Built by different structural parts. Long, crazy buildup, but clear, minimalistic drop
 
 [L. F. T. -- Nucleon](https://www.youtube.com/watch?v=fFkEohFUf8g&list=PLhc7X_iW7SkmrINkQTQw20g9HSD5MHrhA&index=6)    
-[Prospa - Information](https://www.youtube.com/watch?v=HIwO7y-LETU&list=PLhc7X_iW7SkmrINkQTQw20g9HSD5MHrhA&index=7)  
+[Prospa - Information](https://www.youtube.com/watch?v=HIwO7y-LETU&list=PLhc7X_iW7SkmrINkQTQw20g9HSD5MHrhA&index=7)
+[Make This Right - The Toxic Avangers](https://www.youtube.com/watch?v=M-LMYdj-wqo&list=LL&index=4)
   
 ---  
 
