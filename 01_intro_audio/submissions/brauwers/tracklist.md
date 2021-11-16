@@ -14,3 +14,4 @@ The songs on my tracklist are all in the area of alternative and alternative pop
 12. Ariana Grande - 7 Rings
 
 
+![IMG_0075](https://user-images.githubusercontent.com/66121204/142022355-9156a334-8a33-4ec7-b7fe-b7cec4cb5a02.jpeg)
