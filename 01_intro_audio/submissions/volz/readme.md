@@ -1,4 +1,4 @@
-* The [Moodboard](https://miro.com/app/board/o9J_linmyDc=/) I created in the filmuniversity miro team, so you should hopefully be able to access it.  
+* The [Moodboard](https://miro.com/app/board/o9J_linmyDc=/) I created in the filmuniversity miro team, so you should hopefully be able to access it. I also added it as a PDF though.  
   
 * The Tracklist
     * [Curses - Surrender](https://www.youtube.com/watch?v=7ailoJ5X_2E)
