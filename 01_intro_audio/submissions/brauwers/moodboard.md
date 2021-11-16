@@ -7,7 +7,7 @@ The songs on my tracklist are all in the area of alternative and alternative pop
 5. [070 Skake - Guilty Conscience](https://www.youtube.com/watch?v=qh4sS0PL-u0)
 6. [Noah Cyrus - Again](https://www.youtube.com/watch?v=fas7u8m1_e8)
 7. [Billie Eilish - ilomilo](https://www.youtube.com/watch?v=h64bLxx_RLU)
-8. [Metic - Help I'm Alive](https://www.youtube.com/watch?v=WTdWzXenPHg)
+8. [Metric - Help I'm Alive](https://www.youtube.com/watch?v=WTdWzXenPHg)
 11. [Billie Eilish- Overheated](https://www.youtube.com/watch?v=xJrTxe_L7mE)
 12. [Ariana Grande - 7 Rings](https://www.youtube.com/watch?v=31Inu_c7nC0)
 13. [Raised by Swans - Hail of Arrows](https://www.youtube.com/watch?v=1oxkTf6_Kxc)
