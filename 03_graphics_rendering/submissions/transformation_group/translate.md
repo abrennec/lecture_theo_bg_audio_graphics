@@ -113,19 +113,22 @@ void setup()
 void draw()
 {
   background(240, 240, 240);
-  
+
+   //draws green box
   pushMatrix();
   fill(0, 255, 0, 50);
   translate(width/4, height/2);
   box(500);
   popMatrix();
   
+  //draws blue box
   pushMatrix();
   fill(0, 0, 255, 50);
   translate(width-width/4, height-height/2);
   box(500);
   popMatrix();
   
+  //draws red box
   pushMatrix();
   fill(255, 0, 0, 50);
   translate(mouseX,mouseY);
@@ -160,7 +163,7 @@ I added another for loop for the z-axis for(lel) the previous image. You get a b
  <h2>Sources</h2>
 
  [translate()](https://processing.org/reference/translate_.html)
- 
+
  [popMatrix()](https://processing.org/reference/popMatrix_.html)
 
 
