@@ -9,16 +9,16 @@ The rotation commands in various software/frameworks provide us with a (rather) 
 ---
 # (a little bit of) the mathematics
 
-Just like [translating](), *rotating* something means converting (or transforming) it's coordinate space into another one. For an object, this works by multiplying the objects current transformation matrix with a rotation matrix.
+Just like [translating](./translate.md), *rotating* something means converting (or transforming) it's coordinate space into another one. For an object, this works by multiplying the objects current transformation matrix with a rotation matrix.
 
 Every object in a scene has a transformation matrix in which it's translation, rotation and scaling are stored. Usually, the contents of this matrix can be accessed and edited directly by the user or scripts.
 As an example for 3D objects, this is the "Transform" Component of a GameObject in Unity:
 
-![cropped screenshot from Unity](./rotation_screenshotUnity.PNG)
+![cropped screenshot from Unity](imgs/rotation_screenshotUnity.PNG)
 
 And here we have the transformation matrix for a 3D model in AutoDesk Maya:
 
-![cropped screenshot from Maya](./rotation_screenshotMaya.PNG)
+![cropped screenshot from Maya](imgs/rotation_screenshotMaya.PNG)
 
 "Rotating" the object in a mathematical sense means multiplying the transformation matrix with a rotation matrix, which yields us a new transformation matrix for the object. This also implies that rotation, just like translation, is cumulative because we get a new matrix to start our next operation with.
 
@@ -61,7 +61,7 @@ You can also convert "normal" angles (circle = 360°) into radians using the `ra
 
 > Objects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction.
 
-For the rotation calculation to work properly, we need to specify a rotation point, also known as *pivot* point.
+For the rotation calculation to work properly we need to specify a rotation point, also known as *pivot* point.
 The `rotate()` function takes the current transformation matrix as a pivot point by default. This will be reset every frame:
 
 ```java
@@ -80,7 +80,7 @@ void draw() {
 }
 ```
 
-![screenshot of a half rotated cube](./rotation_rotatedCubeStatic.PNG)
+![screenshot of a half rotated cube](imgs/rotation_rotatedCubeStatic.PNG)
 
 If we multiply the angle value in `rotate()` with the [frameCount](https://processing.org/reference/frameCount.html), we can achieve a continuous rotation:
 ```java
@@ -99,7 +99,7 @@ void draw() {
 }
 ```
 
-![GIF of a rotating cube](./rotation_rotatingCube.gif)
+![GIF of a rotating cube](imgs/rotation_rotatingCube.gif)
 
 
 We can also specfiy any other point as a pivot point around by stacking matrices, for example other objects:
@@ -128,7 +128,7 @@ void draw() {
 }
 ```
 
-![GIF of 3 connected rotating cubes](./rotation_connectedCubes.gif)
+![GIF of 3 connected rotating cubes](imgs/rotation_connectedCubes.gif)
 
 If we do not want to have the behaviour shown above, then we have to tell Processing that not all matrices should be calculated with each other. 
 For this we can use the matrix stack with the commands `pushMatrix()` and `popMatrix()`:
@@ -166,12 +166,6 @@ void draw() {
 }
 ```
 
-![GIF of 3 NOT connected rotating cubes](./rotation_NOTconnectedCubes.gif)
+![GIF of 3 NOT connected rotating cubes](imgs/rotation_NOTconnectedCubes.gif)
 
 In this example I have used `rotateX()`, `rotateY()` and `rotateZ()`, which rotate the object *around* the axis in their name.
-
----
-
-I hope you liked this little introduction to the rotation of objects and can use it in your own projects! :two_hearts:
-
----
