@@ -8,7 +8,7 @@ The first exercise is inspired by the lecture ["Creative Coding" by Prof. Dr. Al
 
 Create a Processing sketch in 2D that contains 2D primitives and is inspired by Mondrian's Art. As an alternative, pick one image from your mood board that could be turned into a Processing sketch with simple 2D geometry.
 
-[MondrianSketch]()
+[MondrianSketch](tbag_ws2122_03_graphics_exercise01_01_Mondrian_ho.pde)
 
 Check out the following functions and create an animated sketch:
 
@@ -17,6 +17,8 @@ Check out the following functions and create an animated sketch:
 - [PShape](https://processing.org/reference/PShape.html) and [createShape](https://processing.org/reference/createShape_.html) to specify your own shapes and check out the related shape modes
 - [random](https://processing.org/reference/random_.html) 
 - color
+
+[2D_Animated_Sketch](tbag_ws2122_03_graphics_exercise01_02_2D-Animated_ho.pde)
 
 ### Exercise 2
 
@@ -38,6 +40,9 @@ Check out the following functions and create a(n animated) sketch:
 An inspiration might be the following Art work by [Daniel Rozin](https://vimeopro.com/bitforms/rozin/video/101408845):
 
 ![daniel rozen](imgs/danielrozen_woodenmirror.png)
+
+[3D_Animated_Sketch_01](tbag_ws2122_03_graphics_exercise02_01_3D-animated_ho.pde)
+[3D_Animated_Sketch_02](tbag_ws2122_03_graphics_exercise02_02_3D-animated_ho.pde)
 
 # Euclidian Geometry and Vertices
 
