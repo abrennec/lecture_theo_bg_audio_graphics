@@ -2,6 +2,7 @@ final int depthSteps = 7;
 final int distance = 200;
 final float goldenRatio = 1.618033988749;
 int currentFill;
+int jitterFactor = 0;
 
 void setup() 
 {
@@ -9,6 +10,11 @@ void setup()
     smooth(8);
     
     currentFill = 15;
+}
+
+void mouseReleased() 
+{
+    jitterFactor = 30;
 }
 
 void draw() 
@@ -19,25 +25,24 @@ void draw()
     translate(width / 2, 0, -50);
     stroke(currentFill);
     fill(currentFill);
-    // rotateX(PI / 2);
-    float zfactor = map(sin(frameCount / 53.0), -1.0, 1.0, 1.0, 1.5);
+    float zfactor = map(sin(frameCount / 53.0), -1.0, 1.0, 1.25, 1.75);
+
     
     for (int i = 0; i <= depthSteps; i++)
     {
         float xfactor = 30 * sin((frameCount / 47.0) + 0.8 * i);
         float yfactor = 30 * map(sin((frameCount / 37.0) + 0.8 * i), -1.0, 1.0, -1.0, 0.0);
-        drawPyramid(distance / 4, -(width / 2.0) + xfactor, yfactor, i * - distance * zfactor);
-        drawPyramid(distance / 4, (width / 2.0) + xfactor, yfactor, i * - distance * zfactor); 
-        drawQuad(200, distance * (zfactor / 2)/ 4, xfactor, height / 2 * goldenRatio + yfactor, i * - distance * zfactor);     
-    }
-    
-    // for (int i = 0; i <= depthSteps; i++)
-    // {
-    //     drawPyramid(50.0, -squareWidth / 2.0, i * - distance * zfactor, height / 2.0);
-    //     drawPyramid(50.0, squareWidth / 2.0, i * - distance * zfactor, height / 2.0);
-// }
-    
-    
+        float edgeLength = (distance / 4);
+        float pyramidX = (width / 2.0) + xfactor;
+        float pyramidZ = i * - distance * zfactor;
+        float quadY = height / 2 * goldenRatio + yfactor;
+
+        drawPyramid(edgeLength, -pyramidX + getJitter(jitterFactor), yfactor + getJitter(jitterFactor), pyramidZ + getJitter(jitterFactor));
+        drawPyramid(edgeLength, pyramidX + getJitter(jitterFactor), yfactor + getJitter(jitterFactor), pyramidZ + getJitter(jitterFactor)); 
+        drawQuad(200, distance * (zfactor / 4), xfactor + getJitter(jitterFactor), quadY + getJitter(jitterFactor), pyramidZ + getJitter(jitterFactor));     
+    }   
+
+    if(jitterFactor > 0) jitterFactor--;
 }
 
 
@@ -82,4 +87,10 @@ void drawQuad(float squareWidth, float squareDepth, float posX, float posY, floa
     vertex(posX, posY, squareDepth + posZ);
     
     endShape();
+}
+
+
+float getJitter(int factor)
+{
+    return (factor / 5) * random(-1.0, 1.0);
 }
