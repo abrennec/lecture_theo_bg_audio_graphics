@@ -21,6 +21,7 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
 
 
 ### Triangular Subdivision
+<img width="998" alt="Bildschirmfoto 2021-12-07 um 18 08 24" src="https://user-images.githubusercontent.com/66121204/145077688-08d19280-a1e0-446c-8909-3f79f5b32ca3.png">
 > Source: https://openprocessing.org/sketch/970715
 
     // Parameters
@@ -163,3 +164,4 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
             }
         }
     }
+
