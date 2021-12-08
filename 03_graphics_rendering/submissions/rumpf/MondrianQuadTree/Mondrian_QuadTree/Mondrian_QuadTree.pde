@@ -15,8 +15,14 @@ qt = new Quadtree(boundary, 1);
 }
 
 void draw (){
-  if(frameCount % 5 == 0){
-       qt.insert(new Point ( int(random(width)) , int(random(height))));
+  // random trigger
+  //if(frameCount % 4 == 0){
+  //     qt.insert(new Point ( int(random(width)) , int(random(height))));
+  //}
+  
+  // mouse clicked
+  if(mousePressed){
+     qt.insert(new Point ( mouseX , mouseY));
   }
   qt.show();
 
