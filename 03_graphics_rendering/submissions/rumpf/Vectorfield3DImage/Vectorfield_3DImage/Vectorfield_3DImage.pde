@@ -66,6 +66,7 @@ void draw() {
 
   //background(0);
 
+  // Comment Angela: Why do you use push. and popMatrix?
   pushMatrix();
   for (Particle p : particles)
   {

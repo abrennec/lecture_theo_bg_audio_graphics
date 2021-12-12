@@ -3,6 +3,15 @@
 // modified colors
 // Rest by me (Marco Braune)
 
+
+/*
+
+Comment Angela:
+- What about moving this to 3D? Benefits and drawbacks? 
+- pgFireworks is not being used, is it? What was the reasoning behind it?
+
+*/
+
 ArrayList<Firework> fireworks;
 PVector gravity = new PVector(0, 0.1);
 PGraphics pgSkyline, pgFireworks;

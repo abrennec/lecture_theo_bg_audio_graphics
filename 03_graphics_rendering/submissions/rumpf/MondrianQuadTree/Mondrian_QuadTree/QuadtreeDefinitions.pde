@@ -1,4 +1,8 @@
 
+// Comment Angela:
+// Do you need the Point class? What about using PVector?
+// Do you need the Rectangle class? What about "rect" ?
+
 class Point {
   int x;
   int y;
