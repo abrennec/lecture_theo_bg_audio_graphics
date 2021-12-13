@@ -6,7 +6,7 @@ int jitterFactor = 0;
 
 void setup() 
 {
-    size(800, 600, P3D);
+    fullScreen(P3D);
     smooth(8);
     
     currentFill = 15;
