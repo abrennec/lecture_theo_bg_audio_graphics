@@ -99,6 +99,7 @@ Lights interact with materials based on the material's properties (such as specu
 Normal vectors play an important role in determining a material’s brightness at a particular point. “The brightness of the object at any given point of its surface depends on the angle between the normal at that point and the light direction.”
 Provide one or more exemplary sketches.
 
+---
 
 ### Useful links
 https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-normals
