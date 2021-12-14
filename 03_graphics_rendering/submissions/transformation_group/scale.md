@@ -63,7 +63,7 @@ With this we can see that scale is working **on the udnerlying coordinate system
 
 # Keeping Objects in the Desired Position
 
-Because `scale()` increases / decreases from the origin of 0, 0 (as apposed to outwards / inwards from the middle of the window for example), we also need to offsett the position of the shape, relative to the scale amount. This can be done by using `translate()` (see [translate.md](translate.md)).
+Because `scale()` increases / decreases from the origin of 0, 0 (as apposed to outwards / inwards from the middle of the window for example), we also need to offsett the position of the shape, relative to the scale amount. This can be done by using `translate()` (see [translate.md](translate.md)) and rectMode(CENTER).
 
 For example:
 ```js
@@ -86,21 +86,12 @@ void draw(){
   
   translate(width/2, width/2); // Move origin of shaope to the middle
   scale(2); // scale by 200% on x and y axis
-  ellipse(0, 0, 50, 50);
+  rectMode(CENTER); // Draws the rectangle from the center. The last two arguments become width and height. (ellipses are always drawn from the center)
+  rect(0, 0, 50, 50);
 }
 ```
 This code results in this:
-![Ellipse Centered](imgs/ellipse_centered.png)
-
-You may ask yourself, "but what if I scale by 3 (300%)? How will I know how much to translate the ellipse so that it is back in the center?"
-
-One way is to whip out the calculator and figure out by how many pixels the `shape()`function has actually displaced the object.
-If we were to take the above values (where the ellipse is being drawn at 250, 250), but scale by 3:
-1. 250 * 3 = 750
-2. 750 - 250 = 500 (the difference between origin and displacement)
-3. `translate(-500, -500)`
-   
-I'm sure there's a code based way to do this automatically, but it's outside the scope of my brain right now...
+![Rect Centered](imgs/rect_centered.png)
 
 > Handy tip: Just like the other transform functions, calculations are **cumulative**, meaning that scale(2.0) followed by scale(1.5) is the same as a singular instance of scale(3.0). 
 
