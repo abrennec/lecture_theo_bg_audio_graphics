@@ -1,4 +1,4 @@
-# Group 1 -- Lights
+# Group 1: Lights
 
 ## Research about shading and lighting in computer graphics.
 ---
