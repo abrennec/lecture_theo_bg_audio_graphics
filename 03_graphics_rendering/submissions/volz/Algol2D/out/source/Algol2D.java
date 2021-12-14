@@ -55,16 +55,6 @@ float halfHeight;
     scale(scaleStep);
 
   }
-<<<<<<< HEAD
-  
-  /* 
-  pushMatrix();
-  scale(scaleStep);
-  triangle(120, 300, 232, 80, 344, 300);
-  popMatrix(); 
-  */
-=======
->>>>>>> 8bac93bb68f823559f3224ecebe198d08528b57f
 }
 
 
