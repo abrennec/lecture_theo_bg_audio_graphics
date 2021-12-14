@@ -92,9 +92,16 @@
 - Winter:
   - Nice approach to mondrian 3d, but 
     - I can hardly recognize the rendering due to the transparency settings
+      - I updated the sketch - there are now multiple color themes which can be cycled        through by clicking. I don't entirely understand what you mean, but it should look somewhat like the screenshots [in here](../submissions/transformation_group/translate.md) unless something is severly broken.
     - Where is the 2D counterpart?
+      - I uploaded my original p5 sketch.
     - Do you need the camera function?
+      - I used the function to set the camera further back on the z-axis, since the Mondrian-thing gets drawn towards the camera, starting at the origin. I could also start drawing at (0, 0, 9500) instead.
  - What are the benefits / drawbacks of using 3D vs 2D?
- - What would you like to achieve visually? 
+   - For me, it is more difficult to achieve a "natural" or "organic" look in 3D. Lighting and shaders can help with this though. This was also the reason why I relied on transparency so heavily. 
+ - What would you like to achieve visually?
+   - This sketch doesn't really match the tone of the track I started for Christians class at all, so I won't continue with this. Since I sampled some of the Barbie Girl lyrics for my track, I'd like to process videos in a similar fashion, such as TV commercials. Ideally, I'd end up with something similar to Tim's submission. 
  - Is there a particular connection with your moodboard?
+   - No, I just focused on the Mondrian aspect.
  - How would you like to continue with this?
+   - I won't, beyond the added color themes. 
