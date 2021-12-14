@@ -10,7 +10,7 @@ Vertices are points where directions or vectors come together.
 
 
 2. What kind of 3D data formats can be loaded with Processing?
-
+.OBJ files
 
 
 3. What is meant by triangular subdivision for?
