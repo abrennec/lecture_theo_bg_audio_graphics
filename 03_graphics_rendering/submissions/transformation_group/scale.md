@@ -63,9 +63,12 @@ With this we can see that scale is working **on the udnerlying coordinate system
 
 # Keeping Objects in the Desired Position
 
-Because `scale()` increases / decreases from the origin of 0, 0 (as apposed to outwards / inwards from the middle of the window for example), we also need to offsett the position of the shape, relative to the scale amount. This can be done by using `translate()` (see [translate.md](translate.md)) and rectMode(CENTER).
+Because `scale()` increases / decreases from the origin of 0, 0 (as apposed to outwards / inwards from the middle of the window for example), we need a way to keep objects in the same position when scaling. One way is to use rectMode(CENTER).
+
+> Note that ellipses by default are drawn from the center!
 
 For example:
+
 ```js
 int grid = 20;
 
@@ -86,11 +89,12 @@ void draw(){
   
   translate(width/2, width/2); // Move origin of shaope to the middle
   scale(2); // scale by 200% on x and y axis
-  rectMode(CENTER); // Draws the rectangle from the center. The last two arguments become width and height. (ellipses are always drawn from the center)
+  rectMode(CENTER); // Draws the rectangle from the center. The last two arguments become width and height. 
   rect(0, 0, 50, 50);
 }
 ```
-This code results in this:
+The above code results in this:
+
 ![Rect Centered](imgs/rect_centered.png)
 
 > Handy tip: Just like the other transform functions, calculations are **cumulative**, meaning that scale(2.0) followed by scale(1.5) is the same as a singular instance of scale(3.0). 
