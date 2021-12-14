@@ -11,11 +11,14 @@ The rotation commands in various software/frameworks provide us with a (rather) 
 
 Just like [translating](./translate.md), *rotating* something means converting (or transforming) it's coordinate space into another one. For an object, this works by multiplying the objects current transformation matrix with a rotation matrix.
 
-> ANNOTATION: I think I got it wrong here, sorry folks.
+> ANNOTATION: I think I got something mixed up here, sorry folks.
 > If I understood Angela's [video lecture](https://owncloud.gwdg.de/index.php/s/zwUNl0K7QPoPBPU) correctly, the object's new rotation is calculated by using the following initial parameters: the angle amount you want to rotate and the axis you want to rotate around. So we have to calculate a VECTOR and a MATRIX and not 2 matrices.
 > Depending on what axis we want to rotate around, the calculations are different (see ~ 36:10 in the video lecture for the different calculations). 
 
 Every object in a scene has a transformation matrix in which it's translation, rotation and scaling are stored. Usually, the contents of this matrix can be accessed and edited directly by the user or scripts.
+
+> ANNOTATION: Sorry, I don't think the storage matrix is itself a transformation matrix. However, this is probably just nomenclature for us and shouldn't be relevant to our applications.
+
 As an example for 3D objects, this is the "Transform" Component of a GameObject in Unity:
 
 ![cropped screenshot from Unity](./rotation_screenshotUnity.PNG)
@@ -26,12 +29,12 @@ And here we have the transformation matrix for a 3D model in AutoDesk Maya:
 
 "Rotating" the object in a mathematical sense means multiplying the transformation matrix with a rotation matrix, which yields us a new transformation matrix for the object. This also implies that rotation, just like translation, is cumulative because we get a new matrix to start our next operation with.
 
-> ANNOTATION: As mentioned above, this is might be wrong.
+> ANNOTATION: As mentioned above, this might be inaccurate.
 > However, rotations are still cumulative, because in the end we still get a new transformation matrix, that we can then use for our next transformations.
 
 Doing matrix multiplication requires a lot of math but can be useful in some cases. If you're interested in understanding the details of matrix multiplication and doing some proofs [this blog](https://www.javatpoint.com/computer-graphics-rotation) might be interesting to you.
 
-> ANNOTATION: Even though I might be wrong here, the math behind rotations is still complicated (at least to me), but Angela provided us with a cool video on how the math works. Please watch the [video](https://owncloud.gwdg.de/index.php/s/zwUNl0K7QPoPBPU)! :)
+> ANNOTATION: Even though I have mixed up some stuff, the math behind rotations is still complicated (at least to me), but Angela provided us with a cool video on how the math works. Please watch the [video](https://owncloud.gwdg.de/index.php/s/zwUNl0K7QPoPBPU)! :)
 
 ...
 
@@ -89,7 +92,7 @@ void draw() {
 }
 ```
 
-![screenshot of a half rotated cube](./rotation_rotatedCubeStatic.PNG)
+![screenshot of a half rotated cube](imgs/rotation_rotatedCubeStatic.PNG)
 
 If we multiply the angle value in `rotate()` with the [frameCount](https://processing.org/reference/frameCount.html), we can achieve a continuous rotation:
 ```java
@@ -108,7 +111,7 @@ void draw() {
 }
 ```
 
-![GIF of a rotating cube](./rotation_rotatingCube.gif)
+![GIF of a rotating cube](imgs/rotation_rotatingCube.gif)
 
 
 We can also specfiy any other point as a pivot point around by stacking matrices, for example other objects:
@@ -137,7 +140,7 @@ void draw() {
 }
 ```
 
-![GIF of 3 connected rotating cubes](./rotation_connectedCubes.gif)
+![GIF of 3 connected rotating cubes](imgs/rotation_connectedCubes.gif)
 
 If we do not want to have the behaviour shown above, then we have to tell Processing that not all matrices should be calculated with each other. 
 For this we can use the matrix stack with the commands `pushMatrix()` and `popMatrix()`:
@@ -175,7 +178,7 @@ void draw() {
 }
 ```
 
-![GIF of 3 NOT connected rotating cubes](./rotation_NOTconnectedCubes.gif)
+![GIF of 3 NOT connected rotating cubes](imgs/rotation_NOTconnectedCubes.gif)
 
 In this example I have used `rotateX()`, `rotateY()` and `rotateZ()`, which rotate the object *around* the axis in their name.
 
@@ -185,7 +188,7 @@ In this example I have used `rotateX()`, `rotateY()` and `rotateZ()`, which rota
 
 # Sources:
 
-for the mathmatical stuff:
+for the mathematical stuff:
 
 - Harold Serrano [Rotations in Computer Graphics](https://www.haroldserrano.com/blog/rotations-in-computer-graphics);
 
