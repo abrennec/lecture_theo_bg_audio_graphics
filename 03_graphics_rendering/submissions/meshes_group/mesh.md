@@ -20,6 +20,29 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
 4. Provide one or more examplary sketches.
 
 
+
+<img width="600" alt="Bildschirmfoto 2021-12-15 um 10 30 58" src="https://user-images.githubusercontent.com/66121204/146160626-1b755ea7-e6e2-4590-9cc6-8335b80a8d1f.png">
+<img width="597" alt="Bildschirmfoto 2021-12-15 um 10 30 46" src="https://user-images.githubusercontent.com/66121204/146160616-85226015-8395-4b78-9a47-f955d0b97f70.png">
+<img width="592" alt="Bildschirmfoto 2021-12-15 um 10 31 10" src="https://user-images.githubusercontent.com/66121204/146160628-a34fe216-e9b6-4feb-a7b9-0f38fb5ef819.png">
+<img width="596" alt="Bildschirmfoto 2021-12-15 um 10 31 19" src="https://user-images.githubusercontent.com/66121204/146160631-0f883628-abb4-4534-a111-90a4936e0083.png">
+
+ void setup() {
+    size(600, 600, P3D);
+    noFill();
+    stroke(255);
+  }
+
+  void draw() {
+    background(0);
+    translate(width/2, height/2);
+    rotateX(PI/2);
+    rotateZ(-PI/6);
+    sphere(100);
+    rotateY(0.3);
+    sphereDetail(mouseX / 4);
+  }
+
+
 ### Triangular Subdivision
 <img width="998" alt="Bildschirmfoto 2021-12-07 um 18 08 24" src="https://user-images.githubusercontent.com/66121204/145077688-08d19280-a1e0-446c-8909-3f79f5b32ca3.png">
 > Source: https://openprocessing.org/sketch/970715
