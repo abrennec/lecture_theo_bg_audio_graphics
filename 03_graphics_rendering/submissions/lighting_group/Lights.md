@@ -105,3 +105,8 @@ Provide one or more exemplary sketches.
 https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-normals
 http://creative-co.de/better_looking_processing/
 https://processing.org/reference/
+
+### Follow-up Questions:
+Why does the ambient light have a position parameter?
+Is there an upper limit to the number of lights in a scene?
+How expensive are each of the light sources relative to each other?
