@@ -44,7 +44,8 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
        rotateY(0.3);
        sphereDetail(mouseX / 4);
      }
-     ```
+     
+ ```
 
 
 ### Triangular Subdivision
