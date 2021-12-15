@@ -28,6 +28,7 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
  <img  src="https://user-images.githubusercontent.com/66121204/146160631-0f883628-abb4-4534-a111-90a4936e0083.png" width="250" >
  </p>
 
+```java
     void setup() {
        size(600, 600, P3D);
        noFill();
@@ -43,11 +44,16 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
        rotateY(0.3);
        sphereDetail(mouseX / 4);
      }
+     ```
 
 
 ### Triangular Subdivision
 <img width="998" alt="Bildschirmfoto 2021-12-07 um 18 08 24" src="https://user-images.githubusercontent.com/66121204/145077688-08d19280-a1e0-446c-8909-3f79f5b32ca3.png">
 > Source: https://openprocessing.org/sketch/970715
+
+
+```java
+
 
     // Parameters
     var maxDivs = 15;
@@ -189,4 +195,4 @@ In triangular subdivision one triangle is subdivided into more. With triangular 
             }
         }
     }
-
+```
