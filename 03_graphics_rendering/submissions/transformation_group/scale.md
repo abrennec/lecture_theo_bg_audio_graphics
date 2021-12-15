@@ -186,6 +186,13 @@ void draw() {
 }
 ```
 If you run this code, the rectangle will stay in the middle, growing and shrinking in size, while the ellipse will also stay in place. 
+
+![Scale Gif](imgs/scale.gif)
+
 If you comment out the `pushMatrix() and pullMatrix()` lines, you will see that the ellipse also starts to grow, but also to move!
 
 This is because the coordinate system on which the ellipse is being drawn relative to, is being "shifted" and scaled acording to `translate()` and also `scale()`. 
+
+![Scale Incorrect](imgs/scale_incorrect.gif)
+
+(content to push?)
