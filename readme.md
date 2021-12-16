@@ -12,6 +12,7 @@ Christian Halten | halten@skylife.de
 ---
 
 - [Theoretical Backgrounds of Audio and Graphics Applications](#theoretical-backgrounds-of-audio-and-graphics-applications)
+- [Technical Requirements](#technical-requirements)
 - [Organization of the Course](#organization-of-the-course)
   - [General Information](#general-information)
   - [Method of Instruction](#method-of-instruction)
@@ -118,28 +119,28 @@ At the end of the lecture, a final exercise will allow you to combine both field
 - The syllabus is still subject to change.
 ```
 
-03.11.21 - **Audio & Project Intro** (4 hrs)
+03.11.21 - **Audio & Project Intro** (4 hrs) > Christian
   - Intro to the course & main project
   - Computer & music history / musique concrète / MIDI
   - Basics of sound, digitization
   - Mood boards and project work
   - Homework: Create mood board and track listing
 
-17.11.21 - **Audio Production / DAWs** (4 hrs)
+17.11.21 - **Audio Production / DAWs** (4 hrs) > Christian
   - Audio rendering
   - DAWs and plugin concepts
   - Production steps and workflows
   - Mood board and track listing discussion
   - Homework: Create multitrack arrangement
 
-24.11.21 - **Graphics Rendering** (4 hrs)
+24.11.21 - **Graphics Rendering** (4 hrs) > Angela
   - Computer graphics history
   - Graphics rendering pipeline
   - Euclidian geometry and vertices
   - 3D geometric objects and triangles
   - Homework: Time & motion -> Create animations
 
-01.12.21 - **Sound Synthesis** (4 hrs)
+01.12.21 - **Sound Synthesis** (4 hrs) > Christian
   - Sound generation and basic waveforms
   - Sound synthesis
   - Analysis and filter
@@ -147,30 +148,30 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Multitrack arrangement discussion
   - Homework: Create 10 sounds with 3 different synthesis types each to fit the project
 
-01.12.21 - **Moving Around** (4 hrs)
+01.12.21 - **Building Bridges** (4hrs) > Christian
+  - Relating audio and graphics
+  - Sound FX and 3D space
+  - Practical exploration & discussion / group work
+
+15.12.21 - **Moving Around** (4 hrs) > Angela
   - Martrices and matrix multiplication
   - Geometric transformations
   - Homogeneous coordinates
   - Geometric transformations by example
 
-15.12.21 - **Shader programming** (4 hrs)
+12.01.22 - **Shader programming** (4 hrs) > Angela
   - The rendering pipeline revisited
   - Vertex shaders and fragment shaders
   - Object manipulations using shaders
 
-12.01.22 - **Building Bridges** (4hrs)
-  - Relating audio and graphics
-  - Sound FX and 3D space
-  - Practical exploration & discussion / group work
-
-19.01.21 - **Album Work** (4hrs)
+19.01.21 - **Album Work** (4hrs) > India & Christian
   - Specialization
   - Integrating audio and graphics
   - Album work
 
-Project work and questions (1hrs)
+26.01.2022 - Project work and questions (1hrs) > Christian
 
-Final presentations (3hrs)
+02.02.2022 - Final presentations (3hrs) > Angela & Christian
   - Projects presentation
   - Course wrap-up
 
