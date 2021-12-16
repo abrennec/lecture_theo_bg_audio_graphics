@@ -146,7 +146,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Analysis and filter
   - Subtractive synthesis by example
   - Multitrack arrangement discussion
-  - Homework: Create 10 sounds with 3 different synthesis types each to fit the project
+  - Homework: Create 3 sounds with 3 different synthesis types each (9 in total) to fit the project
 
 01.12.21 - **Building Bridges** (4hrs) > Christian
   - Relating audio and graphics
