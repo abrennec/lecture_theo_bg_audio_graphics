@@ -2,21 +2,23 @@
 
  1. What is the difference between vectors, points, and vertices?
 
-**Vectors** represent directions
+**Points** represent locations in space. A point is a 0-dimensional entity existing in n-dimensional space.
+A point is a primitive notion, which means it is not defined in relation to any object, that has previously been defined. It can not be subdivided into anything else, nor does it consist of various parts.
 
-**Points** represent locations 
+**Vectors** represent directions or displacement. It is a 1-dimensional entity existing in n-dimensional space. A vector can describe the geometracial relation between two points.
 
-**Vertices** are points where directions or vectors come together.
+
+**Vertices** in geometry are points where edges or vectors intersect or origin from. In computer graphics, vertices can have mutlitple attributes like color or texture coordinates. So in both cases, there is a difference to a point. A vertex in geometry is therefore either defined only in relation to previously defined objects (e.g. two edges that intersect), which would not make it a primitive notion and therefore not a point. A vertex in computer graphics consists of various attributes, which would also not make it a primitive notion and therefore not a point.
 
 
 2. What kind of 3D data formats can be loaded with Processing?
 
-.OBJ files
+SVG and OBJ files can be loaded via the loadShape() function.
 
 
 3. What is meant by triangular subdivision for?
 
-In triangular subdivision one triangle is subdivided into more. With triangular subdivision a shape can get more complex.
+Triangular subdivision is used for representing curved surfaces in Computer Graphics. A complex and computationally expensive to use *inner mesh* can be approximated in a *coarse* or *outer mesh* using much fewer triangles. This happens in an iterative process of a chosen *depth*. With a higher depth – meaning more iterations – the *outer mesh* will be increasingly accurate, but also increasingly computationally expensive to use in a scene.
 
 4. Provide one or more examplary sketches.
 
