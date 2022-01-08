@@ -199,4 +199,5 @@ I_{dentity} =
 
 I do not have the time / energy / motivation to continue. My math keeps being wrong.
 
-<!-- $\theta \omega \theta$ -->
+<!-- $\theta \omega \theta$
+[funny image: https://www.researchgate.net/figure/Example-of-applying-an-affine-transformation-to-the-deformation-texture-Top-A_fig2_221249004](url) -->
