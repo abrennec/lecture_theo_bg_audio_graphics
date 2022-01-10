@@ -164,14 +164,14 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Vertex shaders and fragment shaders
   - Object manipulations using shaders
 
-19.01.21 - **Album Work** (4hrs) > India & Christian
-  - Specialization
+19.01.21 - **Album Work** (4hrs) > Angela, India & Christian
+  - Shader 
   - Integrating audio and graphics
   - Album work
 
 26.01.2022 - Project work and questions (1hrs) > Christian
 
-02.02.2022 - Final presentations (3hrs) > Angela & Christian
+09.02.2022 - Final presentations (3hrs) > Angela & Christian
   - Projects presentation
   - Course wrap-up
 
