@@ -153,7 +153,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Sound FX and 3D space
   - Practical exploration & discussion / group work
 
-15.12.21 - **Moving Around** (4 hrs) > Angela
+15.12.21 - **Transformations** (4 hrs) > Angela
   - Martrices and matrix multiplication
   - Geometric transformations
   - Homogeneous coordinates
@@ -162,14 +162,18 @@ At the end of the lecture, a final exercise will allow you to combine both field
 12.01.22 - **Shader programming** (4 hrs) > Angela
   - The rendering pipeline revisited
   - Vertex shaders and fragment shaders
-  - Object manipulations using shaders
+  - Attributes, varying, and uniforms
+  - Shader programming
 
-19.01.21 - **Album Work** (4hrs) > Angela, India & Christian
-  - Shader 
+19.01.21 - **Integration** (4hrs) > Angela, India & Christian
+  - Shader programming continued
   - Integrating audio and graphics
+  - Project outline
   - Album work
 
-26.01.2022 - Project work and questions (1hrs) > Christian
+26.01.2022 - Project work and questions (1hrs) > Christian (Angela)
+  - Consultations
+  - Technical and artistic feedback
 
 09.02.2022 - Final presentations (3hrs) > Angela & Christian
   - Projects presentation
