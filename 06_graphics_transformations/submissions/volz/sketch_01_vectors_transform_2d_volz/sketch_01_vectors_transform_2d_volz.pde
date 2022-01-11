@@ -59,7 +59,9 @@ void draw() {
   // Task 4: Re-write the box/cube object explicitly with
   // vertices using PShape! 
   pushMatrix();
-  translate(width/2, height/2);
+  //translate(width/2, height/2);
+  applyMatrix(1, 0, width/2,
+              0, 1, height/2);
   noFill();
   drawBox();
   popMatrix();
@@ -131,9 +133,16 @@ void drawBox()
      pushMatrix();
      rotateY(i * HALF_PI);
  
-     translate(-10, -10, 0);
+     //translate(-10, -10, 0);
+     
+     applyMatrix(1, 0, -10,
+                 0, 1, -10);
      rotateY(HALF_PI);
-     translate(-10, 0, 0);
+     
+     //translate(-10, 0, 0);
+     
+     applyMatrix(1, 0, -10,
+                 0, 1, 0);
      shape(square);
      
      popMatrix();
@@ -180,6 +189,7 @@ void drawSphere() {
   
   pushMatrix();
   translate(sphereLocation.x, sphereLocation.y, sphereLocation.z);
+  
   specular(0, 255, 0);
 
   // define the ellipses current position and size
