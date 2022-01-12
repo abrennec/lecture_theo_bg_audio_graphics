@@ -1,4 +1,4 @@
-final int depthSteps = 7;
+final int depthSteps = 12;
 final int distance = 200;
 final float goldenRatio = 1.618033988749;
 int currentFill;
