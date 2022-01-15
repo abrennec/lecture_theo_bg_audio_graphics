@@ -1,30 +1,53 @@
 
-
+let easing = 0.05;
+let x = 0;
 // shader object
-let simpleShader;
+let experimentShader;
 
+// 3d object
+let bust;
 function preload(){
 
   // set the shader object
-  simpleShader = loadShader('basic.vert', 'basic.frag');
+  experimentShader = loadShader('experiment_shader.vert', 'experiment_shader.frag');
+  bust = loadModel('assets/bust.obj');
 }
 
 function setup() {
 
   // shaders require WEBGL mode to work
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas.GL.getExtension('OES_standard_derivatives');
+      // load the shader
+
   noStroke();
+  noCursor();
 }
 
 function draw() {  
-
-    // load the shader
-    shader(simpleShader);
-    // orange
+    background(0);
     fill(200, 100, 0);
-    // rect gives us some geometry on the screen
-    rect(0, 0, width, height);
 
+    let mx = map(mouseX, 0, width, 1, 20);
+    let my = map(mouseY, 0, height, 1, 50);
+
+
+    shader(experimentShader);
+    // Send the frameCount to the shader
+    experimentShader.setUniform("uFrameCount", frameCount);
+    experimentShader.setUniform('mouse', [mx, my]);
+
+    // orange
+
+    // rect gives us some geometry on the screen
+  let targetX = mouseX ;
+  let dx = targetX - x;
+  x += dx * easing;
+
+    rotateY(x*0.005);
+    translate(0, height/2 -400, 0);
+
+    model(bust);
     // custom polygon with 6 vertices
     /*
     beginShape();
