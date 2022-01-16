@@ -225,7 +225,7 @@ void main() {
   float distortion2 = pnoise(uScaleValue*aPosition+uFrameCount, vec3(-5));
   positionVec4.y += distortion2 * aNormal.x * amplitude*0.5;
   positionVec4.x += distortion2 * aNormal.y * amplitude;
-  positionVec4.z += distortion2* aNormal.z * amplitude*0.2;
+ // positionVec4.z += distortion2* aNormal.z * amplitude*0.2;
 
 
 

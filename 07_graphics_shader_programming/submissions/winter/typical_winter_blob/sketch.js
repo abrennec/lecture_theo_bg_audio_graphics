@@ -38,11 +38,11 @@ function draw() {
   myShader.setUniform("uMouseX", map(mouseX, 0, width, 0, 3));
   myShader.setUniform("uMouseY", map(mouseY, 0, height, 0, 3));
   myShader.setUniform("uBrightnessAnimation", map(brightnessAnimation, 0, 1, 0.8, 0.99));
-  myShader.setUniform("uSaturationAnimation", map(saturationAnimation, 0, 1, 0.8, 0.99));
+  myShader.setUniform("uSaturationAnimation", map(saturationAnimation, 0, 1, 0.7, 0.99));
 
   // Rotate our geometry on the X and Y axes
-  rotateX(frameCount * 0.0005);
-  rotateY(frameCount * 0.00015);
+  //rotateX(frameCount * 0.0005);
+  //rotateY(frameCount * 0.00015);
 
   // Draw some geometry to the screen
   // We're going to tessellate the sphere a bit so we have some more geometry to work with
