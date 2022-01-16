@@ -217,7 +217,7 @@ void main() {
 
   // Frequency and Amplitude will determine the look of the displacement
   float frequency = 20.0;
-  float amplitude = 6.0;
+  float amplitude = 5.0;
 
   // Displace the x position withe the sine of the x + time. Multiply by the normal to move it in the correct direction
   // You could add more distortions to the other axes too. 
@@ -225,7 +225,7 @@ void main() {
   float distortion2 = pnoise(uScaleValue*aPosition+uFrameCount, vec3(-5));
   positionVec4.y += distortion2 * aNormal.x * amplitude*0.5;
   positionVec4.x += distortion2 * aNormal.y * amplitude;
-  //positionVec4.z += distortion2* aNormal.z * amplitude*0.2;
+  positionVec4.z += distortion2* aNormal.z * amplitude*0.2;
 
 
 
