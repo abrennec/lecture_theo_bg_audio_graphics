@@ -23,8 +23,8 @@ function draw() {
   myShader.setUniform("uFrameCount", frameCount);
 
   // Rotate our geometry on the X and Y axes
-  rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.005);
+  //rotateX(frameCount * 0.01);
+  //rotateY(frameCount * 0.05);
 
   // Draw some geometry to the screen
   // We're going to tessellate the sphere a bit so we have some more geometry to work with

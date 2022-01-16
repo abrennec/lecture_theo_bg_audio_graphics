@@ -214,14 +214,17 @@ void main() {
 
   // Frequency and Amplitude will determine the look of the displacement
   float frequency = 20.0;
-  float amplitude = 2.0;
+  float amplitude = 3.0;
 
   // Displace the x position withe the sine of the x + time. Multiply by the normal to move it in the correct direction
   // You could add more distortions to the other axes too. 
   float distortion = sin(positionVec4.x * frequency + uFrameCount * 0.1);
-  float distortion2 = pnoise(1.0*aPosition+uFrameCount*0.01, vec3(100));
+  float distortion2 = pnoise(1.0*aPosition+uFrameCount*0.01, vec3(5));
   positionVec4.y += distortion2 * aNormal.x * amplitude;
-  positionVec4.x += distortion2*aNormal.y * amplitude;
+  positionVec4.x += distortion2 * aNormal.y * amplitude;
+  //positionVec4.z += distortion2* aNormal.z * amplitude;
+
+
 
   // Send the normal to the fragment shader
   vNormal = aNormal;
