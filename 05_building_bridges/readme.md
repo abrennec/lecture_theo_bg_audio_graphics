@@ -14,7 +14,7 @@ Christian Halten | halten@skylife.de
 
 **Control animation from audio track**
 
-Control input sources
+Control sources
 
 1.  Tempo / BPM
 2.  Transients / volume
@@ -22,7 +22,7 @@ Control input sources
 4.  Frequencies / FFT
 5.  Meta data from file or additional control tracks
 
-Control input destinations
+Control destinations
 
 1.  Switching animation scenes
 2.  Animation speed and directions
@@ -41,11 +41,11 @@ Control input destinations
 
 **Control audio from motion graphics**
 
-Control input sources
+Control sources
 
 See destinations above
 
-Control input destinations
+Control destinations
 
 1.  Level
 2.  Audio playback position
