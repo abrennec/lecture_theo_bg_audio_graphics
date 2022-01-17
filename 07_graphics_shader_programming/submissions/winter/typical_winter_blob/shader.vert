@@ -206,6 +206,7 @@ uniform float uFrameCount;
 uniform float uScaleValue;
 uniform float uMouseX;
 uniform float uMouseY;
+uniform float uVectorAnimation;
 
 varying vec2 vTexCoord;
 varying vec3 vNormal;
@@ -222,7 +223,7 @@ void main() {
   // Displace the x position withe the sine of the x + time. Multiply by the normal to move it in the correct direction
   // You could add more distortions to the other axes too. 
   float distortion = sin(positionVec4.x * frequency + uFrameCount * 0.1);
-  float distortion2 = pnoise(uScaleValue*aPosition+uFrameCount, vec3(-5));
+  float distortion2 = pnoise(uScaleValue*aPosition+uFrameCount, vec3(-3));
   positionVec4.y += distortion2 * aNormal.x * amplitude*0.5;
   positionVec4.x += distortion2 * aNormal.y * amplitude;
  // positionVec4.z += distortion2* aNormal.z * amplitude*0.2;

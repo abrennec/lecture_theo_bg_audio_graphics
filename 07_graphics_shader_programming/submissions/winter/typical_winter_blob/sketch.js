@@ -17,6 +17,8 @@ function setup() {
 
 function draw() {
   background(0);
+
+  smooth();
   
   shader(myShader);
 
@@ -30,12 +32,12 @@ function draw() {
   let brightnessAnimation = cos(frameCount*0.003);
   let saturationAnimation = sin(frameCount*0.005);
 
-  let animationValueMapped = map(animationValue, -1, 1, map(animationMax, -1, 1, 0.1, 2), map(animationMin, -1, 1, 0.1, -2));
+  let animationValueMapped = map(animationValue, -1, 1, map(animationMax, -1, 1, 0.1, 2), map(animationMin, -1, 1, -0.1, -2));
 
   // Send the frameCount to the shader
   myShader.setUniform("uScaleValue", map(scaleValue, -1, 1, -0.9, 0.7));
   myShader.setUniform("uFrameCount", animationValueMapped);
-  myShader.setUniform("uMouseX", map(mouseX, 0, width, 0, 3));
+  myShader.setUniform("uMouseX", map(mouseX, 0, width, -4, 4));
   myShader.setUniform("uMouseY", map(mouseY, 0, height, 0, 3));
   myShader.setUniform("uBrightnessAnimation", map(brightnessAnimation, 0, 1, 0.8, 0.99));
   myShader.setUniform("uSaturationAnimation", map(saturationAnimation, 0, 1, 0.7, 0.99));
