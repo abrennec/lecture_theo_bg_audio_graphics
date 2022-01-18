@@ -40,7 +40,7 @@ function draw() {
   myShader.setUniform("uMouseX", map(mouseX, 0, width, -4, 4));
   myShader.setUniform("uMouseY", map(mouseY, 0, height, 0, 3));
   myShader.setUniform("uBrightnessAnimation", map(brightnessAnimation, 0, 1, 0.8, 0.99));
-  myShader.setUniform("uSaturationAnimation", map(saturationAnimation, 0, 1, 0.7, 0.99));
+  myShader.setUniform("uSaturationAnimation", map(saturationAnimation, 0, 1, 0.8, 0.99));
 
   // Rotate our geometry on the X and Y axes
   //rotateX(frameCount * 0.0005);

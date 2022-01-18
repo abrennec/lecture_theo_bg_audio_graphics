@@ -1,0 +1,1 @@
+While I understand the difference between the different vec datatypes (vec2, vec3 vec4), I do not entirely understand their different use cases. For some typical vertex displacement, like in my sketch, I'd just use vec3 for 3d graphics and vec2 for 2d graphics, but it cannot be as simple as that, right?
