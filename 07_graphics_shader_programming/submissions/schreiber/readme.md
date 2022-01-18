@@ -30,14 +30,39 @@ In front of the camera will be a centrepiece which is a writhing torusknot. This
 As you can see from my inspirations, my preferred style for this would not be singular geometry, but many simple shapes - aligned in a tunnel through which the camera moves. However, I do not yet know how I would implement this.
 
 ### Inspirations for the centrepiece:
-| ![knot1](https://media1.giphy.com/media/tJ2xRBV9jbWkxmCJnk/giphy.gif?cid=790b761176aae266c3ab590664eb5e617e636472e6a16094&rid=giphy.gif&ct=g)  | ![knot2](https://media2.giphy.com/media/ReB6gIHAFcim3jTGmN/giphy.gif?cid=ecf05e47lzcrkk8o43fqz55pwukj31w93i7gkju0c7zpqxyl&rid=giphy.gif&ct=g) |
+| ![knot1](https://media1.giphy.com/media/tJ2xRBV9jbWkxmCJnk/giphy.gif?cid=790b761176aae266c3ab590664eb5e617e636472e6a16094&rid=giphy.gif&ct=g)  |  ![knot2](https://media2.giphy.com/media/ReB6gIHAFcim3jTGmN/giphy.gif?cid=ecf05e47lzcrkk8o43fqz55pwukj31w93i7gkju0c7zpqxyl&rid=giphy.gif&ct=g)  | ![knot3](https://media0.giphy.com/media/fBOdXBxwoydCs7RK7b/giphy.gif) 
 |:---:|:---:|:---:|
-| https://giphy.com/gifs/trapcode-trapcodetao-knot-tJ2xRBV9jbWkxmCJnk | https://giphy.com/gifs/ReB6gIHAFcim3jTGmN | https://giphy.com/gifs/trippy-abstract-pi-slices-fBOdXBxwoydCs7RK7b | ![knot3](https://media1.giphy.com/media/ReB6gIHAFcim3jTGmN/giphy.gif?cid=790b76114defa46e97b7d4d14dac27cac1d010c2ac65e8f7&rid=giphy.gif&ct=g) 
+| https://giphy.com/gifs/trapcode-trapcodetao-knot-tJ2xRBV9jbWkxmCJnk | https://giphy.com/gifs/ReB6gIHAFcim3jTGmN | https://giphy.com/gifs/trippy-abstract-pi-slices-fBOdXBxwoydCs7RK7b |
 
-![gif1](https://media2.giphy.com/media/ReB6gIHAFcim3jTGmN/giphy.gif?cid=ecf05e47lzcrkk8o43fqz55pwukj31w93i7gkju0c7zpqxyl&rid=giphy.gif&ct=g)
+With the centrepiece I want to see where I the process takes me. THREE.js has `torusKnotGeometry` which already looks pretty cool.
 
-https://giphy.com/gifs/ReB6gIHAFcim3jTGmN
+Parameters in the scene which I may or may not make interactive and/or sound-reactive:
 
-![gif2](https://media1.giphy.com/media/ReB6gIHAFcim3jTGmN/giphy.gif?cid=790b76114defa46e97b7d4d14dac27cac1d010c2ac65e8f7&rid=giphy.gif&ct=g)
+Background tunnel:
 
-https://giphy.com/gifs/trippy-abstract-pi-slices-fBOdXBxwoydCs7RK7b
+- detail of the geometry/segments (no smooth transition)
+- material parameters like colour, shininess, wireframe, ...
+- several tunnels with lower detail (e.g. `8`), which shear off/out
+- several smaller geometries, which are animted (how?)
+
+Centrepiece:
+
+- `p` & `q` values of `torusKnot` (no smooth transition)
+- radius of the knot (= "size" of the whole knot)
+- radius of the tube which creates the knot
+- animated texture / UVs
+- funky shader (vertexDisplacement), whose values escalate on sound input
+
+Other:
+
+- light positions
+- light params like colours, intensity, ...
+- camera values (post processing? e.g. color abberation)
+
+### Open Questions
+
+Is THREE.js fitting for the plan? Or should I switch to p5?  
+I still do not know how to interweave sound elements into my sketch.  
+Another issue for me is how to make my visualisation actually fit to the music piece I created. Right now I still feel like both pieces exist in their own world, rather than the same.  
+
+
