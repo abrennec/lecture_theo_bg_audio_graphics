@@ -10,7 +10,7 @@ function preload(){
 
   // set the shader object
   experimentShader = loadShader('experiment_shader.vert', 'experiment_shader.frag');
-  bust = loadModel('assets/bust.obj');
+  bust = loadModel('./assets/bust.obj');
 }
 
 function setup() {
