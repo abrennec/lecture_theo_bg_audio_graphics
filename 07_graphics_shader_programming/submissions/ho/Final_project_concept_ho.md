@@ -23,6 +23,6 @@ The technical tasks for this concept could be broken down as follows:
 - split the audio frequency content into low, mids, highs
 - generate an array of amplitude values for each sample - 44.1k or 48k per second of audio (this may be a huge array, so this may need to be sampled at a lower sample rate for performance)
 - use the vertex shader to generate the waveform visuals
-    - x-axis would represent positive time, higher values = further along in the song
-    - generate a point for each sample, with the coordinates [*time*, 0, 0]
-    - use the vertex shader to offset the y-values at each point by the amplitude of the sample at that point in time
+  - x-axis would represent positive time, higher values = further along in the song
+  - generate a point for each sample, with the coordinates [*time*, 0, 0]
+  - use the vertex shader to offset the y-values at each point by the amplitude of the sample at that point in time
