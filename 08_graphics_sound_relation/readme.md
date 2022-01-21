@@ -17,7 +17,7 @@ Christian Halten | SKYLIFE <halten@skylife.de>
   - [Further Material](#further-material)
     - [Inspiration](#inspiration)
     - [p5 Collection for TBAG](#p5-collection-for-tbag)
-  - [Final Projects](#final-projects)
+- [Final Projects](#final-projects)
 
 ---
 
@@ -52,7 +52,7 @@ Please check out the latest additions to this collection that show you how to wo
 
 Please check out the p5 reference for audio and sound functionality for more examples and possibilites.
 
-## Final Projects
+# Final Projects
 
 Here is a link to the final projects from the previous class:
 - https://indiaaparicio.github.io/tbag_online_album/
