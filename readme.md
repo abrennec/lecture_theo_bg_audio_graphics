@@ -230,7 +230,7 @@ The following references have served as resources for this lecture and are recom
 - Modern JavaScript Tutorial: https://javascript.info
 - Buss, S. (2003):  3D Computer Graphics—A Mathematical introduction with OpenGL. Cambridge University Press, New York, NY, USA.
 - Shiffman, D. (2012): Nature of Code. https://natureofcode.com/book/
-- Learn Computer Graphics from Scracht: https://www.scratchapixel.com
+- Learn Computer Graphics from Scratch: https://www.scratchapixel.com
 - [WebGL fundamentals](https://webglfundamentals.org)
 
 --- 
