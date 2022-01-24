@@ -175,7 +175,7 @@ At the end of the lecture, a final exercise will allow you to combine both field
   - Consultations
   - Technical and artistic feedback
 
-09.02.2022 - Final presentations (3hrs) > Angela & Christian
+16.02.2022 - Final presentations (2hrs) > Angela & Christian
   - Projects presentation
   - Course wrap-up
 
