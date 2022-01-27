@@ -1,11 +1,12 @@
 let pg;
 let mask;
+let temp;
 let portalShader;
+let portalShader2;
 
 let trigger = true;
-
 const depthSteps = 12;
-const distance = 200;
+let distance;
 const goldenRatio = 1.618033988749;
 let currentFill;
 let jitterFactor = 0;
@@ -26,18 +27,31 @@ let velocity = 1.0;
 
 function preload()
 {
+    //portalShader = loadShader("basic.vert", "mask.frag");
+    portalShader2 = loadShader('shader.vert', 'shader.frag');
+    
   
 }
 
 function setup() 
 {
-    portalShader = loadShader("basic.vert", "mask.frag");
       
     //fullScreen(P3D);
-    createCanvas(1000, 700, WEBGL);
+    createCanvas(500, 350, WEBGL);
+    temp = createGraphics(width, height,WEBGL);
+    temp.shader(portalShader2);
+    mask = createGraphics(width, height);
+
+    pg = createGraphics(width, height, WEBGL);
+    //pg.directionalLight(255, 255, 255, -0.1, -0.5, -1);
+    //pg.ambientLight(60, 60, 60);
+    pg.pointLight(255, 255, 255, 0, 0, 100);
+   
     //smooth(2);
 
     //perspective(fov, width / height, 0.1, 500);
+
+    distance = width /5;
     
     currentFill = 15;
 }
@@ -55,7 +69,7 @@ function draw()
     translate(0, -height/2, -50);
 
 
-    stroke(currentFill);
+    //stroke(currentFill);
     fill(currentFill);
 
     let zfactor = map(sin(frameCount / zWavelength), -1.0, 1.0, 1.25, 1.25 + zAmplitude);
@@ -100,7 +114,7 @@ function draw()
 function drawPyramid(t, posX, posY, posZ) 
 { 
     
-    stroke(0);
+    //stroke(0);
     
     //this pyramid has 4 sides, each drawn as a separate triangle
     //each side has 3 vertices, making up a triangle shape
@@ -142,21 +156,22 @@ function drawQuad(squareWidth, squareDepth, posX, posY, posZ)
 
 function drawMask()
 {
-    mask = createGraphics(width, height,P2D);
     //mask.noSmooth();
     //mask.perspective(fov, float(width)/float(height), 0.1, 20000);
    // shader(portalShader);
     
     //mask.beginDraw();
-    mask.fill(0,0,0);
+    mask.background(0);
+    mask.fill(255,0,0);
+    //mask.noSmooth();
     mask.push();
     mask.translate(width/2, height/2);
     mask.beginShape();
-    for (let a = 0.0; a < (Math.PI * 2); a += 0.02) {
+    for (let a = 0.0; a < (Math.PI * 2); a += 0.1) {
       let xoff = map(cos(a), -1.0, 1.0, 0.0, 2.0);
       let yoff = map(sin(a), -1.0, 1.0, 0.0, 2.0);
       //r = map(noise(xoff, yoff,zoff), 0.0, 1.0, 100.0, 250.0) * ((float) frameCount)/velocity;
-      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/5, height/2) * map(sin(frameCount/ 20.0), -1.0, 1.0, 0.1, 2.0);
+      r = map(noise(xoff, yoff, zoff), 0.0, 1.0, height/2, height) * map(sin(frameCount/ 50.0), -1.0, 1.0, 0.1, 1.2);
       let x = r * cos(a);
       let y = r * sin(a);
       mask.vertex(x, y);
@@ -179,15 +194,19 @@ function getJitter(factor)
 
 function drawSecondScene()
 {
-  pg = createGraphics(width, height, WEBGL);
   {
-    pg.directionalLight(255, 255, 255, 0, 1, -1);
-  pg.ambientLight(102, 102, 102);
+
+
   //pg.colorMode(ARGB, 255);    
   pg.background(76, 0, 158);
+
+
+  //pg.stroke(227, 117, 0);
+  pg.noStroke();
+  //pg.fill(227, 117, 0);
+  pg.ambientMaterial(227, 117, 0);
+  pg.push()
   pg.translate(0, -height/2, -50);
-  pg.stroke(227, 117, 0);
-  pg.fill(227, 117, 0);
   
   let zfactor = map(sin(frameCount / zWavelength), -1.0, 1.0, 1.25, 1.25 + zAmplitude);
 
@@ -212,27 +231,25 @@ function drawSecondScene()
      pg.pop();
      
   }
+  pg.pop();
   
   }
 
-  portalShader.setUniform("mask",mask);
-  portalShader.setUniform("maskThis",pg);
-  
-  pg.shader(portalShader);
 
-  //( masked = pg.get()).mask(mask);
-  //image(masked, 0, 0);
-  
-  pushMatrix();
-  translate(0,0,50);
-  image(pg,-width/2,0, width, height);
-  popMatrix();
-  //pg.dispose();
-  
-  //shader(portalShader);
-  //portalShader.set("tex", pg);
-  mask.remove();
-  pg.remove();
+  portalShader2.setUniform("tex", pg);
+  portalShader2.setUniform("mask", mask);
+
+  push()
+  translate(-width/2,0,50);
+  //temp.background(0);
+  temp.rect(0, 0, width, height);
+
+  image(temp, 0,0,width,height);
+
+  pop();
+  //image(pg, 0,0,width,height);
+  pg.clear();
+
 }
 
 function drawSecondPyramid(t, posX, posY, posZ) 
@@ -259,7 +276,7 @@ function drawSecondPyramid(t, posX, posY, posZ)
     pg.vertex( -t + posX, -t + posY, -t + posZ);
     pg.vertex(posX, height / 2 * goldenRatio + posY, posZ);
     
-    pg.endShape();
+    pg.endShape(CLOSE);
 }
 
 function drawSecondQuad(squareWidth, squareDepth, posX, posY, posZ)
@@ -271,5 +288,5 @@ function drawSecondQuad(squareWidth, squareDepth, posX, posY, posZ)
     pg.vertex(squareWidth + posX, posY, posZ);
     pg.vertex(posX, posY, squareDepth + posZ);
     
-    pg.endShape();
+    pg.endShape(CLOSE);
 }

@@ -11,15 +11,15 @@ uniform sampler2D mask;
 
 uniform vec2 texOffset;
 varying vec4 maskedColor;
-varying vec4 vTexCoord;
+//varying vec4 vTexCoord;
 
 void main() {
     
-    vec2 st = vTexCoord.st;
+    vec2 st = vec2(vTexCoord.x, vTexCoord.y);
     
     vec4 texColor = texture2D(texture, st).rgba;
     vec4 maskedColor = texture2D(maskThis,st).rgba;
-    vec4 maskColor = texture2D(mask, vec2(vTexCoord.s, vTexCoord.t)).rgba;
+    vec4 maskColor = texture2D(mask, vec2(vTexCoord.x, vTexCoord.y)).rgba;
     //vec4 maskColor = texture2D(mask, vertColor.st).rgba;
     
     //gl_FragColor = mix(texColor, vec4(0, 0, 0, 0.5), 1.0 - maskColor.r);
