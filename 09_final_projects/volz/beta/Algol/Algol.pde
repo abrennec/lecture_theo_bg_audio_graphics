@@ -2,9 +2,13 @@ import java.util.Collections;
 import java.util.ArrayDeque;
 import processing.sound.*;
 
+PImage img;
+
+
 PGraphics pg;
 PGraphics mask;
 PShader portalShader;
+PShader textureShader;
 SoundFile file;
 Amplitude amp;
 BeatDetector beat;
@@ -61,8 +65,12 @@ void preload()
 
 void setup() 
 {
+  img = loadImage("audio.png");
     //Anwendung passiert in drawSugaryScene();
     portalShader = loadShader("mask.glsl");
+    textureShader = loadShader("texture.glsl");
+    
+    textureShader.set("texture", img);
       
       xAmplitude = width * 0.05;
       yAmplitude = height * 0.043;
@@ -122,7 +130,7 @@ void draw()
   
    //beatDetection();
   
-    drawGrittyScene();
+    drawScene();
     drawMask();
     fill(0,0,0);
 
@@ -130,7 +138,7 @@ void draw()
     portalShader.set("mask",mask);
     portalShader.set("maskThis",pg);
   
-    //filter(portalShader);
+    filter(portalShader);
    
     /*
     pushMatrix();
@@ -138,6 +146,7 @@ void draw()
     image(pg, -width/2, 0, width, height);
     popMatrix();
     */
+   
     
     
     if(jitterFactor > 0) jitterFactor--;
@@ -145,7 +154,7 @@ void draw()
 }
 
 
-void drawGrittyScene()
+void drawScene()
 {
      //directionalLight(255, 255, 255, 0, -1, -1);
     //ambientLight(102, 102, 102);
@@ -180,7 +189,8 @@ void drawGrittyScene()
     
     for (int i = 0; i < depthSteps; i++)
     {
-        float spectrumFactor = map(sqrt(sqrt(spectrum[i + 2])), 0.0, 1.0, 1.0, 1.1) * random(-1.0, 1.0);
+        //float spectrumFactor = map(sqrt(sqrt(spectrum[i + 2])), 0.0, 1.0, 1.0, 3.0) * random(-2.0, 2.0);
+        float spectrumFactor = 0;
         //println(spectrumFactor);
         float xOffset = xAmplitude * sin(xConstant  + 0.8 * i);
         float yOffset = yAmplitude * map(sin(yConstant + 0.8 * i), -1.0, 1.0, -1.0, 0.0);
@@ -193,7 +203,7 @@ void drawGrittyScene()
         
         translate(0, 0, pyramidZ);
 
-        drawPyramid(edgeLength, -pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor);
+        drawPyramid(edgeLength, (- width /2.0) + xOffset + spectrumFactor, yOffset + spectrumFactor, spectrumFactor);
         drawPyramid(edgeLength, pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor); 
         drawQuad(groundObjectWidth, distance * (zfactor / 4), xOffset + spectrumFactor, quadY + spectrumFactor, spectrumFactor);   
         
@@ -203,8 +213,8 @@ void drawGrittyScene()
         
         pg.translate(0, 0, pyramidZ);
 
-        drawGrape(edgeLength, -pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor);
-        drawGrape(edgeLength, pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor); 
+        drawGrape(edgeLength * 0.65,(- width /2.0) + xOffset + spectrumFactor, yOffset + spectrumFactor, spectrumFactor);
+        drawGrape(edgeLength * 0.65, pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor); 
         drawCircle(groundObjectWidth, distance * (zfactor / 4), xOffset + spectrumFactor, quadY + spectrumFactor, spectrumFactor, i);   
         
         pg.popMatrix();
@@ -276,16 +286,18 @@ void drawMask()
     mask = createGraphics(width, height,P2D);
     mask.noSmooth();
     
-    float phase = sin(frameCount/ 50.0);
-    float offFactor = map(phase, -1.0, 1.0, 5.0, 1.0);
+    float currentTime = (float) millis() / 1000.0;
+        
+    float phase = sin(TWO_PI * xFrequency * currentTime);
+    float offFactor = map(phase, -1.0, 1.0, 5.0, 3.0);
     float rFactor = map(phase, -1.0, 1.0, 0.1, 2.0);
     
-    float lerp = 0.95; //must be between 0-1
+    float lerp = 0.98; //must be between 0-1
     currentAmp = lerp * currentAmp + (1.0-lerp) * amp.analyze();
     
     //println(currentAmp);
     
-    float compressedAmp = pow(currentAmp, 5);
+    float compressedAmp = pow(currentAmp, 4.5);
    
     
     mask.beginDraw();
@@ -293,18 +305,33 @@ void drawMask()
     mask.pushMatrix();
     mask.translate(width/2, height/2);
     mask.beginShape();
-    for (float a = 0.0; a < TWO_PI; a += 0.01) {
+    
+    noFill();
+    noStroke();
+    pushMatrix();
+    translate(0, height/2, 110);
+    textureWrap(REPEAT);
+    beginShape();
+    texture(img);
+    //shader(textureShader);
+    for (int i = 1; i <= spectrum.length; i += 1) {
+      float a = TWO_PI * ((float) i / (float) spectrum.length);
       float xoff = map(cos(a), -1.0, 1.0, 0.0, offFactor);
       float yoff = map(sin(a), -1.0, 1.0, 0.0, offFactor);
       //r = map(noise(xoff, yoff,zoff), 0.0, 1.0, 100.0, 250.0) * ((float) frameCount)/velocity;
-      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (20.0 * compressedAmp);
+      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (30.0 * compressedAmp);
+      //r = map(spectrum[i-1], 0.0, 1.0, height/4, height/2) * (35.0 * compressedAmp);
       float x = r * cos(a);
       float y = r * sin(a);
+      
       mask.vertex(x, y);
+      vertex(x,y,x+width/2,y+height/2);
     }
     
     zoff += 0.01;
     
+    endShape(CLOSE);
+    popMatrix();
     mask.endShape(CLOSE);
     mask.popMatrix();
     mask.endDraw();
@@ -326,12 +353,12 @@ void drawGrape(float r, float posX, float posY, float posZ)
   
   float x;
   float z;
-  float gridRadius = ((float) width) / 10.0;
+  float gridRadius = ((float) width) / 9.0;
   float rotationSteps;
-  float heightFactor = 0.87;
+  float heightFactor = 0.82;
   
   float h = posY;
-  int layers = 8;
+  int layers = 10;
   
   pg.noStroke();
   pg.fill(orange.col1);
@@ -351,9 +378,9 @@ void drawGrape(float r, float posX, float posY, float posZ)
       pg.sphere(r);
       pg.popMatrix();
     }
-     if(i == layers && gridRadius >= 4*r) //<>//
+     if(i == layers && gridRadius >= 4*r)
      {
-       for(float thisGridRadius = gridRadius - 2*r; thisGridRadius >= r; thisGridRadius -= 2*r) //<>//
+       for(float thisGridRadius = gridRadius - 2*r; thisGridRadius >= r; thisGridRadius -= 2*r)
        {
         rotationSteps = thisGridRadius/r * PI;
         for(float a = 0.0; a < TWO_PI; a += TWO_PI / rotationSteps)
