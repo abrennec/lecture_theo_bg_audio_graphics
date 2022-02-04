@@ -1,6 +1,8 @@
 import java.util.Collections;
-import java.util.ArrayDeque;
 import processing.sound.*;
+
+
+Boolean soundcard = false;
 
 PImage img;
 
@@ -10,6 +12,9 @@ PGraphics mask;
 PShader portalShader;
 PShader textureShader;
 SoundFile file;
+AudioIn in;
+
+
 Amplitude amp;
 BeatDetector beat;
 FFT fft;
@@ -55,8 +60,9 @@ float velocity = 1.0;
 
 void settings()
 {
-    size(1000, 700, P3D);
-    smooth(2);
+    //size(1000, 700, P3D);
+    fullScreen(P3D);
+    //smooth(8);
 }
 void preload()
 {
@@ -65,6 +71,7 @@ void preload()
 
 void setup() 
 {
+
   img = loadImage("audio.png");
     //Anwendung passiert in drawSugaryScene();
     portalShader = loadShader("mask.glsl");
@@ -101,19 +108,36 @@ void setup()
     currentFill = 15;
     
 
-    file = new SoundFile(this, "audio_alpha.wav");
+    
     
     amp = new Amplitude(this);
-    amp.input(file);
     
     beat = new BeatDetector(this);
     beat.input(file);
     beat.sensitivity((int) (60.0 / bpm) * 1000 - 20);
     
     fft = new FFT(this, bands);
-    fft.input(file);
     
-     file.jump(30);
+    if(soundcard)
+    {
+      in = new AudioIn(this, 0);
+      amp.input(in);
+      fft.input(in);
+      
+        //in.play();
+    }
+    else
+    {
+      file = new SoundFile(this, "audio_alpha.wav");
+      
+      amp.input(file);
+      fft.input(file);
+    
+      file.jump(0);
+    }
+    
+
+
     //noLoop();
 }
 
@@ -127,11 +151,12 @@ void beatDetection()
 
 void draw() 
 {   
+    background(245);
+    translate(width / 2, 0, -50);
   
    //beatDetection();
-  
-    drawScene();
     drawMask();
+    drawScene();
     fill(0,0,0);
 
     
@@ -158,8 +183,6 @@ void drawScene()
 {
      //directionalLight(255, 255, 255, 0, -1, -1);
     //ambientLight(102, 102, 102);
-    background(245);
-    translate(width / 2, 0, -50);
     stroke(currentFill);
     fill(currentFill);
     
@@ -215,7 +238,7 @@ void drawScene()
 
         drawGrape(edgeLength * 0.65,(- width /2.0) + xOffset + spectrumFactor, yOffset + spectrumFactor, spectrumFactor);
         drawGrape(edgeLength * 0.65, pyramidX + spectrumFactor, yOffset + spectrumFactor, spectrumFactor); 
-        drawCircle(groundObjectWidth, distance * (zfactor / 4), xOffset + spectrumFactor, quadY + spectrumFactor, spectrumFactor, i);   
+        drawCircle(groundObjectWidth, distance * (zfactor / 4), xOffset + spectrumFactor, quadY + spectrumFactor, i);   
         
         pg.popMatrix();
     } 
@@ -292,12 +315,12 @@ void drawMask()
     float offFactor = map(phase, -1.0, 1.0, 5.0, 3.0);
     float rFactor = map(phase, -1.0, 1.0, 0.1, 2.0);
     
-    float lerp = 0.98; //must be between 0-1
+    float lerp = 0.95; //must be between 0-1
     currentAmp = lerp * currentAmp + (1.0-lerp) * amp.analyze();
     
     //println(currentAmp);
     
-    float compressedAmp = pow(currentAmp, 4.5);
+    float compressedAmp = pow(currentAmp, 4.2);
    
     
     mask.beginDraw();
@@ -314,12 +337,11 @@ void drawMask()
     beginShape();
     texture(img);
     //shader(textureShader);
-    for (int i = 1; i <= spectrum.length; i += 1) {
-      float a = TWO_PI * ((float) i / (float) spectrum.length);
+    for (float a = 0.0; a < TWO_PI; a += 0.01) {
       float xoff = map(cos(a), -1.0, 1.0, 0.0, offFactor);
       float yoff = map(sin(a), -1.0, 1.0, 0.0, offFactor);
       //r = map(noise(xoff, yoff,zoff), 0.0, 1.0, 100.0, 250.0) * ((float) frameCount)/velocity;
-      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (30.0 * compressedAmp);
+      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (22.0 * compressedAmp);
       //r = map(spectrum[i-1], 0.0, 1.0, height/4, height/2) * (35.0 * compressedAmp);
       float x = r * cos(a);
       float y = r * sin(a);
@@ -402,7 +424,7 @@ void drawGrape(float r, float posX, float posY, float posZ)
   }
 }
 
-void drawCircle(float squareWidth, float squareDepth, float posX, float posY, float posZ, int depthStep)
+void drawCircle(float squareWidth, float squareDepth, float posX, float posY, int depthStep)
 {  
     IntList indezes = colorOrder[depthStep];
     pg.pushMatrix();
