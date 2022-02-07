@@ -23,7 +23,7 @@ float currentAmp = 0;
 int bands = 1024;
 float[] spectrum = new float[bands];
 
-float bpm = 140.0;
+float bpm = 138.0;
 
 
 Boolean trigger = true;
