@@ -6,18 +6,19 @@
 // a shader object
 let uniformsShader;
 
-function preload(){
+
+function preload() {
   // load the shader
   uniformsShader = loadShader('uniform.vert', 'uniform.frag');
 }
 
 function setup() {
-  
-  createCanvas(windowWidth, windowHeight, WEBGL);
+
+  createCanvas(100, 100, WEBGL);
   noStroke();
 }
 
-function draw() {  
+function draw() {
 
   shader(uniformsShader);
 
@@ -25,12 +26,14 @@ function draw() {
   // first we will map them so that they go from 0 - 1 
   let mx = map(mouseX, 0, width, 0, 1);
   let my = map(mouseY, 0, height, 0, 1);
+  let geci = cos(frameCount / 36);
 
   // next we will use setUniform() to send them to the shader
   // set uniform is smart enough to figure out what kind of variable we are sending it
   // the first parameter is the name of the variable in the shader
   // the second parameters are the data that we want to send 
   uniformsShader.setUniform('mouse', [mx, my]);
+  uniformsShader.setUniform('lofasz', geci);
 
   // Other examples for uniforms:
   // to send a single int, float, or bool it looks like
@@ -44,9 +47,14 @@ function draw() {
   // shader.setUniform('myVec4, [val1, val2, val4]);
 
   // rect gives us some geometry on the screen
-  rect(0,0,width, height);
+  // rect(0, 0, width, height);
+
+  rotate(geci);
+  box(20, 20, 20, 5, 5);
+
+
 }
 
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
+function windowResized() {
+  resizeCanvas(10, 10);
 }

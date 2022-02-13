@@ -13,6 +13,6 @@ void main() {
 
     vec4 cColor = vColor;
 
-    //cColor.x = sin(time * 0.01);
+    cColor.x = sin(time * 0.01);
     gl_FragColor = cColor;
 }

@@ -19,7 +19,8 @@ void main() {
     vec4 positionVec4 = vec4(aPosition, 1.0);
 
     // send the vertex information on to the fragment shader
-    gl_Position = uProjectionMatrix * uModelViewMatrix * positionVec4;
+    gl_Position =uProjectionMatrix * uModelViewMatrix *  positionVec4 ;
+    // normalize (uProjectionMatrix * uModelViewMatrix * positionVec4);
     
     // Setting varying values for the fragment shader
     vPosition = aPosition;

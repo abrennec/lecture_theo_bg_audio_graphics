@@ -10,7 +10,7 @@ void main() {
 
     vec3 vPos = vPosition;
     //vec3 vPos = normalize(vPosition);
-    vec4 cColor = vec4(vPos, 1.0);
+    vec4 cColor = vec4(sin(vPos.y), cos(vPos.x), 1.0, 1.0);
 
     gl_FragColor = cColor;
 }

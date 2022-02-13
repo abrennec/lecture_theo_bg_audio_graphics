@@ -1,25 +1,25 @@
 //this variable will hold our shader object
 let simpleShader;
 
-function preload(){
+function preload() {
   simpleShader = loadShader('basic.vert', 'basic.frag');
 }
 
 function setup() {
-  
+
   createCanvas(windowWidth, windowHeight, WEBGL);
-  noStroke();
+  // noStroke();
 }
 
-function draw() {  
+function draw() {
 
   shader(simpleShader);
 
-  fill(255,0,0);
+  fill(255, 0, 0);
   // rect gives us some geometry on the screen
-  rect(0,0, 250, 250);
+  rect(0, 0, 25, 25);
 }
 
-function windowResized(){
+function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }

@@ -12,7 +12,7 @@ uniform float posY; // not yet used => how can you use this variable to translat
 
 varying vec4 vColor;
 
-vec4 posChange = vec4(100,0,0,0);
+vec4 posChange = vec4(0,0,0,0);
 
 void main() {
    
