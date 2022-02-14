@@ -45,6 +45,7 @@ float[] fftSum = new float[bands];
 
 void setup() {
   size(1960, 1080, P3D);
+  surface.setResizable(true);
   colorMode(HSB, 360, 100, 100);
   smooth(8);
 
@@ -120,8 +121,7 @@ void draw() {
       globesNear.remove(i);
     }
   }
-  
-  saveFrame("output/image#####.png");
+ 
   
 }
 
