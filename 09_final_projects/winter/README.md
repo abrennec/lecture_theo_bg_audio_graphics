@@ -1,5 +1,6 @@
-## [![preview](https://user-images.githubusercontent.com/93442123/153874200-042dbc66-0318-4c02-84b1-15219aed0b15.png)
-Link to a buggy openprocessing version.](https://openprocessing.org/sketch/1482730)
+![preview](https://user-images.githubusercontent.com/93442123/153874200-042dbc66-0318-4c02-84b1-15219aed0b15.png)
+
+## [Link to a buggy openprocessing version.](https://openprocessing.org/sketch/1482730)
 ## [Link to a video for the Mac users](https://youtu.be/mIczcjCPmK4)
 
 I took this project as a opportunity to learn more about fragment shaders.
