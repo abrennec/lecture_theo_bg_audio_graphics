@@ -50,7 +50,7 @@ eventjs.add(window, "load", function(event) {
 
       /// this sets up the MIDI.Player and gets things going...
       player = MIDI.Player;
-      player.timeWarp = 0.5; // speed the song is played back
+      player.timeWarp = 1.85; // speed the song is played back
       player.loadFile(song[songid++ % song.length], player.start);
 
 
@@ -129,10 +129,13 @@ var player;
 // MIDI files from Disklavier World
 var songid = 0;
 var song = [
+  // song 0
+  "./assets/ravel_jeux_deau_PNO.mid",
   // song 1
   "./assets/mpd218_randomMidiClip.mid",
   // song 2
   "./assets/11_Bach-Kempff_SicilianoInGminor.mid",
+
 ];
 
 let radius= 10; // width should be evenly dividable by spacing
