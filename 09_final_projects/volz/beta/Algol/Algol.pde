@@ -62,7 +62,6 @@ void settings()
 {
     //size(1000, 700, P3D);
     fullScreen(P3D);
-    //smooth(8);
 }
 void preload()
 {
@@ -112,17 +111,11 @@ void setup()
     
     amp = new Amplitude(this);
     
-    beat = new BeatDetector(this);
-    beat.input(file);
-    beat.sensitivity((int) (60.0 / bpm) * 1000 - 20);
-    
-    fft = new FFT(this, bands);
     
     if(soundcard)
     {
       in = new AudioIn(this, 0);
       amp.input(in);
-      fft.input(in);
       
         //in.play();
     }
@@ -131,9 +124,9 @@ void setup()
       file = new SoundFile(this, "track.wav");
       
       amp.input(file);
-      fft.input(file);
     
-      file.play();
+      //file.play();
+      file.jump(40);
     }
     
 
@@ -141,13 +134,6 @@ void setup()
     //noLoop();
 }
 
-void beatDetection() 
-{
-  if(beat.isBeat())
-  {
-    jitterFactor = 15;
-  }
-}
 
 void draw() 
 {   
@@ -199,7 +185,6 @@ void drawScene()
     pg.fill(orange.col1);
     
     
-    fft.analyze(spectrum);
     
     float currentTime = (float) millis() / 1000.0;
     
@@ -295,15 +280,6 @@ void drawQuad(float squareWidth, float squareDepth, float posX, float posY, floa
 }
 
 
-float getJitter(int factor)
-{
-    if(factor == 0)
-    {
-      return 0;
-    }
-    return (factor / 2) * random(-1.0, 1.0);
-}
-
 void drawMask()
 {
     mask = createGraphics(width, height,P2D);
@@ -313,9 +289,8 @@ void drawMask()
         
     float phase = sin(TWO_PI * xFrequency * currentTime);
     float offFactor = map(phase, -1.0, 1.0, 5.0, 3.0);
-    float rFactor = map(phase, -1.0, 1.0, 0.1, 2.0);
     
-    float lerp = 0.93; //must be between 0-1
+    float lerp = 0.98; //must be between 0-1
     currentAmp = lerp * currentAmp + (1.0-lerp) * amp.analyze();
     
     //println(currentAmp);
@@ -341,7 +316,7 @@ void drawMask()
       float xoff = map(cos(a), -1.0, 1.0, 0.0, offFactor);
       float yoff = map(sin(a), -1.0, 1.0, 0.0, offFactor);
       //r = map(noise(xoff, yoff,zoff), 0.0, 1.0, 100.0, 250.0) * ((float) frameCount)/velocity;
-      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (32.0 * compressedAmp);
+      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (40.0 * compressedAmp);
       //r = map(spectrum[i-1], 0.0, 1.0, height/4, height/2) * (35.0 * compressedAmp);
       float x = r * cos(a);
       float y = r * sin(a);
