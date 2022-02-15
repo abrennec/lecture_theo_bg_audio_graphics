@@ -2,6 +2,8 @@
 
 ## Project Outline
 
+[![Flux](./img/Flux%20(4).png)](https://www.timrumpf.com/Flux)
+
 This project is inspired by the phenomena of ferrofluids and is all about tension, about how borders give shape and how breaking through those borders enables to form new shapes or merge with others. Audio reactive visuals can either simply be enjoyed or interactively be manipulated. 
 
 ### [Link to Browser Version](https://timrumpf.com/Flux/)
