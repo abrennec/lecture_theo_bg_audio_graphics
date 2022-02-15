@@ -148,12 +148,12 @@ function draw()
 
   //print(frameRate());
   //print(level);
-  //  print(millis());
+  //print(millis());
 
 }
 
-function windowResized() 
-{
-  resizeCanvas(windowWidth, windowHeight);
+//function windowResized() 
+//{
+//  resizeCanvas(windowWidth, windowHeight);
 
-}
+//}
