@@ -13,7 +13,7 @@ void main() {
   
   // Normalize the normal
   
-  vec3 color = vNormal;
+  vec3 color = vNormal * 0.5 + 0.5;
 
   color.x = sin(uFrameCount * 0.03 * color.x) * 0.5 + 0.5;
   color.y = sin(uFrameCount * 0.09 * color.y) * 0.1 + 0.9;

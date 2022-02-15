@@ -1,4 +1,19 @@
 # HEIZKRAFTWERK MOABEAT
+![screenshot showing the sketch with my shader](./img/screenshot_myShader1.png)
+
+![screenshot showing the sketch with my shader](./img/screenshot_myShader2.png)  |  ![screenshot showing the sketch with my shader](./img/screenshot_myShader3.png)
+:-------------------------:|:-------------------------:
+
+The background is a tunnel which we traverse. The colour changes are created by mapping light color parameters to 3 different frequency ranges in the music:
+low frequencies = blue, middle frequencies = green and high frequencies = red.  
+I have also written my own shader which deforms the vertices according to the various frequenceis in the music. The fragment shader reacts to the music by multiplying the normal "brightness" with the bass frequency.  
+ 
+I have also experimented with other materials / shaders, to make the fragment shader more interesting:
+
+![screenshot showing the sketch with an iridescent material](./img/screenshot_iridescent.png)  |  ![screenshot showing the sketch with my shader](./img/screenshot_phong.png)
+:-------------------------:|:-------------------------:
+
+Sadly, I wasn't very succesful with combining these tests with my vertex displacement and went with the vertex shader in the end.
 
 ## Project Description
 
@@ -12,7 +27,7 @@ So I made a little field trip & recorded various sounds from there with my smart
 
 ## Technical Choices: Sound
 
-For the musical piece, my original inspiration was *musique concrete* and I wanted to **only** use my recorded sounds in the song.  
+For the musical piece, my original inspiration was *musique concrete* and I wanted to **only** use recorded sounds in the song.  
 In order to enhance my sound palette, I also recorded some sounds from my kitchen, i.e. me kicking my oven or banging metal bowls. I made sure to only use metallic objects for this, so it will sound like machinery.  
 
 However, when I continued working on the project, I always missed rhythm or a beat of some sort. So during the process I started drifting more towards an industrial techno sound, as this was just really fun to work with for me.
@@ -39,3 +54,7 @@ I feel like I got more of a grasp now on how web stuff like THREE.js works and w
 I also really enjoyed working with Ableton to create my track, but I think I still *barely* scratched the surface on "how to make music/sounds". I think the same also applies on shader programming: it feels like the more I learn about shaders, the more I am overwhelmed by a vast ocean of possibilities, solutions and crazy stuff one can create with this.
 
 I am looking forward to continue diving into these topics with my future projects.
+
+> **CREDITS:**  
+> I have used code snippets and technical approaches by various people. All used sources are referenced (and linked to) in the source code!
+

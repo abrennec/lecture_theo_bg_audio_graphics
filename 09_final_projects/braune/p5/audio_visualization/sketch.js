@@ -32,8 +32,6 @@ let sizer = 0;
 let sizer2 = 0;
 let started = false;
 
-let rotStart = 0;
-
 //called by default 60 times per second
 function draw()
 {//once the mouse button is pressed, draw loop is executed
