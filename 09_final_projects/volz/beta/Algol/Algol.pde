@@ -128,12 +128,12 @@ void setup()
     }
     else
     {
-      file = new SoundFile(this, "audio_alpha.wav");
+      file = new SoundFile(this, "track.wav");
       
       amp.input(file);
       fft.input(file);
     
-      file.jump(0);
+      file.play();
     }
     
 
@@ -315,7 +315,7 @@ void drawMask()
     float offFactor = map(phase, -1.0, 1.0, 5.0, 3.0);
     float rFactor = map(phase, -1.0, 1.0, 0.1, 2.0);
     
-    float lerp = 0.95; //must be between 0-1
+    float lerp = 0.93; //must be between 0-1
     currentAmp = lerp * currentAmp + (1.0-lerp) * amp.analyze();
     
     //println(currentAmp);
@@ -341,7 +341,7 @@ void drawMask()
       float xoff = map(cos(a), -1.0, 1.0, 0.0, offFactor);
       float yoff = map(sin(a), -1.0, 1.0, 0.0, offFactor);
       //r = map(noise(xoff, yoff,zoff), 0.0, 1.0, 100.0, 250.0) * ((float) frameCount)/velocity;
-      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (22.0 * compressedAmp);
+      r = map(noise(xoff, yoff,zoff), 0.0, 1.0, height/4, height/2) * (32.0 * compressedAmp);
       //r = map(spectrum[i-1], 0.0, 1.0, height/4, height/2) * (35.0 * compressedAmp);
       float x = r * cos(a);
       float y = r * sin(a);
