@@ -1,38 +1,66 @@
+import { GLTFLoader } from '../lib/GLTFLoader.js';
 import { OBJLoader } from '../lib/OBJLoader.js';
+import { GUI } from '../lib/lil-gui.module.min.js';
+import { RenderPass } from '../lib/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from '../lib/postprocessing/UnrealBloomPass.js';
+import { EffectComposer } from '../lib/postprocessing/EffectComposer.js';
 
-let scene, renderer, camera, clock, parties, width, height, video;
-let particles, videoWidth, videoHeight, imageCache;
+let scene, renderer, camera, composer, clock, parties;
 
-// AUDIO
-let audio;
-let fftSize = 2048;
-let analyser;
 
-const frequencyRange = {
-    kick: [0, 32],
-    bass: [42, 100],
-    lowMid: [100, 400],
-    mid: [400, 2600],
-    highMid: [2600, 5200],
-    treble: [5200, 14000],
-};
 
+// GLOBAL
+var myRadius = 66;
+
+// TIME
 clock = new THREE.Clock();
 let elapsedTime = clock.getElapsedTime();
 
-
-// function update() { };
+// FUNCTIONS
 function updateAirPlane() { };
 function updateBoxHanger() { };
 function partySize() { };
 function updateCamera() { };
-
+function updateFlashLight() { };
 function sphereUpdate() { };
-
 function kicker() { };
+//
 
-var myRadius = 16;
 
+
+
+// PARTICLEE Variables
+let group;
+let container, stats;
+const particlesData = [];
+let positions, colors;
+let particles;
+let pointCloud;
+let particlePositions;
+let linesMesh;
+
+const maxParticleCount = 1000;
+let particleCount = 500;
+const r = 1000;
+const rHalf = r / 2;
+
+const effectController = {
+    showDots: true,
+    showLines: true,
+    minDistance: 15,
+    limitConnections: false,
+    maxConnections: 20,
+    particleCount: 50
+};
+//
+
+// After Effects
+let params = {
+    exposure: 0.6,
+    bloomStrength: 2,
+    bloomThreshold: 0,
+    bloomRadius: 0.1
+};
 
 // Keyframes implementation from Tim Rumpf
 const keyFrames = [
@@ -50,36 +78,109 @@ const keyFrames = [
     // 9
 ];
 
+// AUDIO
+let audio;
+let fftSize = 2048;
+let analyser;
+
+const frequencyRange = {
+    kick: [0, 32],
+    bass: [42, 100],
+    lowMid: [100, 400],
+    mid: [400, 2600],
+    highMid: [2600, 5200],
+    treble: [5200, 14000],
+};
+// 
+
+// START BUTTON
 const startButton = document.getElementById('startButton');
 startButton.addEventListener('click', init);
 
+
+// GUI
+function initGUI() {
+
+    const gui = new GUI();
+
+    gui.add(effectController, 'showDots').onChange(function (value) {
+
+        pointCloud.visible = value;
+
+    });
+    gui.add(effectController, 'showLines').onChange(function (value) {
+
+        linesMesh.visible = value;
+
+    });
+    gui.add(effectController, 'minDistance', 10, 300);
+    gui.add(effectController, 'limitConnections');
+    gui.add(effectController, 'maxConnections', 0, 30, 1);
+    gui.add(effectController, 'particleCount', 0, maxParticleCount, 1).onChange(function (value) {
+
+        particleCount = parseInt(value);
+        particles.setDrawRange(0, particleCount);
+
+    });
+    // gui.add(params, 'exposure', 0.1, 2).onChange(function (value) {
+
+    //     renderer.toneMappingExposure = Math.pow(value, 4.0);
+
+    // });
+
+    // gui.add(params, 'bloomThreshold', 0.0, 1.0).onChange(function (value) {
+
+    //     bloomPass.threshold = Number(value);
+
+    // });
+
+    // gui.add(params, 'bloomStrength', 0.0, 3.0).onChange(function (value) {
+
+    //     params.strength = Number(value);
+
+    // });
+
+    // gui.add(params, 'bloomRadius', 0.0, 1.0).step(0.01).onChange(function (value) {
+
+    //     bloomPass.radius = Number(value);
+
+    // });
+
+}
+
+
 function init() {
+
+    initGUI();
+
     // Create scene
     scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(scene.background, 0.125);
+    // scene.fog = new THREE.FogExp2(scene.background, 0.0025);
     //
     //
     //
     //Camera Setup
-    var fov = 115;
+    var fov = 76;
     camera = new THREE.PerspectiveCamera(
         fov,
         window.innerWidth / window.innerHeight,
-        0.1,
-        1000
+        0.001,
+        40000
     );
+    camera.position.z = 5;
 
     // CAMERA Animation
     updateCamera = (t) => {
-        let camRotPosY = Math.cos(t);
-        let camRotPosZ = Math.sin(t);
+        let camRotPosY = Math.cos(t - 1);
+        let camRotPosZ = Math.sin(t - 1);
 
         let camLookAtY = Math.cos(t + 1);
         let camLookAtZ = Math.sin(t + 1);
 
 
-        camera.position.y = camRotPosY * myRadius * 0.9;
-        camera.position.z = camRotPosZ * myRadius * -0.9;
+        camera.position.y = camRotPosY * myRadius * 2 + Math.cos(t) * 10;
+        camera.position.z = camRotPosZ * myRadius * -2;
+        camera.position.x = Math.cos(t) * 40;
         camera.up = (new THREE.Vector3(0, -camRotPosY, camRotPosZ));
         camera.lookAt(new THREE.Vector3(0, camLookAtY * myRadius, -camLookAtZ * myRadius));
     }
@@ -92,31 +193,78 @@ function init() {
 
     //Renderer Setup
     renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.toneMapping = THREE.ReinhardToneMapping;
     document.body.appendChild(renderer.domElement);
+    renderer.outputEncoding = THREE.sRGBEncoding;
     //
     //
     //
     //Light Setup
-    const midLight = new THREE.PointLight(0xff0000, 1, 600);
+    const midLight = new THREE.PointLight(0xff0000, 1, 306);
 
     midLight.castShadow = true;
-    midLight.position.set(0, 0, 0);
-    scene.add(midLight);
-
-
-    // const helper = new THREE.CameraHelper(midLight.shadow.camera);
-    // scene.add(helper);
-
     midLight.shadow.mapSize.width = 512;
     midLight.shadow.mapSize.height = 512;
     midLight.shadow.camera.near = 0.5;
     midLight.shadow.camera.far = 600;
+    midLight.position.set(0, 0, 0);
+
+
+    scene.add(midLight);
+
+
+
+    const flashLight = new THREE.SpotLight("#0218EF");
+    flashLight.castShadow = true;
+
+
+    flashLight.castShadow = true;
+    flashLight.shadow.mapSize.width = 1024;
+    flashLight.shadow.mapSize.height = 1024;
+    flashLight.shadow.camera.near = 500;
+    flashLight.shadow.camera.far = 4000;
+    flashLight.shadow.camera.fov = 30;
+    flashLight.power = 10;
+    flashLight.angle = Math.PI / 2;
+    flashLight.distance = 100;
+    scene.add(flashLight);
+    scene.add(flashLight.target);
+
+
+
+    // const spotLightHelper = new THREE.SpotLightHelper(flashLight);
+    // scene.add(spotLightHelper);
+
+    updateFlashLight = (t) => {
+        // flashLight.rotation.x = -t;
+        flashLight.target.position.y = Math.cos(t + 1.4) * myRadius * 1;
+        flashLight.target.position.z = Math.sin(t + 1.4) * -myRadius * 1;
+        // flashLight.rotation.z = (Math.cos(t) * 0.001);
+        // flashLight.rotation.z = t;
+        flashLight.position.y = Math.cos(t + 1) * myRadius * 0.9;
+        flashLight.position.z = Math.sin(t + 1) * -myRadius * 0.9;
+    };
+
+
 
     // const ambLight = new THREE.AmbientLight(0xff0000, 100);
     // scene.add(ambLight);
+
+    // BLOOM
+    const renderScene = new RenderPass(scene, camera);
+
+    let bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+    bloomPass.threshold = params.bloomThreshold;
+    bloomPass.strength = params.bloomStrength;
+    bloomPass.radius = params.bloomRadius;
+
+    composer = new EffectComposer(renderer);
+    composer.addPass(renderScene);
+    composer.addPass(bloomPass);
 
 
     // Audio listener
@@ -125,7 +273,7 @@ function init() {
 
     const audioLoader = new THREE.AudioLoader();
     // Load audio file inside asset folder
-    audioLoader.load('../assets/trek_v1.wav', (buffer) => {
+    audioLoader.load('../assets/trek_final.wav', (buffer) => {
         audio.setBuffer(buffer);
         audio.setLoop(false);
         audio.play();  // Start playback
@@ -143,27 +291,49 @@ function init() {
     }
 
     // ASSETS
-    const loader = new OBJLoader();
+    // const loader = new OBJLoader();
 
 
     // AirPlane
     let airPlane;
 
 
-    loader.load('../assets/airplaneResized.obj', function (obj) {
-        airPlane = obj;
+    // loader.load('../assets/airplane_v2.obj', function (obj) {
+    //     airPlane = obj;
+    //     airPlane.rotateY(Math.PI / 2);
+
+
+    //     // airPlane.position.y = myRadius;
+
+    //     airPlane.traverse(function (child) { child.castShadow = true; });
+
+    //     airPlane.castShadow = true; //default is false
+    //     airPlane.receiveShadow = true; //default
+
+    //     scene.add(airPlane)
+
+
+    //     // ASSETS Animation
+    //     updateAirPlane = (t) => {
+    //         // ASSETS Animation
+
+    //         airPlane.rotation.order = 'ZXY';
+    //         airPlane.rotation.x = -t + (Math.PI / 2) + 0.8;
+    //         airPlane.rotation.z = (Math.cos(t) * 0.001 - 0.1);
+
+    //         let airPlanePositionY = Math.cos(t + 1);
+    //         let airPlanePositionZ = Math.sin(t + 1);
+
+    //         airPlane.position.y = airPlanePositionY * myRadius * 0.8;
+    //         airPlane.position.z = airPlanePositionZ * myRadius * -0.8;
+    //     };
+
+    // });
+    const loader = new GLTFLoader().setPath('../assets/');
+    loader.load('airPlane.gltf', function (gltf) {
+        airPlane = gltf.scene;
         airPlane.rotateY(Math.PI / 2);
-
-
-        // airPlane.position.y = myRadius;
-
-        airPlane.traverse(function (child) { child.castShadow = true; });
-
-        airPlane.castShadow = true; //default is false
-        airPlane.receiveShadow = true; //default
-
-        scene.add(airPlane)
-
+        scene.add(airPlane);
 
         // ASSETS Animation
         updateAirPlane = (t) => {
@@ -179,19 +349,18 @@ function init() {
             airPlane.position.y = airPlanePositionY * myRadius * 0.8;
             airPlane.position.z = airPlanePositionZ * myRadius * -0.8;
         };
-
     });
 
 
 
 
 
-
-    // Tester Box
-    let instanceNumber = 36;
-    let boxSize = 1;
-    const boxHangerGeo = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
-    const boxHangerMat = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    // TUNNEL
+    let instanceNumber = 136;
+    let ringSize = 8;
+    let detail = 1;
+    const boxHangerGeo = new THREE.OctahedronGeometry(ringSize, detail);
+    const boxHangerMat = new THREE.MeshPhongMaterial({ color: "#6EB0CA", shininess: 1 });
     // const boxHanger = new THREE.Mesh(boxHangerGeo, boxHangerMat);
 
     let boxHanger = new Array(instanceNumber)
@@ -200,10 +369,15 @@ function init() {
 
     boxHanger.forEach((x) => scene.add(x));
 
-    updateBoxHanger = () => {
+
+    updateBoxHanger = (t) => {
         boxHanger.forEach((x, i) => {
-            x.position.y = Math.cos(i) * myRadius;
-            x.position.z = Math.sin(i) * myRadius;
+            x.receiveShadow = true;
+            x.castShadow = true;
+            x.position.y = Math.cos(1 + i) * myRadius * 3 + (Math.sin(t) * 30);
+            x.position.z = Math.sin(i) * myRadius * 2;
+            x.position.x = i * 20;
+            x.rotation.x = i - Math.PI / 8;
         })
     };
 
@@ -218,9 +392,9 @@ function init() {
 
 
     // RING?
-    const ringBahn = new THREE.CylinderGeometry(myRadius, myRadius, myRadius, 12);
+    const ringBahn = new THREE.CylinderGeometry(myRadius * 1.5, myRadius * 1.5, myRadius * 1.5, 12);
     const ringMaterial = new THREE.MeshPhongMaterial({
-        color: "#6EB0CA", shininess: 1000
+        color: "#6EB0CA", shininess: 10
     });
     ringMaterial.side = THREE.BackSide
     const cylinder = new THREE.Mesh(ringBahn, ringMaterial);
@@ -228,74 +402,125 @@ function init() {
     cylinder.rotation.z = Math.PI / 2;
 
     cylinder.receiveShadow = true;
+    cylinder.castShadow = true;
     // Add cube to Scene
     // scene.add(cylinder);
 
 
-    // PARTYCLE Sysyem
-    const partyPos = new THREE.BufferGeometry();
-    const vertices = [];
-    let partyMat
 
-    const sprite = new THREE.TextureLoader().load('../assets/disc.png');
+    // PARTICLE System 2
 
-    for (let i = 0; i < 10000; i++) {
+    group = new THREE.Group();
+    scene.add(group);
 
-        const x = 2000 * Math.random() - 1000;
-        const y = 2000 * Math.random() - 1000;
-        const z = 2000 * Math.random() - 1000;
+    // const helper = new THREE.BoxHelper(new THREE.Mesh(new THREE.BoxGeometry(r, r, r)));
+    // helper.material.color.setHex(0x101010);
+    // helper.material.blending = THREE.AdditiveBlending;
+    // helper.material.transparent = true;
+    // group.add(helper);
 
-        vertices.push(x, y, z);
+    const segments = maxParticleCount * maxParticleCount;
+
+    positions = new Float32Array(segments * 3);
+    colors = new Float32Array(segments * 3);
+
+    const pMaterial = new THREE.PointsMaterial({
+        color: 0xFFFFFF,
+        size: 2,
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        sizeAttenuation: false
+    });
+
+    particles = new THREE.BufferGeometry();
+    particlePositions = new Float32Array(maxParticleCount * 3);
+
+    for (let i = 0; i < maxParticleCount; i++) {
+
+        const x = Math.random() * r - r / 2;
+        const y = Math.random() * r - r / 2;
+        const z = Math.random() * r - r / 2;
+
+        particlePositions[i * 3] = x;
+        particlePositions[i * 3 + 1] = y;
+        particlePositions[i * 3 + 2] = z;
+
+        // add it to the geometry
+        particlesData.push({
+            velocity: new THREE.Vector3(- 0.01 + Math.random() * 0.02, - 0.01 + Math.random() * 0.02, - 0.01 + Math.random() * 0.02),
+            numConnections: 0
+        });
 
     }
 
-    partyPos.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    particles.setDrawRange(0, particleCount);
+    particles.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3).setUsage(THREE.DynamicDrawUsage));
 
-    partyMat = new THREE.PointsMaterial({ size: 3, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true });
-    partyMat.color.setHSL(1.0, 0.3, 0.7);
+    // create the particle system
+    pointCloud = new THREE.Points(particles, pMaterial);
+    group.add(pointCloud);
 
-    const particles = new THREE.Points(partyPos, partyMat);
+    const geometry = new THREE.BufferGeometry();
 
-    scene.add(particles);
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3).setUsage(THREE.DynamicDrawUsage));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3).setUsage(THREE.DynamicDrawUsage));
 
-    partySize = (l) => {
-        partyMat.size = l;
-    }
+    geometry.computeBoundingSphere();
+
+    geometry.setDrawRange(0, 0);
+
+    const material = new THREE.LineBasicMaterial({
+        vertexColors: true,
+        blending: THREE.AdditiveBlending,
+        linewidth: 3,
+        transparent: true
+    });
+
+    linesMesh = new THREE.LineSegments(geometry, material);
+    group.add(linesMesh);
 
 
 
 
 
-    // create  chemTrail:
+
+
+
+
+    // // create  chemTrail:
     parties = [];
 
     var addDemo = (system, offset) => {
-        system.particleSystem.position.x = offset + 5 - (Math.cos(clock.getElapsedTime()) * 0.001 + 0.1);
+        system.particleSystem.position.x = offset + 50 - (Math.cos(clock.getElapsedTime()) * 0.001 + 0.1);
         parties.push(system);
     }
 
     var addDemo2 = (system, offset) => {
-        system.particleSystem.position.x = -offset - 5 - (Math.cos(clock.getElapsedTime()) * 0.001 + 0.1);
+        system.particleSystem.position.x = -offset - 50 - (Math.cos(clock.getElapsedTime()) * 0.001 + 0.1);
         parties.push(system);
     }
-    var globalScale = 20;
+    var globalScale = 200;
 
 
     // texture
-    var texture = new THREE.TextureLoader().load('../assets/disc.png');
+    var texture = new THREE.TextureLoader().load('../assets/smokeD.png');
 
+
+
+    let camPosY = Math.cos(clock.getElapsedTime() - 1) * 66 * 2;
+    console.log(camPosY);
 
     addDemo(new Partykals.ParticlesSystem({
         container: scene,
         particles: {
             startAlpha: 1,
-            endAlpha: 0,
+            endAlpha: 0.3,
             startSize: 3.5,
             endSize: 35,
-            // acceleration: (0, -1, 0),
+            // acceleration: (10, 0, 0),
             gravity: 0,
-            ttl: 20,
-            velocity: new Partykals.Randomizers.SphereRandomizer(0.1),
+            ttl: 6,
+            // velocity: new Partykals.Randomizers.SphereRandomizer(0.1),
             velocityBonus: new THREE.Vector3(0, 0, 0),
             colorize: true,
             alphaTest: 0.1,
@@ -304,59 +529,71 @@ function init() {
             blending: "blend",
             worldPosition: true,
             texture: texture,
+            onUpdate: (i) => {
+                i.velocity = new THREE.Vector3(-1, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
+                    Math.sin((clock.getElapsedTime() * -0.3)) * 2)
+            }
         },
         system: {
-            particlesCount: 1000,
+            particlesCount: 300,
             scale: globalScale,
             emitters: new Partykals.Emitter({
                 onInterval: new Partykals.Randomizers.MinMaxRandomizer(0, 5),
                 interval: new Partykals.Randomizers.MinMaxRandomizer(0, 0.25),
             }),
             depthWrite: true,
-            speed: 5,
+            speed: 1,
             onUpdate: (system) => {
                 system.startX = system.startX || system.particleSystem.position.x;
                 system.particleSystem.rotation.order = 'ZXY';
-                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() + 1) * myRadius * 0.8 + (Math.cos(clock.getElapsedTime()) * -0.001 - 0.5);
-                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() + 1) * myRadius * -0.8 + (Math.cos(clock.getElapsedTime()) * 0.0001 - 0.1);
+                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 1) * myRadius * 0.95;
+                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 1) * myRadius * -0.95;
             },
         }
 
 
     }), 1);
+
     addDemo2(new Partykals.ParticlesSystem({
         container: scene,
         particles: {
             startAlpha: 1,
-            endAlpha: 0,
+            endAlpha: 0.3,
             startSize: 3.5,
             endSize: 35,
-            // acceleration: (0, -1, 0),
+            // acceleration: (10, 1, 10),
             gravity: 0,
-            ttl: 20,
+            ttl: 6,
             velocity: new Partykals.Randomizers.SphereRandomizer(0.1),
-            velocityBonus: new THREE.Vector3(0, 0, 0),
+            rotation: 1,
+            // velocityBonus: new THREE.Vector3(1, 0, 0),
             colorize: true,
-            startColor: new Partykals.Randomizers.ColorsRandomizer(new THREE.Color(0.5, 0.5, 0.2), new THREE.Color(1, 0.5, 1)),
+            startColor: new Partykals.Randomizers.ColorsRandomizer(new THREE.Color(0.5, 0.5, 0.5), new THREE.Color(1, 1, 1)),
             endColor: new THREE.Color(0, 0, 0),
             blending: "blend",
             worldPosition: true,
             texture: texture,
+            onUpdate: (i) => {
+                i.velocity = new THREE.Vector3(1, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
+                    Math.sin((clock.getElapsedTime() * -0.3)) * 2);
+                i.rotation += 30;
+
+            }
         },
         system: {
-            particlesCount: 1000,
+            particlesCount: 300,
             scale: globalScale,
             emitters: new Partykals.Emitter({
                 onInterval: new Partykals.Randomizers.MinMaxRandomizer(0, 5),
                 interval: new Partykals.Randomizers.MinMaxRandomizer(0, 0.25),
             }),
-            depthWrite: false,
-            speed: 5,
+            depthWrite: true,
+            speed: 1,
             onUpdate: (system) => {
                 system.startX = system.startX || system.particleSystem.position.x;
                 system.particleSystem.rotation.order = 'ZXY';
-                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() + 1) * myRadius * 0.8 + (Math.cos(clock.getElapsedTime()) * 0.001 + 0.5);
-                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() + 1) * myRadius * -0.8 + (Math.cos(clock.getElapsedTime()) * 0.0001 - 0.1);
+                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 1) * myRadius * 0.95;
+                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 1) * myRadius * -0.95;
             },
         }
 
@@ -364,30 +601,19 @@ function init() {
     }), 1);
 
 
-    // const geometry = new THREE.SphereGeometry(5, 32, 16);
-    // const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-    // const sphere = new THREE.Mesh(geometry, material);
-    // sphere.rotateY(Math.PI / 2);
-    // scene.add(sphere);
-
-    // sphereUpdate = () => {
-    //     sphere.position.y = Math.cos(clock.getElapsedTime() + 1) * myRadius * 0.8;
-    //     sphere.position.z = Math.sin(clock.getElapsedTime() + 1) * myRadius * -0.8;
-    // }
-
     animate();
-
 }
-
-
 
 function onWindowResize() {
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
 
-    effect.setSize(window.innerWidth, window.innerHeight);
-
+    renderer.setSize(width, height);
+    composer.setSize(width, height);
 
 }
 
@@ -397,7 +623,7 @@ function onWindowResize() {
 
 function animate() {
 
-    requestAnimationFrame(animate);
+    console.log(Math.cos((clock.getElapsedTime() * 0.3) - 1));
 
     // AUDIO
     let k, l, m, h;
@@ -429,12 +655,13 @@ function animate() {
         return result;
     }
 
-    let t = clock.getElapsedTime();
+    let t = clock.getElapsedTime() * 0.3;
 
     updateCamera(t);
     updateAirPlane(t);
-    updateBoxHanger();
+    updateBoxHanger(t);
     partySize(kicker(k));
+    updateFlashLight(t);
     // update(t);
 
     sphereUpdate();
@@ -442,10 +669,96 @@ function animate() {
     // Update Particle System
     for (var i = 0; i < parties.length; ++i) {
         parties[i].update();
+    };
+
+    // console.log(kicker(k));
+
+
+    let vertexpos = 0;
+    let colorpos = 0;
+    let numConnected = 0;
+
+    for (let i = 0; i < particleCount; i++)
+        particlesData[i].numConnections = 0;
+
+    for (let i = 0; i < particleCount; i++) {
+
+        // get the particle
+        const particleData = particlesData[i];
+
+        particlePositions[i * 3] += particleData.velocity.x;
+        particlePositions[i * 3 + 1] += particleData.velocity.y;
+        particlePositions[i * 3 + 2] += particleData.velocity.z;
+
+        if (particlePositions[i * 3 + 1] < - rHalf || particlePositions[i * 3 + 1] > rHalf)
+            particleData.velocity.y = - particleData.velocity.y;
+
+        if (particlePositions[i * 3] < - rHalf || particlePositions[i * 3] > rHalf)
+            particleData.velocity.x = - particleData.velocity.x;
+
+        if (particlePositions[i * 3 + 2] < - rHalf || particlePositions[i * 3 + 2] > rHalf)
+            particleData.velocity.z = - particleData.velocity.z;
+
+        if (effectController.limitConnections && particleData.numConnections >= effectController.maxConnections)
+            continue;
+
+        // Check collision
+        for (let j = i + 1; j < particleCount; j++) {
+
+            const particleDataB = particlesData[j];
+            if (effectController.limitConnections && particleDataB.numConnections >= effectController.maxConnections)
+                continue;
+
+            const dx = particlePositions[i * 3] - particlePositions[j * 3];
+            const dy = particlePositions[i * 3 + 1] - particlePositions[j * 3 + 1];
+            const dz = particlePositions[i * 3 + 2] - particlePositions[j * 3 + 2];
+            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (dist < effectController.minDistance) {
+
+                particleData.numConnections++;
+                particleDataB.numConnections++;
+
+                const alpha = 1.0 - dist / effectController.minDistance;
+
+                positions[vertexpos++] = particlePositions[i * 3];
+                positions[vertexpos++] = particlePositions[i * 3 + 1];
+                positions[vertexpos++] = particlePositions[i * 3 + 2];
+
+                positions[vertexpos++] = particlePositions[j * 3];
+                positions[vertexpos++] = particlePositions[j * 3 + 1];
+                positions[vertexpos++] = particlePositions[j * 3 + 2];
+
+                colors[colorpos++] = alpha;
+                colors[colorpos++] = alpha;
+                colors[colorpos++] = alpha;
+
+                colors[colorpos++] = alpha;
+                colors[colorpos++] = alpha;
+                colors[colorpos++] = alpha;
+
+                numConnected++;
+
+            }
+
+        }
+
+
     }
 
-    console.log(kicker(k));
+    effectController.minDistance = k * 100;
 
+
+    linesMesh.geometry.setDrawRange(0, numConnected * 2);
+    linesMesh.geometry.attributes.position.needsUpdate = true;
+    linesMesh.geometry.attributes.color.needsUpdate = true;
+
+    pointCloud.geometry.attributes.position.needsUpdate = true;
+
+    const delta = clock.getDelta();
+    composer.render();
+
+    requestAnimationFrame(animate);
     render();
 
 }
@@ -455,8 +768,12 @@ function render() {
 
     const delta = clock.getDelta();
 
+    const time = Date.now() * 0.001;
 
-    renderer.render(scene, camera);
+    group.rotation.y = time * 0.1;
+
+
+    // renderer.render(scene, camera);
 }
 
 
@@ -476,4 +793,4 @@ const getFrequencyRangeValue = (data, _frequencyRange) => {
 };
 
 
-// Particle system from: https://github.com/RonenNess/partykals/tree/master/demo
+// Particle system from: https://github.com/RonenNess/partykals
