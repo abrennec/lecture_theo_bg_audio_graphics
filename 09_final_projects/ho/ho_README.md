@@ -18,4 +18,4 @@ As for the graphics part, I had originally imagined an abstract space scene, wit
 
 ![just a subset of the various shaped you can create with this formula](imgs/Untitled%201.png)
 
-just a subset of the various shaped you can create with this formula
+just a subset of the various shaped you can create with this formula.
