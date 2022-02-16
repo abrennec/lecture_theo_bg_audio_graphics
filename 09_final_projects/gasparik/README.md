@@ -1,9 +1,9 @@
 # TBAG Final Project - *Fly*
 
-## Project Outline
+## Project Link
 
-### Link to video
 
+[Link to project](https://gasparikmarton.github.io/fly/)
 
 This project is inspired by the phenomena of ferrofluids and is all about tension, about how borders give shape and how breaking through those borders enables to form new shapes or merge with others. Audio reactive visuals can either simply be enjoyed or interactively be manipulated. 
 
