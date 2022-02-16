@@ -4,7 +4,7 @@ This project came to life due to an early COVID-19 symptom.
 
 ## Project Description
 
-*A TRIP DOWN THE SUPERMARKET* explores perspectives on superstores and the temporality of life. 
+*A TRIP DOWN THE SUPERMARKET* explores perspectives on supermarkets and the temporality of life. 
 A mixture of alternate reality, surrealism and the superfulousness of a supermarket driven world, create a harmonic and hypnotic audiovisual interraction.
 ---
 I went to Edeka Market next to my home where I started hearing drones and sounds in tune and in rhythm. I felt like I was there and at the same time I was not, like I was in a different universe and got lost in the sounds of the supermarket (from freezers to heatintg devices to people, register machines, coins, etc...). 
