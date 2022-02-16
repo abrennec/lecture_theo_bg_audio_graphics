@@ -43,6 +43,7 @@ function setup()
 
   soundFile.play();
   frameRate(60);
+  getAudioContext().resume();
 }
 
 function draw() 
