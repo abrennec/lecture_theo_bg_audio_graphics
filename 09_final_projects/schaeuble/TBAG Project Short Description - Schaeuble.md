@@ -1,7 +1,6 @@
 # TBAG Project Short Description - T.Schaeuble
 
 ![Screenshot](./Images/Screenshot.png)
-[Video Preview](https://jmp.sh/OPUPcnU)
 
 ## Brief Outline
 With this project, you are given basic control over the movement of a snake through its environment. Pressing and holding any key, incites the snake to glide through a calm and mysterious sea of spheres, the colours of which respond to the accompanying audio track.
@@ -35,3 +34,6 @@ I definitely learned some new technical processes, such as array lists, sound in
 I felt that many difficulties I had with coding became demystified. Even throughout this project itself, the process of having an idea, considering how to implement it with code, trying it, troubleshooting and researching it - to then arriving at functioning code - became smoother and incorperated less steps as time went on.
 
 I was also pleasently surprised how organic the creative process can be when coding. The progression from the initial mountains / valleys idea to the drifting snake, was one of unforced, natural progression through inspiration and happy accidents. Experiencing this natural flow, has helped entice me further into this whole world!
+
+# Video Preview
+As a fallback option where streaming does not work via Zoom, here is a [video preview](https://jmp.sh/OPUPcnU) of the sketch.
