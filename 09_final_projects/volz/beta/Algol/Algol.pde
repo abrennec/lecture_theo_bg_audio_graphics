@@ -125,8 +125,8 @@ void setup()
       
       amp.input(file);
     
-      //file.play();
-      file.jump(40);
+      file.play();
+      //file.jump(40);
     }
     
 
