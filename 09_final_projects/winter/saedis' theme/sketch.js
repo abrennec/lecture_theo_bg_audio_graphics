@@ -147,7 +147,7 @@ function draw()
     }
   }
 
-  print(frameRate());
+  //print(frameRate());
   //print(level);
   //print(millis());
 
