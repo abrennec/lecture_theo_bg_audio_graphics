@@ -26,6 +26,7 @@ At first, I had three different settings for the visuals in mind, which were col
 * cities with contrasts between darkness and vibrant colors
 * space scenes
 * shapes of persons / double exposures
+
 In the end I wanted something more simplistic to look at, so I took the contrast aspect with glowing colors from the first idea and the space scene from the second idea and came up with something new while watching some typical audio visualizers to listen to music.
 
 The dark atmosphere in the visuals is created by designing a space-inspired environment by adding small circels as stars. To add to the space-scenery, the semicircular visualizer of the waveform is inspired by the look of an eclipse. Space is an empty place and offers freedom but can also be intimidating, because we do not know what is out there. To increase the intimidating effect in the visuals, an abstract artifact fills out most of the scene. It's nothing organic or smooth that we might consider pleasant. Instead, it has sharp edges and straight lines and we can not associate anything specific with it. The louder the music gets, the more "aggressive" it moves - it grows and glows. 
