@@ -1,6 +1,7 @@
 # TBAG Project Short Description - T.Schaeuble
 
 ![[Screenshot]](./images/screenshot.png)
+[Video Preview](https://jmp.sh/OPUPcnU)
 
 ## Brief Outline
 With this project, you are given basic control over the movement of a snake through its environment. Pressing and holding any key, incites the snake to glide through a calm and mysterious sea of spheres, the colours of which respond to the accompanying audio track.
