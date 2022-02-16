@@ -60,7 +60,7 @@ let zTranslateCounter = 0;
 //let myShader;
 
 function preload() {
-	track = loadSound("./sketches/SuperFormula.wav"); //, [successCallback], [errorCallback], [whileLoading])
+	track = loadSound("../audio/SuperFormula.wav"); //, [successCallback], [errorCallback], [whileLoading])
 	//myShader = loadShader('basic.vert', 'basic.frag');
 	
 }
@@ -96,7 +96,7 @@ function setup()
 	analyzer = new p5.Amplitude();
 
 	// Patch the input to an volume analyzer
-	analyzer.setInput(drumTrack);
+	analyzer.setInput(track);
 	
 	//analyze track waveform
 	//let wf = track.getPeaks(Math.pow(2, 6));
