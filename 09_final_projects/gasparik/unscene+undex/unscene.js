@@ -14,16 +14,30 @@ var myRadius = 66;
 
 // TIME
 clock = new THREE.Clock();
+clock.autoStart = false;
 let elapsedTime = clock.getElapsedTime();
 
 // FUNCTIONS
 function updateAirPlane() { };
 function updateBoxHanger() { };
-function partySize() { };
+// function partySize() { };
 function updateCamera() { };
+function updateCamera2() { };
+function updateCamera2v2() { };
+function updateCamera3() { };
 function updateFlashLight() { };
 function sphereUpdate() { };
 function kicker() { };
+
+function addTrail() { };
+function addStarLines() { };
+function addBox() { };
+function changeView() { };
+function changeViewDynamic() { };
+function changeView2() { };
+function addBloom() { };
+
+function clockStarter() { };
 //
 
 
@@ -40,17 +54,19 @@ let particlePositions;
 let linesMesh;
 
 const maxParticleCount = 1000;
-let particleCount = 500;
-const r = 1000;
+var particleCount = 10;
+const r = 2000;
 const rHalf = r / 2;
 
+
 const effectController = {
+    youHaveLostControl: true,
     showDots: true,
     showLines: true,
-    minDistance: 15,
+    minDistance: 10,
     limitConnections: false,
-    maxConnections: 20,
-    particleCount: 50
+    maxConnections: 200,
+    particleCount: 10
 };
 //
 
@@ -62,29 +78,13 @@ let params = {
     bloomRadius: 0.1
 };
 
-// Keyframes implementation from Tim Rumpf
-const keyFrames = [
-    // 1
-    5000.123,
-    // 2
-    8500.123,
-    // 3
-    2600.2364,
-    // 4
-    // 5
-    // 6
-    // 7
-    // 8
-    // 9
-];
-
 // AUDIO
 let audio;
-let fftSize = 2048;
+let fftSize = 512;
 let analyser;
 
 const frequencyRange = {
-    kick: [0, 32],
+    kick: [0, 10],
     bass: [42, 100],
     lowMid: [100, 400],
     mid: [400, 2600],
@@ -103,50 +103,11 @@ function initGUI() {
 
     const gui = new GUI();
 
-    gui.add(effectController, 'showDots').onChange(function (value) {
-
-        pointCloud.visible = value;
+    gui.add(effectController, 'youHaveLostControl').onChange(function (value) {
 
     });
-    gui.add(effectController, 'showLines').onChange(function (value) {
 
-        linesMesh.visible = value;
-
-    });
-    gui.add(effectController, 'minDistance', 10, 300);
-    gui.add(effectController, 'limitConnections');
-    gui.add(effectController, 'maxConnections', 0, 30, 1);
-    gui.add(effectController, 'particleCount', 0, maxParticleCount, 1).onChange(function (value) {
-
-        particleCount = parseInt(value);
-        particles.setDrawRange(0, particleCount);
-
-    });
-    // gui.add(params, 'exposure', 0.1, 2).onChange(function (value) {
-
-    //     renderer.toneMappingExposure = Math.pow(value, 4.0);
-
-    // });
-
-    // gui.add(params, 'bloomThreshold', 0.0, 1.0).onChange(function (value) {
-
-    //     bloomPass.threshold = Number(value);
-
-    // });
-
-    // gui.add(params, 'bloomStrength', 0.0, 3.0).onChange(function (value) {
-
-    //     params.strength = Number(value);
-
-    // });
-
-    // gui.add(params, 'bloomRadius', 0.0, 1.0).step(0.01).onChange(function (value) {
-
-    //     bloomPass.radius = Number(value);
-
-    // });
-
-}
+};
 
 
 function init() {
@@ -155,42 +116,85 @@ function init() {
 
     // Create scene
     scene = new THREE.Scene();
-    // scene.fog = new THREE.FogExp2(scene.background, 0.0025);
+    // scene.fog = new THREE.FogExp2(scene.background, 0.00025);
     //
     //
     //
     //Camera Setup
-    var fov = 76;
+    let fov = 70;
     camera = new THREE.PerspectiveCamera(
         fov,
         window.innerWidth / window.innerHeight,
         0.001,
         40000
     );
-    camera.position.z = 5;
 
     // CAMERA Animation
     updateCamera = (t) => {
+        let camRotPosY = Math.cos(t);
+        let camRotPosZ = Math.sin(t);
+
+        let camLookAtY = Math.cos(t + 0.65);
+        let camLookAtZ = Math.sin(t + 0.65);
+
+        camera.position.y = camRotPosY * myRadius / 100;
+        camera.position.z = camRotPosZ * myRadius / 100;
+        camera.fov = 120;
+        camera.updateProjectionMatrix();
+        camera.position.x = 0;
+        camera.up = (new THREE.Vector3(0, -camRotPosY, camRotPosZ));
+        camera.lookAt(new THREE.Vector3(0, camLookAtY * myRadius, -camLookAtZ * myRadius));
+    };
+
+    updateCamera2 = (t) => {
         let camRotPosY = Math.cos(t - 1);
         let camRotPosZ = Math.sin(t - 1);
 
         let camLookAtY = Math.cos(t + 1);
         let camLookAtZ = Math.sin(t + 1);
 
+        camera.position.y = camRotPosY * myRadius * 2;
+        camera.position.z = camRotPosZ * myRadius * -2;
+        // camera.position.x = Math.cos(t) * 40;
+        camera.up = (new THREE.Vector3(0, -camRotPosY, camRotPosZ));
+        camera.lookAt(new THREE.Vector3(0, camLookAtY * myRadius, -camLookAtZ * myRadius));
+    };
+
+    updateCamera2v2 = (t) => {
+        let camRotPosY = Math.cos(t - 1);
+        let camRotPosZ = Math.sin(t - 1);
+
+        let camLookAtY = Math.cos(t + 1);
+        let camLookAtZ = Math.sin(t + 1);
 
         camera.position.y = camRotPosY * myRadius * 2 + Math.cos(t) * 10;
         camera.position.z = camRotPosZ * myRadius * -2;
         camera.position.x = Math.cos(t) * 40;
         camera.up = (new THREE.Vector3(0, -camRotPosY, camRotPosZ));
         camera.lookAt(new THREE.Vector3(0, camLookAtY * myRadius, -camLookAtZ * myRadius));
-    }
+    };
+
+    updateCamera3 = (t) => {
+        let camRotPosY = Math.cos(t);
+        let camRotPosZ = Math.sin(t);
+
+        let camLookAtY = Math.cos(t);
+        let camLookAtZ = Math.sin(t);
+
+        camera.position.y = camRotPosY * myRadius * 2 + Math.cos(t) * 10;
+        camera.position.z = camRotPosZ * myRadius;
+        camera.position.x = 100;
+        camera.up = (new THREE.Vector3(0, -camRotPosY, camRotPosZ));
+        camera.lookAt(new THREE.Vector3(0, camLookAtY * myRadius, -camLookAtZ * myRadius));
+    };
+
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
 
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
-
+    addBloom();
     //Renderer Setup
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -204,7 +208,7 @@ function init() {
     //
     //
     //Light Setup
-    const midLight = new THREE.PointLight(0xff0000, 1, 306);
+    const midLight = new THREE.PointLight("#931BE6", 1, 306);
 
     midLight.castShadow = true;
     midLight.shadow.mapSize.width = 512;
@@ -235,24 +239,16 @@ function init() {
     scene.add(flashLight.target);
 
 
-
-    // const spotLightHelper = new THREE.SpotLightHelper(flashLight);
-    // scene.add(spotLightHelper);
-
     updateFlashLight = (t) => {
-        // flashLight.rotation.x = -t;
         flashLight.target.position.y = Math.cos(t + 1.4) * myRadius * 1;
         flashLight.target.position.z = Math.sin(t + 1.4) * -myRadius * 1;
-        // flashLight.rotation.z = (Math.cos(t) * 0.001);
-        // flashLight.rotation.z = t;
         flashLight.position.y = Math.cos(t + 1) * myRadius * 0.9;
         flashLight.position.z = Math.sin(t + 1) * -myRadius * 0.9;
     };
 
 
-
-    // const ambLight = new THREE.AmbientLight(0xff0000, 100);
-    // scene.add(ambLight);
+    const ambLight = new THREE.AmbientLight(0xff0000, 1);
+    scene.add(ambLight);
 
     // BLOOM
     const renderScene = new RenderPass(scene, camera);
@@ -262,9 +258,12 @@ function init() {
     bloomPass.strength = params.bloomStrength;
     bloomPass.radius = params.bloomRadius;
 
+
     composer = new EffectComposer(renderer);
     composer.addPass(renderScene);
     composer.addPass(bloomPass);
+
+
 
 
     // Audio listener
@@ -273,11 +272,12 @@ function init() {
 
     const audioLoader = new THREE.AudioLoader();
     // Load audio file inside asset folder
-    audioLoader.load('../assets/trek_final.wav', (buffer) => {
+    audioLoader.load('../assets/trek_all2.wav', (buffer) => {
         audio.setBuffer(buffer);
         audio.setLoop(false);
         audio.play();  // Start playback
     });
+
 
     // About fftSize https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/fftSize
     analyser = new THREE.AudioAnalyser(audio, fftSize);
@@ -291,48 +291,18 @@ function init() {
     }
 
     // ASSETS
-    // const loader = new OBJLoader();
-
 
     // AirPlane
     let airPlane;
 
-
-    // loader.load('../assets/airplane_v2.obj', function (obj) {
-    //     airPlane = obj;
-    //     airPlane.rotateY(Math.PI / 2);
-
-
-    //     // airPlane.position.y = myRadius;
-
-    //     airPlane.traverse(function (child) { child.castShadow = true; });
-
-    //     airPlane.castShadow = true; //default is false
-    //     airPlane.receiveShadow = true; //default
-
-    //     scene.add(airPlane)
-
-
-    //     // ASSETS Animation
-    //     updateAirPlane = (t) => {
-    //         // ASSETS Animation
-
-    //         airPlane.rotation.order = 'ZXY';
-    //         airPlane.rotation.x = -t + (Math.PI / 2) + 0.8;
-    //         airPlane.rotation.z = (Math.cos(t) * 0.001 - 0.1);
-
-    //         let airPlanePositionY = Math.cos(t + 1);
-    //         let airPlanePositionZ = Math.sin(t + 1);
-
-    //         airPlane.position.y = airPlanePositionY * myRadius * 0.8;
-    //         airPlane.position.z = airPlanePositionZ * myRadius * -0.8;
-    //     };
-
-    // });
     const loader = new GLTFLoader().setPath('../assets/');
-    loader.load('airPlane.gltf', function (gltf) {
+    loader.load('airPlane2.gltf', function (gltf) {
         airPlane = gltf.scene;
         airPlane.rotateY(Math.PI / 2);
+        airPlane.traverse(function (child) { child.castShadow = true; });
+
+        airPlane.castShadow = true; //default is false
+        airPlane.receiveShadow = true; //default
         scene.add(airPlane);
 
         // ASSETS Animation
@@ -356,8 +326,8 @@ function init() {
 
 
     // TUNNEL
-    let instanceNumber = 136;
-    let ringSize = 8;
+    let instanceNumber = 400;
+    var ringSize = 40;
     let detail = 1;
     const boxHangerGeo = new THREE.OctahedronGeometry(ringSize, detail);
     const boxHangerMat = new THREE.MeshPhongMaterial({ color: "#6EB0CA", shininess: 1 });
@@ -369,24 +339,16 @@ function init() {
 
     boxHanger.forEach((x) => scene.add(x));
 
-
     updateBoxHanger = (t) => {
         boxHanger.forEach((x, i) => {
             x.receiveShadow = true;
             x.castShadow = true;
-            x.position.y = Math.cos(1 + i) * myRadius * 3 + (Math.sin(t) * 30);
-            x.position.z = Math.sin(i) * myRadius * 2;
-            x.position.x = i * 20;
-            x.rotation.x = i - Math.PI / 8;
+            x.position.y = Math.tanh(1 + i * 10) * myRadius * 30;
+            x.position.z = Math.tan(i) * myRadius * 20;
+            x.position.x = (i + 40) * 40;
+
         })
     };
-
-
-    // updateBoxHanger = (r) => {
-    //     boxHanger.scale.set(r * 1.2, r * 1.2, r * 1.2);
-    // }
-
-
 
 
 
@@ -453,7 +415,7 @@ function init() {
 
     }
 
-    particles.setDrawRange(0, particleCount);
+    // particles.setDrawRange(0, particleCount);
     particles.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3).setUsage(THREE.DynamicDrawUsage));
 
     // create the particle system
@@ -477,11 +439,7 @@ function init() {
     });
 
     linesMesh = new THREE.LineSegments(geometry, material);
-    group.add(linesMesh);
-
-
-
-
+    // group.add(linesMesh);
 
 
 
@@ -508,29 +466,30 @@ function init() {
 
 
     let camPosY = Math.cos(clock.getElapsedTime() - 1) * 66 * 2;
-    console.log(camPosY);
+
 
     addDemo(new Partykals.ParticlesSystem({
         container: scene,
         particles: {
             startAlpha: 1,
-            endAlpha: 0.3,
+            endAlpha: 0,
             startSize: 3.5,
             endSize: 35,
             // acceleration: (10, 0, 0),
             gravity: 0,
-            ttl: 6,
+            ttl: 8,
             // velocity: new Partykals.Randomizers.SphereRandomizer(0.1),
-            velocityBonus: new THREE.Vector3(0, 0, 0),
+            // velocityBonus: new THREE.Vector3(0, 0, 0),
             colorize: true,
             alphaTest: 0.1,
             startColor: new Partykals.Randomizers.ColorsRandomizer(new THREE.Color(0.5, 0.5, 0.2), new THREE.Color(1, 0.5, 1)),
             endColor: new THREE.Color(0, 0, 0),
             blending: "blend",
+            rotationSpeed: new Partykals.Randomizers.MinMaxRandomizer(-1, 1),
             worldPosition: true,
             texture: texture,
             onUpdate: (i) => {
-                i.velocity = new THREE.Vector3(-1, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
+                i.velocity = new THREE.Vector3(-1.2, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
                     Math.sin((clock.getElapsedTime() * -0.3)) * 2)
             }
         },
@@ -546,8 +505,8 @@ function init() {
             onUpdate: (system) => {
                 system.startX = system.startX || system.particleSystem.position.x;
                 system.particleSystem.rotation.order = 'ZXY';
-                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 1) * myRadius * 0.95;
-                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 1) * myRadius * -0.95;
+                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 0.9) * myRadius * 0.95;
+                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 0.9) * myRadius * -0.95;
             },
         }
 
@@ -558,12 +517,12 @@ function init() {
         container: scene,
         particles: {
             startAlpha: 1,
-            endAlpha: 0.3,
+            endAlpha: 0,
             startSize: 3.5,
             endSize: 35,
             // acceleration: (10, 1, 10),
             gravity: 0,
-            ttl: 6,
+            ttl: 8,
             velocity: new Partykals.Randomizers.SphereRandomizer(0.1),
             rotation: 1,
             // velocityBonus: new THREE.Vector3(1, 0, 0),
@@ -571,12 +530,13 @@ function init() {
             startColor: new Partykals.Randomizers.ColorsRandomizer(new THREE.Color(0.5, 0.5, 0.5), new THREE.Color(1, 1, 1)),
             endColor: new THREE.Color(0, 0, 0),
             blending: "blend",
+            rotationSpeed: new Partykals.Randomizers.MinMaxRandomizer(-1, 1),
             worldPosition: true,
             texture: texture,
             onUpdate: (i) => {
-                i.velocity = new THREE.Vector3(1, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
+                i.velocity = new THREE.Vector3(1.2, Math.cos((clock.getElapsedTime() * 0.3)) * 2,
                     Math.sin((clock.getElapsedTime() * -0.3)) * 2);
-                i.rotation += 30;
+
 
             }
         },
@@ -592,14 +552,16 @@ function init() {
             onUpdate: (system) => {
                 system.startX = system.startX || system.particleSystem.position.x;
                 system.particleSystem.rotation.order = 'ZXY';
-                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 1) * myRadius * 0.95;
-                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 1) * myRadius * -0.95;
+                system.particleSystem.position.y = Math.cos(clock.getElapsedTime() * 0.3 + 0.9) * myRadius * 0.98;
+                system.particleSystem.position.z = Math.sin(clock.getElapsedTime() * 0.3 + 0.9) * myRadius * -0.98;
             },
         }
 
 
     }), 1);
 
+
+    // clockStarter();
 
     animate();
 }
@@ -623,8 +585,6 @@ function onWindowResize() {
 
 function animate() {
 
-    console.log(Math.cos((clock.getElapsedTime() * 0.3) - 1));
-
     // AUDIO
     let k, l, m, h;
     if (analyser) {
@@ -643,35 +603,100 @@ function animate() {
         h = treble;
     }
 
-    function kicker(kick) {
-        let result;
-        if (Math.round(kick) > 0) {
-            result = kick * 3;
+    clockStarter = () => {
+        if (audio.isPlaying) {
+            clock.autoStart = true;
         }
-        else {
-            result = 0;
-        }
-
-        return result;
     }
+    clockStarter();
 
+    console.log("isRunning" + clock.running)
     let t = clock.getElapsedTime() * 0.3;
 
     updateCamera(t);
     updateAirPlane(t);
-    updateBoxHanger(t);
-    partySize(kicker(k));
+
     updateFlashLight(t);
-    // update(t);
 
     sphereUpdate();
 
-    // Update Particle System
-    for (var i = 0; i < parties.length; ++i) {
-        parties[i].update();
-    };
 
-    // console.log(kicker(k));
+
+    // TIMELINE
+
+    // 1111111111111
+    // ChemTrail trigger
+    addTrail = () => {
+        if (clock.getElapsedTime() > 18) {
+            for (var i = 0; i < parties.length; ++i) {
+                parties[i].update();
+            }
+        }
+    };
+    addTrail();
+
+    // 22222222222222
+    // Stars Trigger
+    let starTimer = Math.floor(clock.getElapsedTime() - 33);
+
+    if (starTimer < 0) {
+        particleCount = 0;
+    }
+    else if
+        (starTimer >= 100) {
+        starTimer = 100
+    }
+    else {
+        particleCount = Math.floor(starTimer * 10);
+    }
+
+    particles.setDrawRange(0, particleCount);
+
+
+    // 3333333333333333333
+    addStarLines = (m) => {
+        if (clock.getElapsedTime() >= 94) {
+            effectController.minDistance = k * clock.getElapsedTime() * l;
+            group.add(linesMesh);
+        }
+    };
+    addStarLines(1);
+
+    addBox = () => {
+        if (clock.getElapsedTime() >= 79) {
+
+            updateBoxHanger(t);
+        }
+    }
+    addBox();
+
+    changeView = () => {
+        if (clock.getElapsedTime() >= 64.2) {
+            updateCamera2(t)
+        }
+    };
+    changeView();
+
+
+    changeViewDynamic = () => {
+        if (clock.getElapsedTime() >= 124.5) {
+            updateCamera2v2(t)
+        }
+    };
+    changeViewDynamic();
+
+
+
+
+    changeView2 = () => {
+        if (clock.getElapsedTime() >= 155) {
+            updateCamera3(t)
+        }
+    };
+    changeView2();
+
+    console.log(clock.getElapsedTime());
+    // 
 
 
     let vertexpos = 0;
@@ -746,7 +771,7 @@ function animate() {
 
     }
 
-    effectController.minDistance = k * 100;
+
 
 
     linesMesh.geometry.setDrawRange(0, numConnected * 2);
