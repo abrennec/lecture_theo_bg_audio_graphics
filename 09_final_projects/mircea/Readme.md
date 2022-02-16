@@ -1,15 +1,14 @@
 # A TRIP DOWN THE SUPERMARKET
-:-------------------------:|:-------------------------:
 
 This project came to life due to an early COVID-19 symptom.
-
+---
 ## Project Description
 
 *A TRIP DOWN THE SUPERMARKET* explores perspectives on superstores and the temporality of life. 
 A mixture of alternate reality, surrealism and the superfulousness of a supermarket driven world, create a harmonic and hypnotic audiovisual interraction.
 ---
 I went to Edeka Market next to my home where I started hearing drones and sounds in tune and in rhythm. I felt like I was there and at the same time I was not, like I was in a different universe and got lost in the sounds of the supermarket (from freezers to heatintg devices to people, register machines, coins, etc...). 
-
+---
 ## Sound
 
 ### Artistic Intention
@@ -25,8 +24,8 @@ Then I went on to search for a few extra supermarket samples that I didn't manag
 After that it began the most harduous part of the project due to editing all of the different samples into a more consise and evolving idea. By adding a mix of reverb and delay effects to different tracks, I managed to construct the buildup I had set in mind, editing the sample waves into small chuncks of little edited samples in order to play around with them as I saw fit (by going up and down the tracks with different effects). I also changed the delay settings and worked with the reverb to give it the sustain I wanted and spent a great deal of time editing the volume on several tracks in order to have better buildup and dynamics.
 After having a more completed project (closer to what I had in mind) I decided to enrich the base drone with another one so I went on to garage band on my Ipad and made a progressive drone with one of its Synths and connected it to the ending portion of the "dead" beep, and I also added some more background money machines because why not.
 at the very end I added an AI vst to the master track I had found on the reaper subreddit that helps compress the "main out" for me called "smart:comp".
-
-## Technical Choices: Graphics
+---
+## Graphics
 
 ### Artistic Intention
 
@@ -36,7 +35,7 @@ While following the visuals, the viewer should feel sucked inside the surreal al
 ### Technical Choices
 
 I chose to work with P5 and create interactivity between the graphics and the song. 
-
+---
 ## Learnings and Reflections
 
 I can say that it was an amazing learning experience that I enjoyed a lot, eventually.
