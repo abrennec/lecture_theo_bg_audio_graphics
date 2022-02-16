@@ -662,7 +662,7 @@ function animate() {
     addStarLines(1);
 
     addBox = () => {
-        if (clock.getElapsedTime() >= 79) {
+        if (clock.getElapsedTime() >= 49.2) {
 
             updateBoxHanger(t);
         }
