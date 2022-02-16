@@ -43,6 +43,7 @@ function setup()
 
   soundFile.play();
   frameRate(60);
+  getAudioContext().resume();
 }
 
 function draw() 
@@ -146,7 +147,7 @@ function draw()
     }
   }
 
-  //print(frameRate());
+  print(frameRate());
   //print(level);
   //print(millis());
 
