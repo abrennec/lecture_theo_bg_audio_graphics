@@ -22,6 +22,12 @@ The music visualizer was coded with p5.js. The overall design consists of simple
 
 The listener should be able to dive deep into a dark atmosphere. Therefore the music track starts slowly with deep and intimidating sounds. The suspense rises and then the "chaos" breaks out and it gets dramatic, by adding more and more instruments, increasing the volume and tempo. When I listen to music, it's always important for me, that I can have my own thoughts, ideas and story to the music. To offer this freedom tothe listener of my track as well, I created visuals that deliver the same atmosphere but is not too distracting. 
 
+At first, I had three different settings for the visuals in mind, which were collected in a mood board: 
+* cities with contrasts between darkness and vibrant colors
+* space scenes
+* shapes of persons / double exposures
+In the end I wanted something more simplistic to look at, so I took the contrast aspect with glowing colors from the first idea and the space scene from the second idea and came up with something new while watching some typical audio visualizers to listen to music.
+
 The dark atmosphere in the visuals is created by designing a space-inspired environment by adding small circels as stars. To add to the space-scenery, the semicircular visualizer of the waveform is inspired by the look of an eclipse. Space is an empty place and offers freedom but can also be intimidating, because we do not know what is out there. To increase the intimidating effect in the visuals, an abstract artifact fills out most of the scene. It's nothing organic or smooth that we might consider pleasant. Instead, it has sharp edges and straight lines and we can not associate anything specific with it. The louder the music gets, the more "aggressive" it moves - it grows and glows. 
 To also incorporate the chaos aspect in the visuals, the user input is handled differently for each triangel. Not everything can be scaled and rotated, and those triangles that can be manipulated, react in opposite ways to the user input.
 
