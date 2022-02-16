@@ -7,6 +7,9 @@
 The background is a tunnel which we traverse. The colour changes are created by mapping light color parameters to 3 different frequency ranges in the music:
 low frequencies = blue, middle frequencies = green and high frequencies = red.  
 I have also written my own shader which deforms the vertices according to the various frequenceis in the music. The fragment shader reacts to the music by multiplying the normal "brightness" with the bass frequency.  
+
+The video of my final result:  
+[YouTube Link to my video](https://youtu.be/YMMXQ9Ge0B0)
  
 I have also experimented with other materials / shaders, to make the fragment shader more interesting:
 
