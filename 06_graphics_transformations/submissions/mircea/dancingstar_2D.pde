@@ -1,4 +1,4 @@
-// Coding Train
+// adapted from Coding Train
 // http://thecodingtrain.com
 // http://patreon.com/codingtrain
 
