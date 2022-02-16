@@ -7,6 +7,7 @@
 This project is inspired by the phenomena of ferrofluids and is all about tension, about how borders give shape and how breaking through those borders enables to form new shapes or merge with others. Audio reactive visuals can either simply be enjoyed or interactively be manipulated. 
 
 ### [Link to Browser Version](https://timrumpf.com/Flux/)
+For some reason keyframes are ignored in Firefox, but runs in Chrome and Edge.
 ### [Link to Video](https://youtu.be/t2Bq1nFchSA)
 The visuals are based on a [Shader by Will Kirkby](https://www.shadertoy.com/view/ltcyDf).
 ## Technical Choices
