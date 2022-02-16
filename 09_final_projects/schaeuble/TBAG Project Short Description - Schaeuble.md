@@ -1,6 +1,6 @@
 # TBAG Project Short Description - T.Schaeuble
 
-![[Screenshot]](./images/screenshot.png)
+![Screenshot](./images/screenshot.png)
 [Video Preview](https://jmp.sh/OPUPcnU)
 
 ## Brief Outline
